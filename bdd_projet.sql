@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 09 Août 2017 à 16:58
+-- Généré le :  Jeu 10 Août 2017 à 18:16
 -- Version du serveur :  10.1.13-MariaDB
 -- Version de PHP :  5.6.23
 
@@ -1567,8 +1567,16 @@ CREATE TABLE `users` (
   `id_user` int(3) NOT NULL,
   `pseudo` varchar(20) NOT NULL,
   `mdp` varchar(20) NOT NULL,
-  `email` varchar(30) NOT NULL
+  `email` varchar(30) NOT NULL,
+  `role` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `users`
+--
+
+INSERT INTO `users` (`id_user`, `pseudo`, `mdp`, `email`, `role`) VALUES
+(16, 'larson', '$2y$10$U8C7ES3ob6Pk8', 'mail@mail.fr', 'ROLE_USER');
 
 -- --------------------------------------------------------
 
@@ -1619,7 +1627,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT pour la table `user_categories`
 --

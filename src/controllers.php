@@ -14,6 +14,16 @@ $app->get('/', function () use ($app) {
 ->bind('homepage')
 ;
 
+$app
+    ->match('/inscription', 'user.controller:registerAction')
+    ->bind('register')
+;
+
+$app
+    ->match('/connexion', 'user.controller:loginAction')
+    ->bind('login')
+;
+
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {
         return;

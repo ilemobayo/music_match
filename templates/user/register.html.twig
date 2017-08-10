@@ -1,0 +1,31 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'Inscription' %}
+
+{% block content %}
+    <div class='container'>
+        {{ form_start(registerForm) }}
+        <div class="form-group">
+            {{ form_label(registerForm.username, 'Votre Pseudo') }}
+            {{ form_widget(registerForm.username, {'attr': {
+                'class' : 'form-control'
+            }}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(registerForm.email, 'Votre Email') }}
+            {{ form_widget(registerForm.email, {'attr': {
+                'class' : 'form-control'
+            }}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(registerForm.password, 'Votre Mot de passe') }}
+            {{ form_widget(registerForm.password, {'attr': {
+                'class' : 'form-control'
+            }}) }}
+        </div>
+        {{ form_widget(registerForm.submit, {'attr': {
+                'class' : 'btn btn-primary'
+            }}) }}
+        {{ form_end(registerForm) }}
+    </div>
+{% endblock %}
