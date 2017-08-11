@@ -49,8 +49,17 @@ $app->register(
 $app->register(new SessionServiceProvider());
 $app->register(new FormServiceProvider());
 $app->register(new LocaleServiceProvider());
+$app->register(new Silex\Provider\ValidatorServiceProvider());
 $app->register(new TranslationServiceProvider(), array(
-    'translator.domains' => array(),
+/*    'translator.domains' => [
+        'messages' => [
+            'en' => [
+                'Email' => 'email'
+            ]
+        ]
+    ],
+*/
+    'locale' => 'fr'
 ));
 
 

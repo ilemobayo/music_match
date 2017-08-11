@@ -77,7 +77,13 @@ class UserManager {
         return $this->session->get('user');
     }
     
-    
+
+    public function islogged(){
+        /*if(){
+
+        }*/
+    }
+
     /**
      * 
      * @return bool

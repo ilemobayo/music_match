@@ -25,7 +25,7 @@ class UserController extends ControllerAbstract{
         
         $registerform = $this->app['form.factory']->create(RegisterType::class, $user);
         $registerform->handleRequest($request);
-        
+
         if ($registerform->isValid()) {
             
             $passHash = $this->app['user.manager']->encodePassword($user->getPassword());
@@ -41,7 +41,7 @@ class UserController extends ControllerAbstract{
         // do something with the data
 
         // redirect somewhere
-        // //todo rediriger vers profil
+        // todo rediriger vers profil
         //return $app->redirect('...');
     }
         
@@ -58,18 +58,13 @@ class UserController extends ControllerAbstract{
         
         $loginForm = $this->app['form.factory']->create(LoginType::class, $currentUser);
         $loginForm->handleRequest($request);
-        
         if($loginForm->isValid()){
             $user = $this->app['user.repository']->findByEmail($currentUser->getEmail());
-   
             if(!is_null($user)){
-                dump($this->app['user.manager']->verifyPassword($currentUser->getPassword(), $user->getPassword()));
                 if($this->app['user.manager']->verifyPassword($currentUser->getPassword(), $user->getPassword()))
                 {
-                    echo 'ok';
                     $this->app['user.manager']->login($user);
-                    
-                    print_r($this->app['user.manager']->getUser());
+
                     //return $this->redirectRoute('homepage');
                 }
             }
