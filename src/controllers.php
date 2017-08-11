@@ -24,6 +24,18 @@ $app
     ->bind('login')
 ;
 
+$app
+    ->get('/profile/{username}', 'profile.controller:displayProfileAction')
+    /*->assert('username', '/^[a-zA-Z0-9_-]{6,20}$/') /* username caractères acceptés : 
+    a-z, A-Z, 0-9, _ -, de 6 à 20 caractères */
+    ->bind('display')
+;
+
+$app
+    ->get('/edition_profil/{username}', 'profile.controller:editProfileAction')
+    ->bind('edit')
+;
+
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {
         return;

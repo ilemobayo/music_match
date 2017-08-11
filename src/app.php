@@ -1,5 +1,6 @@
 <?php
 
+use Controller\ProfileController;
 use Controller\UserController;
 use Repository\UserRepository;
 use Service\UserManager;
@@ -62,13 +63,17 @@ $app->register(new TranslationServiceProvider(), array(
     'locale' => 'fr'
 ));
 
-
 // ----------------- Controller ----------------- //
             
 $app['user.controller'] = function() use($app){
     return new UserController($app);
 };          
      
+$app['profile.controller'] = function() use($app){
+    return new ProfileController($app);
+};
+     
+
 
 // ----------------- Repository ----------------- //
 
