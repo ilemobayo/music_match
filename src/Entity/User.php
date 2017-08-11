@@ -26,6 +26,10 @@ class User {
     
     private $role;
     
+    private $registerDate;
+    
+    private $picture;
+    
 
     public function getId() {
         return $this->id;
@@ -69,6 +73,24 @@ class User {
     
     public function setUsername($username) {
         $this->username = $username;
+        return $this;
+    }
+
+    public function getRegisterDate() {
+        return $this->registerDate;
+    }
+    
+    public function setRegisterDate($registerDate) {
+        $this->registerDate = $registerDate;
+        return $this;
+    }
+
+    public function getPicture() {
+        return $this->picture;
+    }
+    
+    public function setPicture($picture) {
+        $this->picture = $picture;
         return $this;
     }
 

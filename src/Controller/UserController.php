@@ -29,7 +29,7 @@ class UserController extends ControllerAbstract{
         if ($registerform->isValid()) {
             
             $passHash = $this->app['user.manager']->encodePassword($user->getPassword());
-            
+ 
             $this->app['user.repository']->save($user, 
                [
                    'pseudo' => $user->getUsername(),
@@ -63,7 +63,6 @@ class UserController extends ControllerAbstract{
             $user = $this->app['user.repository']->findByEmail($currentUser->getEmail());
    
             if(!is_null($user)){
-                dump($this->app['user.manager']->verifyPassword($currentUser->getPassword(), $user->getPassword()));
                 if($this->app['user.manager']->verifyPassword($currentUser->getPassword(), $user->getPassword()))
                 {
                     echo 'ok';

@@ -42,6 +42,19 @@ class UserRepository extends RepositoryAbstract {
             return $this->buildEntity($dbUser);
         }
     }
+    
+    public function findByUsername($username){
+        $dbUser = $this->db->fetchAssoc(
+            'SELECT * FROM users WHERE pseudo = :pseudo',
+            [
+                ':pseudo' => $username
+            ]
+        );
+        
+        if(!empty($dbUser)){
+            return $this->buildEntity($dbUser);
+        }
+    }
 
     protected function buildEntity(array $data) {
         $user = new User();
@@ -50,6 +63,8 @@ class UserRepository extends RepositoryAbstract {
         $user->setPassword($data['mdp']);
         $user->setEmail($data['email']);
         $user->setRole($data['role']);
+        $user->setRegisterDate($data['register_date']);
+        $user->setPicture($data['picture']);
         return $user;
     }
 

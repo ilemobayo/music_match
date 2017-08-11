@@ -1,5 +1,6 @@
 <?php
 
+use Controller\ProfileController;
 use Controller\UserController;
 use Repository\UserRepository;
 use Service\UserManager;
@@ -60,6 +61,11 @@ $app['user.controller'] = function() use($app){
     return new UserController($app);
 };          
      
+$app['profile.controller'] = function() use($app){
+    return new ProfileController($app);
+};
+     
+
 
 // ----------------- Repository ----------------- //
 
