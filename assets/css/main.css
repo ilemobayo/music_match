@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+}
+h1 {
+    animation-delay: 0.3s;
+}
+h2 {
+    animation-delay: 0.5s;
+}
+
+.tree {
+    width: 10%;
+    height: 10%;
+}
+
+section.container-fluid {
+    margin: 40px auto;
+    margin-bottom: 0;
+    padding: 40px 0;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 120%;
+}
+
+div.flexItem p {
+    font-size: 2em;
+    padding: 0 20px;    
+    padding-top: 35px;
+}
+.vinyl {
+    background-image: url('../img/backG/vinyl.jpg');
+    height: 900px;
+}
+span i {
+    font-size: 15em;
+}
+
+.img-circle {
+    width: 30%;
+    margin: 0 27%;
+    
+}
+.centerImg {
+    margin-left: 25px;
+}
