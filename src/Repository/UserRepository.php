@@ -51,12 +51,25 @@ class UserRepository extends RepositoryAbstract {
             ]
         );
         
-        if(!empty($dbUser)){
-            return $this->buildEntity($dbUser);
+        $dbUserCategories = $this->db->fetchAll('SELECT c.genre FROM user_categories uc JOIN categories c ON uc.id_category = c.id_category WHERE uc.id_user = :id_user', 
+            [
+                ':id_user' => $dbUser['id_user']
+            ]
+        );
+        
+        $tags= [];
+        
+        foreach ($dbUserCategories as $tag){
+            $tags[] = $tag['genre'];
         }
+        
+        if(!empty($dbUser)){
+            return $this->buildEntity($dbUser, $tags);
+        }
+        
     }
 
-    protected function buildEntity(array $data) {
+    protected function buildEntity(array $data, array $tags) {
         $user = new User();
         $user->setId($data['id_user']);
         $user->setUsername($data['pseudo']);
@@ -65,6 +78,9 @@ class UserRepository extends RepositoryAbstract {
         $user->setRole($data['role']);
         $user->setRegisterDate($data['register_date']);
         $user->setPicture($data['picture']);
+        if(!empty($tags)){
+            $user->setTags($tags);
+        }
         return $user;
     }
 

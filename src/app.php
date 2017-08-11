@@ -1,5 +1,6 @@
 <?php
 
+use Controller\DashboardController;
 use Controller\ProfileController;
 use Controller\UserController;
 use Repository\UserRepository;
@@ -14,6 +15,9 @@ use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\SessionServiceProvider;
 use Silex\Provider\TranslationServiceProvider;
 use Silex\Provider\TwigServiceProvider;
+use Silex\Provider\ValidatorServiceProvider;
+use SpotifyWebAPI\Session;
+use SpotifyWebAPI\SpotifyWebAPI;
 
 $app = new Application();
 $app->register(new ServiceControllerServiceProvider());
@@ -50,7 +54,7 @@ $app->register(
 $app->register(new SessionServiceProvider());
 $app->register(new FormServiceProvider());
 $app->register(new LocaleServiceProvider());
-$app->register(new Silex\Provider\ValidatorServiceProvider());
+$app->register(new ValidatorServiceProvider());
 $app->register(new TranslationServiceProvider(), array(
 /*    'translator.domains' => [
         'messages' => [
@@ -73,6 +77,10 @@ $app['profile.controller'] = function() use($app){
     return new ProfileController($app);
 };
      
+$app['dashboard.controller'] = function() use($app){
+    return new DashboardController($app);
+};
+     
 
 
 // ----------------- Repository ----------------- //
@@ -82,10 +90,34 @@ $app['user.repository'] = function() use($app){
 };
 
 
+
 // ----------------- Manager ----------------- //
 
 $app['user.manager'] = function() use($app){
     return new UserManager($app['session']);
 };
+
+// ----------------- Service API Spotify ----------------- //
+
+$app['spotify.api'] = function(){
+    
+    $session = new Session(
+    '5caab53bc299402b84905322f4f2ab39', // Clé API public
+    '0e0be2067ee84c0daeb725eda774164e' // Clé API privée
+    );
+    
+    $api = new SpotifyWebAPI();
+    
+    // demande acces
+    $session->requestCredentialsToken();
+    $accessToken = $session->getAccessToken();
+
+    // Set the code on the API wrapper
+    $api->setAccessToken($accessToken);
+    
+    return $api;
+};
+
+
 
 return $app;

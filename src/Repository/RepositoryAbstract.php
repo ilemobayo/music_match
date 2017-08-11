@@ -121,5 +121,5 @@ abstract class RepositoryAbstract {
         return $table;
     }
     
-    abstract protected function buildEntity(array $data);
+    //abstract protected function buildEntity(array $data, array $data2 = []);
 }
