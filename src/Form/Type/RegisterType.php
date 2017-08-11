@@ -50,7 +50,7 @@ class RegisterType extends AbstractType {
 
         $builder->add('email', EmailType::class,
             [
-                'constraint' =>
+                'constraints' =>
                     [
                         new Assert\Email(['message' => 'email pas valide']),
                         new Assert\NotBlank(['message' => 'doit être rempli'])
