@@ -33,7 +33,7 @@ class RegisterType extends AbstractType {
                 'constraints' =>
                     [
                         new Assert\NotBlank(['message' => 'le champs doit etre remplie']),
-                        new Assert\Length(['min' => 6, 'max' => 20, 'minMessage' => 'le pseudo doit faire 6 cartere min', 'maxMessage' => 'le pseudo doit faire moins de 20 cartere'])
+                        new Assert\Length(['min' => 3, 'max' => 12, 'minMessage' => 'le pseudo doit faire 3 cartere min', 'maxMessage' => 'le pseudo doit faire moins de 12 cartere'])
                     ]
             ]
           );
@@ -50,7 +50,7 @@ class RegisterType extends AbstractType {
 
         $builder->add('email', EmailType::class,
             [
-                'constraint' =>
+                'constraints' =>
                     [
                         new Assert\Email(['message' => 'email pas valide']),
                         new Assert\NotBlank(['message' => 'doit être rempli'])
