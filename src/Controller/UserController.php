@@ -65,7 +65,7 @@ class UserController extends ControllerAbstract{
                 {
                     $this->app['user.manager']->login($user);
 
-                    //return $this->redirectRoute('homepage');
+                    return $this->redirectRoute('homepage');
                 }
             }
             $this->addFlashMessage('Identification incorrecte', 'error');

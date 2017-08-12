@@ -29,37 +29,51 @@ class RegisterType extends AbstractType {
             'username',
             TextType::class,
             [
-                'label' => 'Identifiant',
+                'required' => false,
+                'attr' => 
+                [
+                    'placeholder' => 'Pseudo'
+                ],
                 'constraints' =>
                     [
-                        new Assert\NotBlank(['message' => 'le champs doit etre remplie']),
-                        new Assert\Length(['min' => 6, 'max' => 20, 'minMessage' => 'le pseudo doit faire 6 cartere min', 'maxMessage' => 'le pseudo doit faire moins de 20 cartere'])
+                        new Assert\NotBlank(['message' => 'Le champ doit être rempli']),
+                        new Assert\Length(['min' => 6, 'max' => 20, 'minMessage' => 'le pseudo doit faire 6 caractères min', 'maxMessage' => 'Le pseudo doit faire moins de 20 caractères'])
                     ]
             ]
           );
 
         $builder->add('password', PasswordType::class,
             [
+                'required' => false,
+                'attr' => 
+                [
+                    'placeholder' => 'Password'
+                ],
                 'constraints' =>
                 [
                     new Assert\NotBlank(['message' => 'mot de passe requis']),
-                    new Assert\Length(['min' => 6, 'minMessage' => 'le mot de passe doit faire 6 cartere min', 'max' => 12, 'maxMessage' => 'le mot de passe doit faire moins de 12 cartere'])
+                    new Assert\Length(['min' => 6, 'minMessage' => 'Le mot de passe doit faire 6 caractères min', 'max' => 12, 'maxMessage' => 'Le mot de passe doit faire moins de 12 caractères'])
                 ]
             ]
         );
 
         $builder->add('email', EmailType::class,
             [
+                'required' => false,
+                'attr' => 
+                [
+                    'placeholder' => 'Email'
+                ],
                 'constraints' =>
                     [
-                        new Assert\Email(['message' => 'email pas valide']),
-                        new Assert\NotBlank(['message' => 'doit être rempli'])
+                        new Assert\Email(['message' => 'Email non valide']),
+                        new Assert\NotBlank(['message' => 'Le champ email doit être rempli'])
                     ]
             ]
         );
         
         $builder->add('submit', SubmitType::class,[
-                'label' => 'S\'inscrire' 
+                'label' => 'JUMP IN !!!' 
             ]
         );
     }
