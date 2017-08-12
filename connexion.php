@@ -30,7 +30,7 @@ require("assets/inc/nav.inc.php");
 				<input type="text" name="pseudo" id="pseudo" class="form-control" value="" />
 				<label for="mdp">Mot de passe</label>
 				<input type="text" name="mdp" id="mdp" class="form-control" value="" />
-				<button type="submit" name="inscription" id="inscription" class="form-control btn btn-success" style="margin-top:20px;"><span style="color:red;"></span> Connexion</button>
+				<button type="submit" name="connexion" id="connexion" class="form-control btn btn-success" style="margin-top:20px;"><span style="color:red;"></span> Connexion</button>
 			</form>	
 		  </div>
 		</div>

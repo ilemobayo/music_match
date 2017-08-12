@@ -18,7 +18,7 @@
                             <i class="fa fa-twitter"></i>
                         </a>
                     </div>
-                    <form class="register-form">
+                    <form method="post" class="register-form">
                         <label>Email</label>
                         <div class="input-group form-group-no-border">
                             <span class="input-group-addon">
@@ -33,7 +33,7 @@
                             </span>
                             <input type="text" id="mdp" name="mdp" class="form-control" placeholder="Password">
                         </div>
-                        <button class="btn btn-danger btn-block btn-round">Register</button>
+                        <button type="submit" class="btn btn-danger btn-block btn-round">Register</button>
                     </form>
                     <div class="forgot">
                         <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
