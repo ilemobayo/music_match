@@ -5,6 +5,7 @@
 {% block content %}
     <div class='container'>
         {{ form_start(registerForm) }}
+        {{ form_errors(registerForm) }}
         <div class="form-group">
             {{ form_label(registerForm.username, 'Votre Pseudo') }}
             {{ form_widget(registerForm.username, {'attr': {

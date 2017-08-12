@@ -35,6 +35,7 @@ class UserController extends ControllerAbstract{
                    'pseudo' => $user->getUsername(),
                    'mdp' => $passHash,
                    'email' => $user->getEmail(),
+                   'register_date' => date('Y-m-d H:i:s'),
                    'role' => 'ROLE_USER'
                ]
             );
