@@ -26,24 +26,42 @@ class UserController extends ControllerAbstract{
         $registerform = $this->app['form.factory']->create(RegisterType::class, $user);
         $registerform->handleRequest($request);
 
-        if ($registerform->isValid()) {
-            
-            $passHash = $this->app['user.manager']->encodePassword($user->getPassword());
-            
-            $this->app['user.repository']->save($user, 
-               [
-                   'pseudo' => $user->getUsername(),
-                   'mdp' => $passHash,
-                   'email' => $user->getEmail(),
-                   'role' => 'ROLE_USER'
-               ]
-            );
-        // do something with the data
+        if ($registerform->isSubmitted() && $registerform->isValid()) {
 
-        // redirect somewhere
-        // todo rediriger vers profil
-        //return $app->redirect('...');
-    }
+
+
+            /*
+             * verifie si l'utilisateur existe deja ou non avant de l'enregistrer en bdd
+             */
+
+            //dump($this->app['user.repository']->findByUsername($user->getUsername()));
+
+            if(
+                !$this->app['user.repository']->findByUsername($user->getUsername())&&
+                !$this->app['user.repository']->findByEmail($user->getEmail())
+            ){
+                $passHash = $this->app['user.manager']->encodePassword($user->getPassword());
+
+
+                $this->app['user.repository']->save($user,
+                   [
+                       'pseudo' => $user->getUsername(),
+                       'mdp' => $passHash,
+                       'email' => $user->getEmail(),
+                       'register_date' => date('Y-m-d H:i:s'),
+                       'role' => 'ROLE_USER'
+                   ]
+                );
+
+                $this->app['user.manager']->login($user);
+
+                // redirect somewhere
+                return $this->redirectRoute('display', ['username' => $user->getUsername()]);
+            }
+
+            $this->addFlashMessage('le pseudo ou l\' email sont déja pris', 'error');
+        }
+
         
         $registerFormView = $registerform->createView();
    
@@ -65,7 +83,7 @@ class UserController extends ControllerAbstract{
                 {
                     $this->app['user.manager']->login($user);
 
-                    return $this->redirectRoute('homepage');
+                    return $this->redirectRoute('dashboardDisplay', ['username' => $user->getUsername()]);
                 }
             }
             $this->addFlashMessage('Identification incorrecte', 'error');

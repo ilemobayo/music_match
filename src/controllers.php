@@ -14,6 +14,9 @@ $app->get('/', function () use ($app) {
 ->bind('homepage')
 ;
 
+// ----------------- User ----------------- //
+
+
 $app
     ->match('/inscription', 'user.controller:registerAction')
     ->bind('register')
@@ -32,9 +35,28 @@ $app
 ;
 
 $app
-    ->get('/edition_profil/{username}', 'profile.controller:editProfileAction')
+    ->match('/edition_profil/{username}', 'profile.controller:editProfileAction')
     ->bind('edit')
 ;
+
+// ----------------- Dashboard ----------------- //
+
+$app
+    ->get('/accueil/{username}', 'dashboard.controller:userMusicDisplayAction')
+    ->bind('dashboardDisplay')
+;
+
+
+
+
+
+
+
+
+
+
+
+
 
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {
