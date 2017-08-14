@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 10 Août 2017 à 18:16
+-- Généré le :  Lun 14 Août 2017 à 13:13
 -- Version du serveur :  10.1.13-MariaDB
 -- Version de PHP :  5.6.23
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `categories` (
-  `id_categorie` int(3) NOT NULL,
+  `id_category` int(3) NOT NULL,
   `genre` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -35,7 +35,7 @@ CREATE TABLE `categories` (
 -- Contenu de la table `categories`
 --
 
-INSERT INTO `categories` (`id_categorie`, `genre`) VALUES
+INSERT INTO `categories` (`id_category`, `genre`) VALUES
 (1, 'pop'),
 (2, 'post-teen pop'),
 (3, 'dance pop'),
@@ -1566,17 +1566,24 @@ INSERT INTO `categories` (`id_categorie`, `genre`) VALUES
 CREATE TABLE `users` (
   `id_user` int(3) NOT NULL,
   `pseudo` varchar(20) NOT NULL,
-  `mdp` varchar(20) NOT NULL,
+  `mdp` varchar(255) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `role` varchar(50) NOT NULL
+  `role` varchar(50) NOT NULL,
+  `register_date` datetime NOT NULL,
+  `picture` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id_user`, `pseudo`, `mdp`, `email`, `role`) VALUES
-(16, 'larson', '$2y$10$U8C7ES3ob6Pk8', 'mail@mail.fr', 'ROLE_USER');
+INSERT INTO `users` (`id_user`, `pseudo`, `mdp`, `email`, `role`, `register_date`, `picture`) VALUES
+(16, 'larson', '$2y$10$U8C7ES3ob6Pk8', 'mail@mail.fr', 'ROLE_USER', '2017-08-16 06:06:53', 'http://i.f1g.fr/media/figaro/805x453/2016/05/04/XVMef720894-11e4-11e6-ae46-577acce3d9ab-805x500.jpg'),
+(17, 'larson', '$2y$10$B7kGWT/k8PWIS', 'luront@yopmail.com', 'ROLE_USER', '0000-00-00 00:00:00', ''),
+(19, 'tristan', '$2y$10$iQhtb/XYw7DuVSo799KRy.S.BcR6VJl8VReBgrdP8g1SXGsxSQ6Jq', 'luront@gmail.com', 'ROLE_USER', '0000-00-00 00:00:00', 'https://secure.parksandresorts.wdpromedia.com/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-assets/parks-and-tickets/tours-and-experiences/star-wars-guided-tour/star-wars-guided-tour-00.jpg'),
+(22, 'pilouououo', '$2y$10$hTsOqjiUaQ/mKEeqLMprtunNtAsuIjAs1iNI3c/OaJ62oCfpghawK', 'mail@mail.fr', 'ROLE_USER', '0000-00-00 00:00:00', NULL),
+(23, 'davydfd', '$2y$10$b8ug3MWIcrAD2vUM1dsWlu8KvnYIt6x0IQ.0FZNEia1dFW9f1HA5G', 'luront@yopmail.com', 'ROLE_USER', '0000-00-00 00:00:00', NULL),
+(24, 'Admin', '$2y$10$DAdjYZonB43fbGB/VGL6SOVFJsr48Jq6sfM3ot0LwPXmK8wZvgu5.', 'admin@admin.com', 'ROLE_USER', '2017-08-14 12:15:53', NULL);
 
 -- --------------------------------------------------------
 
@@ -1591,6 +1598,15 @@ CREATE TABLE `user_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Contenu de la table `user_categories`
+--
+
+INSERT INTO `user_categories` (`id_user_category`, `id_user`, `id_category`) VALUES
+(1, 16, 1),
+(2, 16, 23),
+(3, 19, 597);
+
+--
 -- Index pour les tables exportées
 --
 
@@ -1598,7 +1614,7 @@ CREATE TABLE `user_categories` (
 -- Index pour la table `categories`
 --
 ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id_categorie`);
+  ADD PRIMARY KEY (`id_category`);
 
 --
 -- Index pour la table `users`
@@ -1622,17 +1638,17 @@ ALTER TABLE `user_categories`
 -- AUTO_INCREMENT pour la table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id_categorie` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1521;
+  MODIFY `id_category` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1521;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT pour la table `user_categories`
 --
 ALTER TABLE `user_categories`
-  MODIFY `id_user_category` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user_category` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Contraintes pour les tables exportées
 --
@@ -1642,7 +1658,7 @@ ALTER TABLE `user_categories`
 --
 ALTER TABLE `user_categories`
   ADD CONSTRAINT `user_categories_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `user_categories_ibfk_2` FOREIGN KEY (`id_category`) REFERENCES `categories` (`id_categorie`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `user_categories_ibfk_2` FOREIGN KEY (`id_category`) REFERENCES `categories` (`id_category`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
