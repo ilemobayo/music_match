@@ -28,21 +28,26 @@ $app
 ;
 
 $app
-    ->get('/profil/{username}', 'profile.controller:displayProfileAction')
+    ->get('/{username}/profil', 'profile.controller:displayProfileAction')
     /*->assert('username', '/^[a-zA-Z0-9_-]{6,20}$/') /* username caractères acceptés : 
     a-z, A-Z, 0-9, _ -, de 6 à 20 caractères */
     ->bind('display')
 ;
 
 $app
-    ->match('/edition_profil/{username}', 'profile.controller:editProfileAction')
+    ->match('/{username}/edition_profil', 'profile.controller:editProfileAction')
     ->bind('edit')
+;
+
+$app
+    ->match('/deconnexion', 'user.controller:logoutAction')
+    ->bind('logout')
 ;
 
 // ----------------- Dashboard ----------------- //
 
 $app
-    ->get('/accueil/{username}', 'dashboard.controller:userMusicDisplayAction')
+    ->get('/{username}/accueil', 'dashboard.controller:userMusicDisplayAction')
     ->bind('dashboardDisplay')
 ;
 

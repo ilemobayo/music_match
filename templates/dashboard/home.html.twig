@@ -1,5 +1,7 @@
 {% extends "layout.html.twig" %}
 
+{% block title 'Home' %}
+
 {% block content %}
     <div class="wrapper">
         <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('{{ asset('img/fabio-mangione.jpg') }}')">
@@ -10,18 +12,13 @@
             <div class="container">
                 <div class="owner">
                     <div class="name">
-                        <h4 class="title">Jane Faker<br /></h4>
-						<h6 class="description">Music Producer</h6>
+                        <img src="{{ asset('photo/') }}{{ user.picture }}" class='rounded-circle profil' width='150' height='150'>
+                        <h4 class="title">{{ user.username}}<br /></h4>
+			{# <h6 class="description">Music Producer</h6> #}
                     </div>
                     <div class="container flex">
                         <div class="flexItem">
-                            <h2>News</h2>
-                        </div>
-                        <div class="flexItem">
-                            <h2>Events</h2>
-                        </div>
-                        <div class="flexItem">
-                            <h2>Blah</h2>
+                            <h2>dashboard</h2>
                         </div>
                     </div>
                 </div>
@@ -32,10 +29,10 @@
                     <div class="nav-tabs-wrapper">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#follows" role="tab">Follows</a>
+                                <a class="nav-link active" data-toggle="tab" href="#follows" role="tab">Recommandations musicales</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#following" role="tab">Following</a>
+                                <a class="nav-link" data-toggle="tab" href="#following" role="tab">Recommandations basées sur la catégorie : {{ tag }}</a>
                             </li>
                         </ul>
                     </div>
@@ -69,21 +66,69 @@
                                                     </div>
                                                     <div class="col-md-1 col-xs-2 offset-1">
                                                         <div class="py-3" >
-                                                            <a href="{{ track.external_urls.spotify }}"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
+                                                            <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
                                             <hr />
                                         {% endfor %}
+                                    {% else %}
+                                        <li>
+                                            <p><strong>No tracks</strong></p>
+                                            <h3 class="text-muted">Not following anyone yet :(</h3>
+                                            <button class="btn btn-warning btn-round">Find artists</button>
+                                        </li>
                                     {% endif %}
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane text-center" id="following" role="tabpanel">
-                        <h3 class="text-muted">Not following anyone yet :(</h3>
-                        <button class="btn btn-warning btn-round">Find artists</button>
+                    <div class="tab-pane " id="following" role="tabpanel">
+                       <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <ul class="list-unstyled follows">
+                                    {% if recommendationsTag %}
+                                        {% for track in recommendationsTag.tracks %}
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-2 offset-md-0">
+                                                        <img src="{{ track.album.images[0].url }}" alt="Circle Image" class=" img-responsive">
+                                                    </div>
+                                                    <div class="col-md-7 col-xs-4">
+                                                        <h6>{{ track.name }}<br/>
+                                                            <small>
+                                                                Artiste : 
+                                                                {% for artist in track.artists %}
+                                                                    {% if loop.last %}
+                                                                        {{ artist.name }}
+                                                                    {% else %}
+                                                                        {{ artist.name }},
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                            </small>
+                                                        </h6>
+                                                    </div>
+                                                    <div class="col-md-1 col-xs-2 offset-1">
+                                                        <div class="py-3" >
+                                                            <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <hr />
+                                        {% endfor %}
+                                    {% else %}
+                                        <li>
+                                            <p><strong>No tracks</strong></p>
+                                            <h3 class="text-muted">Not following anyone yet :(</h3>
+                                            <button class="btn btn-warning btn-round">Find artists</button>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
                     </div>
                 </div>
             </div>

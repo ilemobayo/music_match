@@ -71,11 +71,11 @@ class UserController extends ControllerAbstract{
     }
     
     public function loginAction(Request $request){
+        /*
+        //$currentUser = new User;
         
-        $currentUser = new User;
-        
-        $loginForm = $this->app['form.factory']->create(LoginType::class, $currentUser);
-        $loginForm->handleRequest($request);
+        //$loginForm = $this->app['form.factory']->create(LoginType::class, $currentUser);
+        //$loginForm->handleRequest($request);
         if($loginForm->isValid()){
             $user = $this->app['user.repository']->findByEmail($currentUser->getEmail());
             if(!is_null($user)){
@@ -88,11 +88,38 @@ class UserController extends ControllerAbstract{
             }
             $this->addFlashMessage('Identification incorrecte', 'error');
         }
+         * */
+         
         
+        if($request->isMethod('POST')){
+            $user = $this->app['user.repository']->findByEmail($request->request->get('email'));
+            
+            if(!is_null($user)){
+                if($this->app['user.manager']->verifyPassword($request->request->get('password'), $user->getPassword()))
+                {
+                    $this->app['user.manager']->login($user);
+
+                    return $this->redirectRoute('dashboardDisplay', ['username' => $user->getUsername()]);
+                }
+            }
+            $this->addFlashMessage('Identification incorrecte', 'error');
+        }
+        
+        return $this->redirectRoute('homepage');
+        
+        /*
         return $this->render('user/login.html.twig', 
             [
-                'loginForm' => $loginForm->createView(),
+                //'loginForm' => $loginForm->createView(),
             ] 
         );
+         * */
+         
+    }
+    
+    public function logoutAction(){
+        $this->app['user.manager']->logout();
+        
+        return $this->redirectRoute('homepage');
     }
 }

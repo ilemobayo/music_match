@@ -28,12 +28,25 @@ class DashboardController extends ControllerAbstract {
                     'seed_genres' => $user->getTags()
                 ]
             );
+            
+            $tags = $user->getTags();
+            $tag = $tags[array_rand($tags)];
+            
+            $recommendationsTag = $this->app['spotify.api']->getRecommendations(
+                [
+                    //'seed_tracks' => ['1MDoll6jK4rrk2BcFRP5i7'],
+                    'seed_genres' => [$tag]
+                ]
+            );
+            
         }
 
         return $this->render('dashboard/home.html.twig',
             [
                 'user' => $user,
-                'recommendations' => $recommendations
+                'recommendations' => $recommendations,
+                'tag' => $tag,
+                'recommendationsTag' => $recommendationsTag
             ]
         );
     }
