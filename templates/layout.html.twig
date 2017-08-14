@@ -24,7 +24,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Music Match</a>
+                    {% if  user_manager.user %}
+                        <a class="navbar-brand" href="{{ path('dashboardDisplay', { username : user_manager.user.username }) }}">Music Match</a>
+                    {% else %}
+                        <a class="navbar-brand" href="{{ path('homepage') }}">Music Match</a>
+                    {% endif %}
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,7 +38,12 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li></li>
+                        {% if  not user_manager.user %}
+                            <li><a href="{{ path('register') }}">Inscription</a></li>
+                            <li><a href="{{ path('login') }}">connexion</a></li>
+                        {% else %}
+                            <li><a href="{{ path('display', { username : user_manager.user.username }) }}">profile</a></li>
+                        {% endif %}
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->

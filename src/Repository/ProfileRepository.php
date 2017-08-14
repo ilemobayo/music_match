@@ -19,9 +19,10 @@ class ProfileRepository extends RepositoryAbstract
                 ]
             );
 
-            $tagIsRegister = $this->db->fetchAssoc('SELECT * FROM user_categories WHERE id_category = :id_category',
+            $tagIsRegister = $this->db->fetchAssoc('SELECT * FROM user_categories WHERE id_category = :id_category AND id_user = :id_user',
                 [
-                    ':id_category' => $tagdb['id_category']
+                    ':id_category' => $tagdb['id_category'],
+                    'id_user' => $id
                 ]
             );
 

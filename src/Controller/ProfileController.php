@@ -64,7 +64,7 @@ class ProfileController extends ControllerAbstract {
                 }
             }
 
-            $tags = explode(',', $request->request->get('tags'));
+            $tags = explode(', ', $request->request->get('tags'));
 
 
             //dump($tags);
@@ -73,7 +73,7 @@ class ProfileController extends ControllerAbstract {
 
                 $this->app['user.repository']->save($profile, $data);
                 $this->app['profile.repository']->saveTag($tags, $profile->getId());
-                //return $this->redirectRoute('homepage');
+                return $this->redirectRoute('display', ['username' => $profile->getUsername()]);
             } else {
                 $message = '<strong>Le formulaire contient des erreurs :</strong>';
                 $message .= '<br>' . implode('<br>', $errors);
