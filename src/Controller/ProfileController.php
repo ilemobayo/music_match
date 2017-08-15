@@ -64,10 +64,8 @@ class ProfileController extends ControllerAbstract {
                 }
             }
 
-            $tags = explode(', ', $request->request->get('tags'));
+            $tags = explode(',', trim($request->request->get('tags')));
 
-
-            //dump($tags);
 
             if (empty($errors)) {
 
@@ -78,7 +76,7 @@ class ProfileController extends ControllerAbstract {
                 $message = '<strong>Le formulaire contient des erreurs :</strong>';
                 $message .= '<br>' . implode('<br>', $errors);
                 $this->addFlashMessage($message, 'error');
-                dump($errors);
+
             }
         }
 

@@ -54,7 +54,7 @@ abstract class RepositoryAbstract {
             ;
             */
             
-            $array = $this->buildEntity($dbresult);
+            $array = $this->buildEntity($dbCategory);
             
             $arrays[] = $array;
         }
@@ -121,5 +121,5 @@ abstract class RepositoryAbstract {
         return $table;
     }
     
-    //abstract protected function buildEntity(array $data, array $data2 = []);
+//    abstract protected function buildEntity(array $data);
 }

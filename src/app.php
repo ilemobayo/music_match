@@ -1,6 +1,7 @@
 <?php
 
 use Controller\DashboardController;
+use Controller\MusicController;
 use Controller\ProfileController;
 use Controller\UserController;
 use Repository\ProfileRepository;
@@ -82,7 +83,10 @@ $app['profile.controller'] = function() use($app){
 $app['dashboard.controller'] = function() use($app){
     return new DashboardController($app);
 };
-     
+
+$app['music.controller'] = function() use($app){
+    return new MusicController($app);
+};
 
 
 // ----------------- Repository ----------------- //

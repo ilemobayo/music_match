@@ -1,0 +1,56 @@
+{% extends "layout.html.twig" %}
+
+{% block title  album.name ~ ' - ' ~ album.artists[0].name  %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="page-header page-header-xs" style="background-image: url('{{ album.images[0].url }}')">
+            <div class="filter">
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div>
+                        <img src="{{ album.images[1].url }}" alt="" class="img-fluid">
+                    </div>
+                    <h3><strong>{{ album.name }}</strong></h3>
+                    <h4>
+                        {% for artist in album.artists %}
+                            <a href="{{ path('showArtist', {'id_artist' : artist.id}) }}" class="link-music">
+                                {% if not loop.last %}
+                                    {{ artist.name }},
+                                {% else %}
+                                    {{ artist.name }}
+                                {% endif %}
+                            </a>
+                        {% endfor %}
+                    </h4>
+                    <small>{{ album.label }}</small>
+                    <p class="mt-2">{{ album.tracks.items|length }} Morceaux </p>
+                    <p>Sortie : {{ album.release_date|date('d-m-Y')  }}</p>
+                </div>
+                <div class="col-sm-8">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Titre</th>
+                                <th>durée</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for track in album.tracks.items %}
+                            <tr>
+                                <TD>{{ track.track_number  }}</TD>
+                                <TD>{{ track.name  }}</TD>
+                                <TD>{{ ( track.duration_ms//1000 )|date('i:s') }}</TD>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

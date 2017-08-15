@@ -6,13 +6,26 @@
     <div class='page_header'>
         <h1>Connexion</h1> 
     </div>
-    {{ form_start(loginForm) }}
-            {{ form_row(loginForm.email) }}
-        <div class="form-group">
-            {{ form_label(loginForm.password, 'Votre Mot de passe') }}
-            {{ form_widget(loginForm.password, {'attr': {
-                'class' : 'form-control'
-            }}) }}
+    
+    <div class="wrapper"> 
+        <div class="container">
+            <div class="starter-template">
+                <h1><span class="glyphicon glyphicon-user" style="color: red;"></span>Connexion</h1>
+            </div>
+	  
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4">
+                    {{ form_start(loginForm) }}
+                    {{ form_row(loginForm.email) }}
+                        <div class="form-group">
+                            {{ form_label(loginForm.password, 'Votre Mot de passe') }}
+                            {{ form_widget(loginForm.password, {'attr': {
+                                'class' : 'form-control'
+                            }}) }}
+                        </div>
+                    {{ form_end(loginForm) }}
+                </div>
+            </div>	
         </div>
-    {{ form_end(loginForm) }}
+    </div> 
 {% endblock %}

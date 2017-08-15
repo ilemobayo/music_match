@@ -26,19 +26,19 @@ class LoginType extends AbstractType {
     {
         $builder->add('email', EmailType::class,
             [
+                'required' => false,
                 'label' => 'Adresse mail',
                 'constraints' => [
-                    new Assert\Email(['message' => 'email pas valide']),
-                    new Assert\NotBlank(['message' => 'doit être rempli'])
+                    new Assert\Email(['message' => 'Email non valide']),
+                    new Assert\NotBlank(['message' => 'Doit être rempli'])
                 ]
             ]
         );
         $builder->add('password', PasswordType::class,
             [
+                'required' => false,
                 'constraints' => [
-                    new Assert\NotBlank(['message' => 'le mot de passe dout etre fournie']),
-                    new Assert\Length(['min' => 6, 'minMessage' => 'le mot de passe doit faire 6 cartere min', 'max' => 12, 'maxMessage' => 'le mot de passe doit faire moins de 12 cartere'])
-                ]
+                    new Assert\NotBlank(['message' => 'Le mot de passe doit être fourni'])]
             ]
         );
         
