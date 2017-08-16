@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="wrapper">
-        <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('{{ asset('img/fabio-mangione.jpg') }}')">
+        <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('http://admin.traxmag.com/uploads/images/size800x1200/2017/01/justice-woman-cd-3_5880bd06b146e.jpg'); background-size: cover; background-position: center -630px">
             <div class="filter">
             </div>
         </div>
@@ -48,20 +48,27 @@
                                             <li>
                                                 <div class="row">
                                                     <div class="col-md-2 offset-md-0">
-                                                        <img src="{{ track.album.images[0].url }}" alt="Circle Image" class=" img-responsive">
+                                                        <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
+                                                            <img src="{{ track.album.images[0].url }}" alt="Circle Image" class=" img-responsive">
+                                                        </a>
                                                     </div>
                                                     <div class="col-md-7 col-xs-4">
-                                                        <h6>{{ track.name }}<br/>
+                                                        <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
                                                             <small>
                                                                 Artiste : 
                                                                 {% for artist in track.artists %}
-                                                                    {% if loop.last %}
-                                                                        {{ artist.name }}
-                                                                    {% else %}
-                                                                        {{ artist.name }},
-                                                                    {% endif %}
+                                                                    <a href="{{ path('showArtist', {'id_artist' : artist.id}) }}" class="link-music">
+                                                                        {% if loop.last %}
+                                                                            {{ artist.name }}
+                                                                        {% else %}
+                                                                            {{ artist.name }},
+                                                                        {% endif %}
+                                                                    </a>
                                                                 {% endfor %}
-                                                            </small>
+                                                            </small><br/>
+                                                            <small>
+                                                                Album : <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.album.name }}</a>
+                                                            </small><br/>
                                                         </h6>
                                                     </div>
                                                     <div class="col-md-1 col-xs-2 offset-1">
@@ -93,20 +100,27 @@
                                             <li>
                                                 <div class="row">
                                                     <div class="col-md-2 offset-md-0">
-                                                        <img src="{{ track.album.images[0].url }}" alt="Circle Image" class=" img-responsive">
+                                                        <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
+                                                            <img src="{{ track.album.images[0].url }}" alt="Circle Image" class=" img-responsive">
+                                                        </a>
                                                     </div>
                                                     <div class="col-md-7 col-xs-4">
-                                                        <h6>{{ track.name }}<br/>
+                                                        <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
                                                             <small>
-                                                                Artiste : 
+                                                                Artiste :
                                                                 {% for artist in track.artists %}
-                                                                    {% if loop.last %}
-                                                                        {{ artist.name }}
-                                                                    {% else %}
-                                                                        {{ artist.name }},
-                                                                    {% endif %}
+                                                                    <a href="{{ path('showArtist', {'id_artist' : artist.id}) }}" class="link-music">
+                                                                        {% if loop.last %}
+                                                                            {{ artist.name }}
+                                                                        {% else %}
+                                                                            {{ artist.name }},
+                                                                        {% endif %}
+                                                                    </a>
                                                                 {% endfor %}
-                                                            </small>
+                                                            </small><br/>
+                                                            <small>
+                                                                Album : <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.album.name }}</a>
+                                                            </small><br/>
                                                         </h6>
                                                     </div>
                                                     <div class="col-md-1 col-xs-2 offset-1">

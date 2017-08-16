@@ -148,5 +148,14 @@
 
         <!--  Paper Kit Initialization snd functons -->
         <script src="{{ asset('js/paper-kit.js?v=2.0.0') }}"></script>
+        <!-- a refaire en propre -->
+        <script>
+            $(function () {
+                $('.play').on('click', function() {
+                    //console.log($(this).next())
+                    $(this).next()[0].play()
+                })
+            });
+        </script>
     </body>
 </html>

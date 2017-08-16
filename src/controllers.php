@@ -1,10 +1,8 @@
 <?php
 
+use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
@@ -12,6 +10,11 @@ $app->get('/', function () use ($app) {
     return $app['twig']->render('index.html.twig', array());
 })
 ->bind('homepage')
+->before(function(Request $request, Application $app){
+    if($app['user.manager']->getUser()){
+        return $app->redirect($app['url_generator']->generate('dashboardDisplay', ['username' => $app['user.manager']->getUser()->getUsername()]));
+    }       
+})
 ;
 
 // ----------------- User ----------------- //
@@ -37,6 +40,11 @@ $app
 $app
     ->match('/{username}/edition_profil', 'profile.controller:editProfileAction')
     ->bind('edit')
+    ->before(function(Request $request, Application $app){
+        if($app['user.manager']->getUser()->getUsername() != $request->get('username')){
+            return $app->redirect($app['url_generator']->generate('homepage'));
+        }        
+    })
 ;
 
 $app
@@ -49,6 +57,21 @@ $app
 $app
     ->get('/{username}/accueil', 'dashboard.controller:userMusicDisplayAction')
     ->bind('dashboardDisplay')
+    ->before(function(Request $request, Application $app){
+        if($app['user.manager']->getUser()->getUsername() != $request->get('username')){
+            return $app->redirect($app['url_generator']->generate('homepage'));
+        }        
+    })
+;
+
+// ----------------- Album --------------------- //
+$app
+    ->get('/album/{id_album}', 'music.controller:showAlbumAction')
+    ->bind('showAlbum')
+;
+$app
+    ->get('/artist/{id_artist}', 'music.controller:showArtistAction')
+    ->bind('showArtist')
 ;
 
 
@@ -61,9 +84,7 @@ $app
 
 
 
-
-
-$app->error(function (\Exception $e, Request $request, $code) use ($app) {
+$app->error(function (Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {
         return;
     }

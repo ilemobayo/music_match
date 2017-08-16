@@ -19,3 +19,22 @@
 #profil {
     text-align: center;
 }
+
+.link-music{
+    color: inherit;
+    transition: 0.2s;
+}
+
+.link-music:hover {
+    color: #05ae0e;
+}
+
+.play {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.play:focus {
+    outline: none;
+}

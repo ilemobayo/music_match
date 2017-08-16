@@ -17,27 +17,27 @@
                 <form method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label>Pseudo</label>
-                        <input type ="text" name="pseudo" value="{{profile.username}}">
+                        <input class="form-control" type ="text" name="pseudo" value="{{profile.username}}">
                     </div>
 
                     <div class="form-group">
                         <label>Mot de passe</label>
-                        <input type ="text" name="mdp" value="">
+                        <input class="form-control" type ="text" name="mdp" value="">
                     </div>
 
                     <div class="form-group">
                         <label>Email</label>
-                        <input type ="text" name="email" value="{{profile.email}}">
+                        <input class="form-control" type ="text" name="email" value="{{profile.email}}">
                     </div>
 
                     <div class="form-group">
                         <label>Changer de photo</label>
-                        <input type="file" name="picture" value="">
+                        <input class="form-control" type="file" name="picture" value="">
                     </div>
 
                     <div class="form-group">
                         <label>Les styles que vous recherchez (séparés par des virgules)</label>
-                        <input type="text" name="tags" value="{{ profile.tags|join(', ') }}">
+                        <input class="form-control" type="text" name="tags" value="{{ profile.tags|join(', ') }}">
                     </div>
 
 
