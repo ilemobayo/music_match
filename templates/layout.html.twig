@@ -48,8 +48,8 @@
                     {% endif %}
                 </div>
                 
-                <div class="collapse navbar-collapse" id="navbarToggler">
-                    <ul class="navbar-nav ml-auto">
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto" >
                         {% if  not user_manager.user %}
                         <li class="nav-item">
                             <a href="{{ path('register') }}" class="btn btn-danger btn-round">Inscription</a>
@@ -58,11 +58,24 @@
                             <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#connexion">Connexion</button>
                         </li>
                         {% else %}
-                        <li class="nav-item">
-{#                            <a href="{{ path('display', {username: profile.username}) }}" class="btn btn-info btn-round">Profile</a>"#}
+                        <form class="form-inline my-2 my-lg-0" action="{{ path('search') }}" method="get">
+                            <input class="form-control mr-sm-2" type="text"  name="q" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="{{ path('display', { username : user_manager.user.username }) }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ user_manager.user.username }}
+                            </a>
+                            <ul class="dropdown-menu p-2">
+                                <a href="{{ path('display', { username : user_manager.user.username }) }}" class="dropdown-item">Profil</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="{{ path('logout') }}" class="dropdown-item">Déconnexion</a>
+                            </ul>
+                        </li>
+                        {#<li class="nav-item">
                             <a href="{{ path('display', { username : user_manager.user.username }) }}" class="btn btn-info btn-round">{{ user_manager.user.username }}</a>
                             <a href="{{ path('logout') }}" class="btn btn-info btn-round">Déconnexion</a>
-                        </li>
+                        </li>#}
                         {% endif %}
                     </ul>
                 </div>
@@ -83,6 +96,8 @@
         
         
         {% block content %}{% endblock %}
+        
+        
         <!--Connexion  -->
         <div class="modal fade" id="connexion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -125,6 +140,7 @@
             </div>
         </div>
     
+                            
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
@@ -154,6 +170,12 @@
                 $('.play').on('click', function() {
                     //console.log($(this).next())
                     $(this).next()[0].play()
+                })
+                
+                //-----------------------------------
+                
+                $.get('ajax/getTags', function(data){
+                    console.log(data);
                 })
             });
         </script>

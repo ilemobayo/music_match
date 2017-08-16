@@ -89,6 +89,9 @@ $app['music.controller'] = function() use($app){
     return new MusicController($app);
 };
 
+$app['search.controller'] = function() use($app){
+    return new Controller\SearchController($app);
+};
 
 // ----------------- Repository ----------------- //
 

@@ -116,8 +116,8 @@
     color: #ddd !important;
 }
 .footer{
-    background-attachment: fixed;
-    position: relative;
+/*    background-attachment: fixed;
+    position: relative;*/
     line-height: 20px;
 }
 .footer nav > ul {

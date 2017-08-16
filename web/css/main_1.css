@@ -50,3 +50,8 @@ span i {
 .container-top {
     margin-top: 100px;
 }
+
+.dropdown-menu {
+    background-color: #FFF;
+    border: 0 none;
+}

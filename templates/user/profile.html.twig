@@ -18,14 +18,14 @@
                 <li class="list-group-item">Pseudo : {{ profile.username }}</li>
                 <li class="list-group-item">Email : {{ profile.email }}</li>
                 <li class="list-group-item">Date d'enregistrement : {{ profile.registerDate|date("d/m/Y")}}</li>
-                <li class="list-group-item">Vos styles musicaux : {{ profile.tags|join(', ') }}</li>
+                <li class="list-group-item">Vos styles musicaux : {{ profile.tags|join(', ')|upper }}</li>
             </ul>
             <div class="col-sm-5 offset-1">
                 <img src="{{ asset('photo/') }}{{ profile.picture }}" alt="Photo de profil" style="height: 250px;">
             </div>
-                {% if user_manager.user.username == global.request.get('username') %}
-                    <a href="{{ path('edit', {username: profile.username}) }}">Modifier votre profil</a>
-                {% endif %}
+            {% if user_manager.user.username == global.request.get('username') %}
+                <a href="{{ path('edit', {username: profile.username}) }}">Modifier votre profil</a>
+            {% endif %}
         </div>
 
     </div><!-- /.container -->

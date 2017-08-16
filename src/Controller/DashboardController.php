@@ -20,6 +20,7 @@ class DashboardController extends ControllerAbstract {
         //var_dump($this->app['spotify.api']);
 
         $user = $this->app['user.repository']->findByUsername($username);
+        dump($this->app['spotify.api']->getGenreSeeds());
         $recommendations = null;
         if($user->getTags()){
             $recommendations = $this->app['spotify.api']->getRecommendations(

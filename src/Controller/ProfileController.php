@@ -67,8 +67,6 @@ class ProfileController extends ControllerAbstract {
             $tags = explode(', ', $request->request->get('tags'));
 
 
-            //dump($tags);
-
             if (empty($errors)) {
 
                 $this->app['user.repository']->save($profile, $data);

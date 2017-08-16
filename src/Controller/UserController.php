@@ -122,4 +122,14 @@ class UserController extends ControllerAbstract{
         
         return $this->redirectRoute('homepage');
     }
+    
+    public function selectTagsAction(){
+        $tags = $this->app['user.manager']->getUser()->getTags();
+        
+        return $this->render('edit.html.twig', 
+            [
+                'tags' => getTags()
+            ]
+        );
+    }
 }

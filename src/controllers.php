@@ -69,19 +69,27 @@ $app
     ->get('/album/{id_album}', 'music.controller:showAlbumAction')
     ->bind('showAlbum')
 ;
+
 $app
     ->get('/artist/{id_artist}', 'music.controller:showArtistAction')
     ->bind('showArtist')
 ;
 
+// ----------------- Recherche --------------------- //
+$app
+    ->get('/search', 'search.controller:searchAction')
+    //->value('query', null) // valeur par défaut pour l'id
+    ->bind('search')
+;
 
 
 
+//--------------------ajax----------------------------//
 
-
-
-
-
+$app
+    ->get('/ajax/getTags', 'ajax.controller:searchAction')
+    ->bind('ajax_getTags')
+;
 
 
 $app->error(function (Exception $e, Request $request, $code) use ($app) {

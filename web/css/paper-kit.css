@@ -2678,8 +2678,8 @@ textarea.form-control {
 }
 
 .footer {
-  background-attachment: fixed;
-  position: relative;
+/*  background-attachment: fixed;
+  position: relative;*/
   line-height: 20px;
 }
 
@@ -3346,7 +3346,7 @@ textarea.form-control {
   .card.card-just-text .dropdown .dropdown-menu:before,
   .card-just-text .dropdown .dropdown-menu:before,
   .dropdown-btn .dropdown-menu:before {
-    border-bottom: 11px solid #F1EAE0;
+    border-bottom: 11px solid #FFF;
     border-left: 11px solid transparent;
     border-right: 11px solid transparent;
     content: "";
@@ -3366,7 +3366,7 @@ textarea.form-control {
   .card.card-just-text .dropdown .dropdown-menu:after,
   .card-just-text .dropdown .dropdown-menu:after,
   .dropdown-btn .dropdown-menu:after {
-    border-bottom: 11px solid #FFFCF5;
+    border-bottom: 11px solid #FFF;
     border-left: 11px solid transparent;
     border-right: 11px solid transparent;
     content: "";
