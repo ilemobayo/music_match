@@ -1,5 +1,6 @@
 <?php
 
+use Controller\AjaxController;
 use Controller\DashboardController;
 use Controller\MusicController;
 use Controller\ProfileController;
@@ -83,11 +84,15 @@ $app['profile.controller'] = function() use($app){
 $app['dashboard.controller'] = function() use($app){
     return new DashboardController($app);
 };
+     
 
 $app['music.controller'] = function() use($app){
     return new MusicController($app);
 };
 
+$app['ajax.controller'] = function() use($app){
+    return new AjaxController($app);
+};
 
 // ----------------- Repository ----------------- //
 
@@ -98,6 +103,11 @@ $app['user.repository'] = function() use($app){
 $app['profile.repository'] = function() use($app){
     return new ProfileRepository($app);
 };
+
+$app['dashboard.repository'] = function() use($app){
+    return new \Repository\DashboardRepository($app);
+};
+
 
 // ----------------- Manager ----------------- //
 
