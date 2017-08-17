@@ -95,7 +95,9 @@
         
         
         
-        {% block content %}{% endblock %}
+        {% block content %}
+        
+        {% endblock %}
         
         
         <!--Connexion  -->
@@ -104,7 +106,7 @@
                 <div class="modal-content card card-register">
                     <div class="modal-body">
                         <h3 class="title">Welcome</h3>
-                        <div class="social-line text-center">
+                        {#<div class="social-line text-center">
                             <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
                                 <i class="fa fa-facebook-square"></i>
                             </a>
@@ -114,7 +116,7 @@
                             <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
                                 <i class="fa fa-twitter"></i>
                             </a>
-                        </div>
+                        </div>#}
                         <form method="post" action="{{ path('login') }}" class="register-form">
                             <label>Email</label>
                             <div class="input-group form-group-no-border">
@@ -140,7 +142,7 @@
             </div>
         </div>
     
-                            
+        {% block script %}                    
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
@@ -162,22 +164,18 @@
         <script src="{{ asset('js/moment.min.js') }}"></script>
         <script src="{{ asset('js/bootstrap-datetimepicker.min.js') }}"></script>
 
-        <!--  Paper Kit Initialization snd functons -->
+        <!--  Paper Kit Initialization and functions -->
         <script src="{{ asset('js/paper-kit.js?v=2.0.0') }}"></script>
         <!-- a refaire en propre -->
+        {% endblock %}
         <script>
             $(function () {
                 $('.play').on('click', function() {
                     //console.log($(this).next())
                     $(this).next()[0].play()
-                })
-                
-                //-----------------------------------
-                
-                $.get('ajax/getTags', function(data){
-                    console.log(data);
-                })
-            });
+                });
+            });    
         </script>
+            
     </body>
 </html>

@@ -86,6 +86,7 @@ $app
 
 //--------------------ajax----------------------------//
 
+// a supprimer ???????
 $app
     ->get('/ajax/getTags', 'ajax.controller:searchAction')
     ->bind('ajax_getTags')

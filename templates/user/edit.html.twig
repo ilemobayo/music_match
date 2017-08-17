@@ -2,6 +2,11 @@
 
 {% block title 'profile' %}
 
+{% block stylesheet %}
+    {{ parent() }}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+{% endblock %}
+    
 {% block content %}
     
     <div>
@@ -36,8 +41,19 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Les styles que vous recherchez (séparés par des virgules)</label>
-                        <input class="form-control" type="text" name="tags" value="{{ profile.tags|join(', ') }}">
+                        <label>Les styles que vous recherchez</label>
+{#                        <input class="form-control" id="tagsForm" type="text" name="tags" value="{{ profile.tags|join(', ') }}">#}
+                        <select name="tags[]" class="form-control" id="tagsForm" multiple="multiple">
+                            {% for tag in tags.genres %}
+                                <option value="{{tag}}" 
+                                {% if tag in profile.tags %}
+                                    selected
+                                {% endif %}
+                                >
+                                    {{tag|replace({'-' : ' '})}}
+                                </option>
+                            {% endfor %}
+                        </select>
                     </div>
 
 
@@ -58,5 +74,16 @@
             </div>
         </div>
     </div>
-                    
+    
+    
+{% endblock %}
+
+{% block script %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script>
+        $(function () {
+            $('#tagsForm').select2();
+        }); 
+    </script>
 {% endblock %}

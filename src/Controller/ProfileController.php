@@ -30,7 +30,10 @@ class ProfileController extends ControllerAbstract {
     
     public function editProfileAction($username, Request $request){
         $profile = $this->app['user.repository']->findByUsername($username);
-
+        $spotifyTags = $this->app['spotify.api']->getGenreSeeds();
+        
+        $user = new User;
+        
         $errors = [];
         if($request->isMethod('POST')){
             $data = [
@@ -39,11 +42,11 @@ class ProfileController extends ControllerAbstract {
             ];
 
             if(empty($request->request->get('pseudo'))){
-                $errors['pseudo'] = 'le peudo ne peut etre vide';
+                $errors['pseudo'] = 'Le pseudo ne peut etre vide';
             }
 
             if(empty($request->request->get('email'))){
-                $errors['email'] = 'le email ne peut etre vide';
+                $errors['email'] = 'L\'email ne peut etre vide';
             }
 
             if(!empty($request->request->get('mdp'))){
@@ -64,14 +67,15 @@ class ProfileController extends ControllerAbstract {
                 }
             }
 
-            $tags = explode(', ', $request->request->get('tags'));
-
-
+            $tags = $request->request->get('tags');
+            
             if (empty($errors)) {
 
                 $this->app['user.repository']->save($profile, $data);
                 $this->app['profile.repository']->saveTag($tags, $profile->getId());
-                return $this->redirectRoute('display', ['username' => $profile->getUsername()]);
+                $this->app['user.manager']->getUser()->setUsername($data['pseudo']);
+                $this->app['user.manager']->getUser()->setEmail($data['email']);
+                return $this->redirectRoute('display', ['username' => $data['pseudo']]);
             } else {
                 $message = '<strong>Le formulaire contient des erreurs :</strong>';
                 $message .= '<br>' . implode('<br>', $errors);
@@ -82,7 +86,9 @@ class ProfileController extends ControllerAbstract {
 
         return $this->render('user/edit.html.twig',
             [
-                'profile' => $profile
+                'profile' => $profile,
+                'tags' => $spotifyTags
             ]);
     }
+    
 }

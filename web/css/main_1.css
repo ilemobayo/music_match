@@ -55,3 +55,8 @@ span i {
     background-color: #FFF;
     border: 0 none;
 }
+
+.select2-selection__choice {
+    background-color: #51cbce !important;
+    color: white !important;
+}
