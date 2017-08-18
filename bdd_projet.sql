@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 10 Août 2017 à 18:16
+-- Généré le :  Ven 18 Août 2017 à 17:57
 -- Version du serveur :  10.1.13-MariaDB
 -- Version de PHP :  5.6.23
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `categories` (
-  `id_categorie` int(3) NOT NULL,
+  `id_category` int(3) NOT NULL,
   `genre` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -35,7 +35,7 @@ CREATE TABLE `categories` (
 -- Contenu de la table `categories`
 --
 
-INSERT INTO `categories` (`id_categorie`, `genre`) VALUES
+INSERT INTO `categories` (`id_category`, `genre`) VALUES
 (1, 'pop'),
 (2, 'post-teen pop'),
 (3, 'dance pop'),
@@ -1560,23 +1560,63 @@ INSERT INTO `categories` (`id_categorie`, `genre`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `library`
+--
+
+CREATE TABLE `library` (
+  `id` int(11) NOT NULL,
+  `id_track` varchar(255) DEFAULT NULL,
+  `id_user` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `library`
+--
+
+INSERT INTO `library` (`id`, `id_track`, `id_user`) VALUES
+(8, '6z5KJH8tgGvPFOqoSScPgS', 28),
+(9, '1hKdDCpiI9mqz1jVHRKG0E', 28),
+(10, '5JvD469hg7VQu2qobOAnuy', 28),
+(11, '7oK9VyNzrYvRFo7nQEYkWN', 28),
+(12, '6urCAbunOQI4bLhmGpX7iS', 28),
+(13, '2lwwrWVKdf3LR9lbbhnr6R', 28),
+(14, '2nLtzopw4rPReszdYBJU6h', 28),
+(15, '0aYQsp1vZZcX0JBEJvKF7N', 28),
+(16, '2kpJe1g0LjwxNPlxvDcBLf', 28),
+(17, '59WN2psjkt1tyaxjspN8fp', 28),
+(18, '7x8dCjCr0x6x2lXKujYD34', 28);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `users`
 --
 
 CREATE TABLE `users` (
   `id_user` int(3) NOT NULL,
   `pseudo` varchar(20) NOT NULL,
-  `mdp` varchar(20) NOT NULL,
+  `mdp` varchar(255) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `role` varchar(50) NOT NULL
+  `role` varchar(50) NOT NULL,
+  `register_date` datetime NOT NULL,
+  `picture` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id_user`, `pseudo`, `mdp`, `email`, `role`) VALUES
-(16, 'larson', '$2y$10$U8C7ES3ob6Pk8', 'mail@mail.fr', 'ROLE_USER');
+INSERT INTO `users` (`id_user`, `pseudo`, `mdp`, `email`, `role`, `register_date`, `picture`) VALUES
+(16, 'larson', '$2y$10$U8C7ES3ob6Pk8', 'mail@mail.fr', 'ROLE_USER', '2017-08-16 06:06:53', 'http://i.f1g.fr/media/figaro/805x453/2016/05/04/XVMef720894-11e4-11e6-ae46-577acce3d9ab-805x500.jpg'),
+(17, 'larson', '$2y$10$B7kGWT/k8PWIS', 'luront@yopmail.com', 'ROLE_USER', '0000-00-00 00:00:00', ''),
+(19, 'Tristan', '$2y$10$iQhtb/XYw7DuVSo799KRy.S.BcR6VJl8VReBgrdP8g1SXGsxSQ6Jq', 'luront@gmail.com', 'ROLE_USER', '0000-00-00 00:00:00', 'https://secure.parksandresorts.wdpromedia.com/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-assets/parks-and-tickets/tours-and-experiences/star-wars-guided-tour/star-wars-guided-tour-00.jpg'),
+(22, 'pilouououo', '$2y$10$hTsOqjiUaQ/mKEeqLMprtunNtAsuIjAs1iNI3c/OaJ62oCfpghawK', 'mail@mail.fr', 'ROLE_USER', '0000-00-00 00:00:00', NULL),
+(23, 'davydfd', '$2y$10$b8ug3MWIcrAD2vUM1dsWlu8KvnYIt6x0IQ.0FZNEia1dFW9f1HA5G', 'luront@yopmail.com', 'ROLE_USER', '0000-00-00 00:00:00', NULL),
+(24, 'Admin', '$2y$10$DAdjYZonB43fbGB/VGL6SOVFJsr48Jq6sfM3ot0LwPXmK8wZvgu5.', 'admin@admin.com', 'ROLE_USER', '2017-08-14 12:15:53', NULL),
+(25, 'lambda', '$2y$10$w01VtEzPgT2sUyHv2/NemOKqWWszr0B2bdIjjjUKAIjruelSZfh6.', 'user@mail.fr', 'ROLE_USER', '2017-08-14 15:38:40', '1photo_profil.jpg'),
+(26, 'Triss', '$2y$10$oyMp6EabRNtmrhkRcck.Q.EE0fbPK.vGm9cF5H70vik5J/caWt.ku', 'triss@gmail.com', 'ROLE_USER', '2017-08-14 17:55:28', 'Batman-1-640x443-375x216.jpg'),
+(27, 'visiteur', '$2y$10$apJKPWmeIG0ddRruf0cA7uq0YBqVxK1.aUAY9W480GBbylsPk8yJe', 'visiteur@mail.fr', 'ROLE_USER', '2017-08-18 16:53:44', NULL),
+(28, 'azerty', '$2y$10$qa253ipO34D/Ryz4Zmclj./6OHvQ7ViCJRP/bwoob8sGwUhce.lrC', 'azerty@mail.fr', 'ROLE_USER', '2017-08-18 17:00:11', NULL);
 
 -- --------------------------------------------------------
 
@@ -1591,6 +1631,23 @@ CREATE TABLE `user_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Contenu de la table `user_categories`
+--
+
+INSERT INTO `user_categories` (`id_user_category`, `id_user`, `id_category`) VALUES
+(1, 16, 1),
+(2, 16, 23),
+(3, 19, 597),
+(4, 24, 1),
+(10, 26, 871),
+(11, 26, 1173),
+(150, 25, 871),
+(151, 25, 1173),
+(152, 25, 1),
+(153, 25, 597),
+(155, 28, 597);
+
+--
 -- Index pour les tables exportées
 --
 
@@ -1598,7 +1655,13 @@ CREATE TABLE `user_categories` (
 -- Index pour la table `categories`
 --
 ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id_categorie`);
+  ADD PRIMARY KEY (`id_category`);
+
+--
+-- Index pour la table `library`
+--
+ALTER TABLE `library`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `users`
@@ -1622,17 +1685,22 @@ ALTER TABLE `user_categories`
 -- AUTO_INCREMENT pour la table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id_categorie` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1521;
+  MODIFY `id_category` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1521;
+--
+-- AUTO_INCREMENT pour la table `library`
+--
+ALTER TABLE `library`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT pour la table `user_categories`
 --
 ALTER TABLE `user_categories`
-  MODIFY `id_user_category` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user_category` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
 --
 -- Contraintes pour les tables exportées
 --
@@ -1642,7 +1710,7 @@ ALTER TABLE `user_categories`
 --
 ALTER TABLE `user_categories`
   ADD CONSTRAINT `user_categories_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `user_categories_ibfk_2` FOREIGN KEY (`id_category`) REFERENCES `categories` (`id_categorie`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `user_categories_ibfk_2` FOREIGN KEY (`id_category`) REFERENCES `categories` (`id_category`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
