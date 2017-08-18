@@ -931,10 +931,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .form-control {
-  background-color: #FFFFFF;
+  /*background-color: #FFFFFF;*/
   border: 1px solid #DDDDDD;
   border-radius: 4px;
-  color: #66615b;
+  /*color: #66615b;*/
   font-size: 14px;
   padding: 7px 12px;
   height: 40px;

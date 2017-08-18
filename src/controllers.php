@@ -31,6 +31,11 @@ $app
 ;
 
 $app
+    ->match('/ajouter_tags', 'profile.controller:addTagsAction')
+    ->bind('addTags')
+;
+
+$app
     ->get('/{username}/profil', 'profile.controller:displayProfileAction')
     /*->assert('username', '/^[a-zA-Z0-9_-]{6,20}$/') /* username caractères acceptés : 
     a-z, A-Z, 0-9, _ -, de 6 à 20 caractères */

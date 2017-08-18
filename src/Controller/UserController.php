@@ -56,7 +56,7 @@ class UserController extends ControllerAbstract{
                 $this->app['user.manager']->login($user);
 
                 // redirect somewhere
-                return $this->redirectRoute('display', ['username' => $user->getUsername()]);
+                return $this->redirectRoute('addTags');
             }
 
             $this->addFlashMessage('le pseudo ou l\' email sont déja pris', 'error');

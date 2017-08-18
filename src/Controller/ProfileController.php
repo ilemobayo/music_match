@@ -29,6 +29,7 @@ class ProfileController extends ControllerAbstract {
     }
     
     public function editProfileAction($username, Request $request){
+        
         $profile = $this->app['user.repository']->findByUsername($username);
         $spotifyTags = $this->app['spotify.api']->getGenreSeeds();
         
@@ -91,4 +92,28 @@ class ProfileController extends ControllerAbstract {
             ]);
     }
     
+    public function addTagsAction(Request $request){
+        
+        $spotifyTags = $this->app['spotify.api']->getGenreSeeds();
+        $tags = $request->request->get('tags');
+        $user = $this->app['user.manager']->getUser();
+        $errors = [];
+        
+        if($request->isMethod('POST')){
+            if(empty($tags)){
+                $errors['tags'] = 'Veuillez entrer au moins une categorie';
+            }else{
+                $this->app['profile.repository']->saveTag($tags, $user->getId());
+                return $this->redirectRoute('dashboardDisplay', ['username' => $user->getUsername()]);
+            }
+        }
+        
+        return $this->render('user/add_tags.html.twig', 
+            [                
+                'tags' => $spotifyTags,
+                'errors' => $errors
+            ]
+        );
+    }
+
 }
