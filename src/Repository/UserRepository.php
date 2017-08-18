@@ -39,9 +39,10 @@ class UserRepository extends RepositoryAbstract {
         );
 
         $tags = $this->searchTagsUser($dbUser['id_user']);
+        $idTracks = $this->findTracksUser($dbUser['id_user']);
 
         if(!empty($dbUser)){
-            return $this->buildEntity($dbUser, $tags);
+            return $this->buildEntity($dbUser, $tags, $idTracks);
         }
     }
     
@@ -54,9 +55,10 @@ class UserRepository extends RepositoryAbstract {
         );
 
         $tags = $this->searchTagsUser($dbUser['id_user']);
-        
+        $idTracks = $this->findTracksUser($dbUser['id_user']);
+
         if(!empty($dbUser)){
-            return $this->buildEntity($dbUser, $tags);
+            return $this->buildEntity($dbUser, $tags, $idTracks);
         }
         
     }
@@ -100,7 +102,26 @@ class UserRepository extends RepositoryAbstract {
         return $tags;
     }
 
-    protected function buildEntity(array $data, array $tags) {
+    public function findTracksUser($id_user){
+
+        $sql = 'SELECT id_track FROM library WHERE id_user = :id_user';
+
+        $dbtracks =  $this->db->fetchAll($sql, [
+                ':id_user' => $id_user
+            ]
+        );
+
+        $tracks = [];
+
+        foreach ($dbtracks as $dbtrack){
+            $tracks[] = $dbtrack['id_track'];
+        }
+
+        return $tracks;
+
+    }
+
+    protected function buildEntity(array $data, array $tags, array $idTracks) {
         $user = new User();
         $user->setId($data['id_user']);
         $user->setUsername($data['pseudo']);
@@ -112,6 +133,10 @@ class UserRepository extends RepositoryAbstract {
         if(!empty($tags)){
             $user->setTags($tags);
         }
+        if(!empty($idTracks)){
+            $user->setIdTracks($idTracks);
+        }
+
         return $user;
     }
 

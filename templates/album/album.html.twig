@@ -37,6 +37,7 @@
                                 <th>#</th>
                                 <th>Titre</th>
                                 <th>durée</th>
+                                <th class="text-center">Ajouter</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -45,6 +46,7 @@
                                 <TD>{{ track.track_number  }}</TD>
                                 <TD>{{ track.name  }}</TD>
                                 <TD>{{ ( track.duration_ms//1000 )|date('i:s') }}</TD>
+                                <td class="text-center"><button class="addToLibrary" data-id="{{ track.id }}"><i class="fa fa-plus" aria-hidden="true"></i></button></td>
                             </tr>
                         {% endfor %}
                         </tbody>

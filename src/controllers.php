@@ -64,11 +64,26 @@ $app
     })
 ;
 
+$app
+    ->get('/{username}/bibliotheque', 'dashboard.controller:userLibraryMusicDisplayAction')
+    ->bind('dashboardLibrary')
+    ->before(function(Request $request, Application $app){
+        if($app['user.manager']->getUser()->getUsername() != $request->get('username')){
+            return $app->redirect($app['url_generator']->generate('homepage'));
+        }
+    })
+;
+
 // ------------------ Ajax --------------------- //
 
 $app
     ->post('/ajax/addTrack', 'ajax.controller:addTracktAction')
     ->bind('ajax_addTrack')
+;
+
+$app
+    ->post('/ajax/removeTrack', 'ajax.controller:removeTracktAction')
+    ->bind('ajax_removeTrack')
 ;
 
 // ----------------- Album --------------------- //
