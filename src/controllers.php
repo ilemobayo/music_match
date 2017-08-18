@@ -68,6 +68,16 @@ $app
         }        
     })
 ;
+    
+$app
+    ->get('/{username}/bibliotheque', 'dashboard.controller:userLibraryMusicDisplayAction')
+    ->bind('dashboardLibrary')
+    ->before(function(Request $request, Application $app){
+        if($app['user.manager']->getUser()->getUsername() != $request->get('username')){
+            return $app->redirect($app['url_generator']->generate('homepage'));
+        }
+    })
+;
 
 // ----------------- Album --------------------- //
 $app
@@ -91,12 +101,14 @@ $app
 
 //--------------------ajax----------------------------//
 
-// a supprimer ???????
 $app
-    ->get('/ajax/getTags', 'ajax.controller:searchAction')
-    ->bind('ajax_getTags')
+    ->post('/ajax/addTrack', 'ajax.controller:addTrackAction')
+    ->bind('ajax_addTrack')
 ;
-
+$app
+    ->post('/ajax/removeTrack', 'ajax.controller:removeTrackAction')
+    ->bind('ajax_removeTrack')
+;
 
 $app->error(function (Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {

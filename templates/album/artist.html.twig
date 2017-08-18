@@ -86,6 +86,11 @@
                                                         <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
                                                     </div>
                                                 </div>
+                                                <div class="col-md-1 col-xs-2 ">
+                                                    <div class="mt-3" >
+                                                        <button class="addToLibrary" data-id="{{ track.id }}"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </li>
                                         <hr />
@@ -149,6 +154,4 @@
     </div>
 </div>
 
-    </div>
-</div>
 {% endblock %}

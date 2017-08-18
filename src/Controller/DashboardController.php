@@ -54,4 +54,17 @@ class DashboardController extends ControllerAbstract {
             ]
         );
     }
+    
+     public function userLibraryMusicDisplayAction($username){
+        $user = $this->app['user.repository']->findByUsername($username);
+        $idTracks = $user->getIdTracks();
+        //dump($user);
+        $tracksUser = $this->app['spotify.api']->getTracks($idTracks);
+        return $this->render('dashboard/library.html.twig',
+            [
+                'user' => $user,
+                'tracksUser' => $tracksUser
+            ]
+        );
+    }
 }

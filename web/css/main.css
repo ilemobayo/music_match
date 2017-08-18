@@ -29,12 +29,34 @@
     color: #05ae0e;
 }
 
-.play {
+.play, .addToLibrary, .removeToLibrary {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.play:focus {
+.play:focus, .addToLibrary:focus {
     outline: none;
+}
+
+.panel-ajax {
+    position: fixed;
+    color: white;
+    right: -260px;
+    bottom: 100px;
+    width: 250px;
+    background-color: #0D9814;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    transition: transform 0.5s;
+
+}
+
+.move-panel-ajax {
+    transform: translateX(-260px);
+}
+
+.panel-ajax.error {
+    background-color: #FB404B;
 }

@@ -33,6 +33,9 @@ class User {
     // Tableau de tags
     private $tags = [];
     
+    // Tableau de tracks de l'utilisateur
+    private $idTracks = [];
+    
 
     public function getId() {
         return $this->id;
@@ -106,4 +109,22 @@ class User {
         return $this;
     }
 
+    
+    /**
+     * @return array
+     */
+    public function getIdTracks()
+    {
+        return $this->idTracks;
+    }
+    /**
+     * @param array $idTracks
+     * @return User
+     */
+    public function setIdTracks($idTracks)
+    {
+        $this->idTracks = $idTracks;
+        return $this;
+    }
+    
 }

@@ -1,0 +1,89 @@
+{% extends "layout.html.twig" %}
+
+{% block titile 'Bibliotheque' %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('http://admin.traxmag.com/uploads/images/size800x1200/2017/01/justice-woman-cd-3_5880bd06b146e.jpg'); background-size: cover; background-position: center -630px">
+            <div class="filter">
+            </div>
+        </div>
+        <div class="section profile-content">
+            <div class="container">
+                <div class="owner">
+                    <div class="name">
+                        <img src="{{ asset('photo/') }}{{ user.picture }}" class='rounded-circle profil' width='150' height='150'>
+                        <h4 class="title">{{ user.username}}<br /></h4>
+                        {# <h6 class="description">Music Producer</h6> #}
+                    </div>
+                    <div class="container flex">
+                        <div class="flexItem">
+                            <h2>Bibliotheque</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content following mt-3">
+                    <div class="tab-pane active" id="follows" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <ul class="list-unstyled follows">
+                                    {% if tracksUser %}
+                                        {% for track in tracksUser.tracks %}
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-2 offset-md-0">
+                                                        <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
+                                                            <img src="{{ track.album.images[0].url }}" alt="Circle Image" class=" img-responsive">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-7 col-xs-4">
+                                                        <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
+                                                            <small>
+                                                                Artiste :
+                                                                {% for artist in track.artists %}
+                                                                    <a href="{{ path('showArtist', {'id_artist' : artist.id}) }}" class="link-music">
+                                                                        {% if loop.last %}
+                                                                            {{ artist.name }}
+                                                                        {% else %}
+                                                                            {{ artist.name }},
+                                                                        {% endif %}
+                                                                    </a>
+                                                                {% endfor %}
+                                                            </small><br/>
+                                                            <small>
+                                                                Album : <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.album.name }}</a>
+                                                            </small><br/>
+                                                        </h6>
+                                                    </div>
+                                                    <div class="col-md-1 col-xs-2 offset-sm-1">
+                                                        <div class="py-3" >
+                                                            <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1 col-xs-2 ">
+                                                        <div class="mt-3" >
+                                                            <button class="removeToLibrary" data-id="{{ track.id }}"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <hr />
+                                        {% endfor %}
+                                    {% else %}
+                                        <li>
+                                            <p><strong>No tracks</strong></p>
+                                            <h3 class="text-muted">Not following anyone yet :(</h3>
+                                            <button class="btn btn-warning btn-round">Find artists</button>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
