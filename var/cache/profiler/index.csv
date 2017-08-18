@@ -886,3 +886,5 @@ e2e66d,::1,GET,http://localhost/music_match/music_match/web/index_dev.php/ajoute
 b9f91d,::1,GET,http://localhost/music_match/music_match/web/index_dev.php/azerty/profil,1503068436,,200
 387c1a,::1,GET,http://localhost/music_match/music_match/web/index_dev.php/azerty/edition_profil,1503068439,,200
 701b99,::1,GET,http://localhost/music_match/music_match/web/index_dev.php/azerty/profil,1503068443,,200
+fea6fc,::1,GET,http://localhost/music_match/music_match/web/index_dev.php/azerty/edition_profil,1503068497,,200
+5e512c,::1,GET,http://localhost/music_match/music_match/web/index_dev.php/azerty/edition_profil,1503068540,,200
