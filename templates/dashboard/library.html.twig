@@ -1,6 +1,6 @@
 {% extends "layout.html.twig" %}
 
-{% block titile 'Bibliotheque' %}
+{% block title 'Bibliotheque' %}
 
 {% block content %}
     <div class="wrapper">
@@ -12,7 +12,11 @@
             <div class="container">
                 <div class="owner">
                     <div class="name">
-                        <img src="{{ asset('photo/') }}{{ user.picture }}" class='rounded-circle profil' width='150' height='150'>
+                        <img src="{% if user.picture %}
+                            {{ asset('photo/') }}{{ user.picture }}
+                            {% else %}
+                            {{ get_gravatar(user.email, 80, 'identicon') }}
+                            {% endif %}" class='rounded-circle profil' width='150' height='150'>
                         <h4 class="title">{{ user.username}}<br /></h4>
                         {# <h6 class="description">Music Producer</h6> #}
                     </div>

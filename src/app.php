@@ -37,6 +37,22 @@ $app->register(new HttpFragmentServiceProvider());
 $app['twig'] = $app->extend('twig', function ($twig, $app) {
     // add custom globals, filters, tags, ...
     $twig->addGlobal('user_manager', $app['user.manager']);
+
+    // function gravatar
+    $function = new Twig_Function('get_gravatar', function ($email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts = array() ){
+        $url = 'https://www.gravatar.com/avatar/';
+        $url .= md5( strtolower( trim( $email ) ) );
+        $url .= "?s=$s&d=$d&r=$r";
+        if ( $img ) {
+            $url = '<img src="' . $url . '"';
+            foreach ( $atts as $key => $val )
+                $url .= ' ' . $key . '="' . $val . '"';
+            $url .= ' />';
+        }
+        return $url;
+    });
+    $twig->addFunction($function);
+
     return $twig;
 });
 
@@ -83,8 +99,7 @@ $app['profile.controller'] = function() use($app){
      
 $app['dashboard.controller'] = function() use($app){
     return new DashboardController($app);
-};
-     
+}; 
 
 $app['music.controller'] = function() use($app){
     return new MusicController($app);
@@ -92,6 +107,10 @@ $app['music.controller'] = function() use($app){
 
 $app['ajax.controller'] = function() use($app){
     return new AjaxController($app);
+};
+
+$app['search.controller'] = function() use($app){
+    return new Controller\SearchController($app);
 };
 
 // ----------------- Repository ----------------- //
@@ -107,7 +126,6 @@ $app['profile.repository'] = function() use($app){
 $app['dashboard.repository'] = function() use($app){
     return new \Repository\DashboardRepository($app);
 };
-
 
 // ----------------- Manager ----------------- //
 

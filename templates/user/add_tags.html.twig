@@ -1,0 +1,50 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'Ajouter des tags' %}
+
+{% block stylesheet %}
+    {{ parent() }}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+{% endblock %}
+    
+{% block content %}
+    <div class="wrapper">
+        <div class="page-header page-header-xs" style="background-image: url('{{asset('img/musician-664432.jpg')}}')">
+            <div class="filter">
+            </div>
+        </div>
+    </div> 
+
+    <div class="container">
+        <h2>Veuillez ajouter les styles musicaux que vous recherchez</h2>
+        <form method="post">
+            <div class="row my-4">
+                <div class="col-sm-10 offset-sm-1">
+                    <select name="tags[]" class="form-control" id="tagsForm" multiple="multiple">
+                        {% for tag in tags.genres %}
+                            <option value="{{tag}}">{{tag|replace({'-' : ' '})}}</option>
+                        {% endfor %}
+                    </select>
+                    {% if errors %}
+                        <div class="alert alert-danger mt-2 text-center">{{ errors.tags }}</div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 offset-sm-3">
+                    <input type ="submit" class="btn btn-primary form-control" value="Valider vos styles musicaux">
+                </div>
+            </div>
+        </form>
+    </div>                   
+{% endblock %}
+
+{% block script %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script>
+        $(function () {
+            $('#tagsForm').select2();
+        }); 
+    </script>
+{% endblock %}

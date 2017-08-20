@@ -5,19 +5,13 @@
  * Date: 16/08/2017
  * Time: 15:54
  */
-
 namespace Controller;
-
-
 use Symfony\Component\HttpFoundation\Request;
-
 class AjaxController extends ControllerAbstract
 {
-    public function addTracktAction(Request $request){
+    public function addTrackAction(Request $request){
         $id = $request->request->get('id');
-
         $ifRegisterTrack = $this->app['dashboard.repository']->saveTrack($id, $this->app['user.manager']->getUser()->getId());
-
         if($ifRegisterTrack) {
             $data = [
                 'status' => 'succes',
@@ -31,17 +25,13 @@ class AjaxController extends ControllerAbstract
         }
         return $this->app->json($data, 200);
     }
-
-    public function removeTracktAction(Request $request){
+    public function removeTrackAction(Request $request){
         $id = $request->request->get('id');
-
         $this->app['dashboard.repository']->deleteTrack($id, $this->app['user.manager']->getUser()->getId());
-
             $data = [
                 'status' => 'succes',
                 'message' => 'le titre à été supprimer de votre bibliotheque'
             ];
-
         return $this->app->json($data, 200);
     }
 }

@@ -31,6 +31,11 @@ $app
 ;
 
 $app
+    ->match('/ajouter_tags', 'profile.controller:addTagsAction')
+    ->bind('addTags')
+;
+
+$app
     ->get('/{username}/profil', 'profile.controller:displayProfileAction')
     /*->assert('username', '/^[a-zA-Z0-9_-]{6,20}$/') /* username caractères acceptés : 
     a-z, A-Z, 0-9, _ -, de 6 à 20 caractères */
@@ -63,7 +68,7 @@ $app
         }        
     })
 ;
-
+    
 $app
     ->get('/{username}/bibliotheque', 'dashboard.controller:userLibraryMusicDisplayAction')
     ->bind('dashboardLibrary')
@@ -74,37 +79,36 @@ $app
     })
 ;
 
-// ------------------ Ajax --------------------- //
-
-$app
-    ->post('/ajax/addTrack', 'ajax.controller:addTracktAction')
-    ->bind('ajax_addTrack')
-;
-
-$app
-    ->post('/ajax/removeTrack', 'ajax.controller:removeTracktAction')
-    ->bind('ajax_removeTrack')
-;
-
 // ----------------- Album --------------------- //
 $app
     ->get('/album/{id_album}', 'music.controller:showAlbumAction')
     ->bind('showAlbum')
 ;
+
 $app
     ->get('/artist/{id_artist}', 'music.controller:showArtistAction')
     ->bind('showArtist')
 ;
 
+// ----------------- Recherche --------------------- //
+$app
+    ->get('/search', 'search.controller:searchAction')
+    //->value('query', null) // valeur par défaut pour l'id
+    ->bind('search')
+;
 
 
 
+//--------------------ajax----------------------------//
 
-
-
-
-
-
+$app
+    ->post('/ajax/addTrack', 'ajax.controller:addTrackAction')
+    ->bind('ajax_addTrack')
+;
+$app
+    ->post('/ajax/removeTrack', 'ajax.controller:removeTrackAction')
+    ->bind('ajax_removeTrack')
+;
 
 $app->error(function (Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {

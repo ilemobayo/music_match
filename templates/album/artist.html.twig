@@ -131,7 +131,11 @@
                                 {% for relatedArtist in relatedArtists.artists %}
                                     <div class="col-sm-3">
                                         <a href="{{ path('showArtist', {'id_artist' : relatedArtist.id}) }}" class="link-music">
-                                            <img src="{{ relatedArtist.images[0].url }}" alt=""  height="200" width="100%">
+                                            {% if relatedArtist.images %}
+                                                <img src="{{ relatedArtist.images[0].url }}" alt=""  height="200" width="100%">
+                                            {% else %}
+                                                <img src="http://www.juicenothing.com/images/scapart/kanye-west-yeezus-v2.jpg" alt=""  height="200" width="100%">
+                                            {% endif %}
                                             <p class="mt-1"><strong>{{ relatedArtist.name }}</strong></pclass>
                                             <p><small>follower : <span class="fa fa-star-o"></span> {{ relatedArtist.followers.total }}</small></p>
                                         </a>
@@ -150,6 +154,4 @@
     </div>
 </div>
 
-    </div>
-</div>
 {% endblock %}

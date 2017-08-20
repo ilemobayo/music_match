@@ -48,8 +48,8 @@
                     {% endif %}
                 </div>
                 
-                <div class="collapse navbar-collapse" id="navbarToggler">
-                    <ul class="navbar-nav ml-auto">
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto" >
                         {% if  not user_manager.user %}
                         <li class="nav-item">
                             <a href="{{ path('register') }}" class="btn btn-danger btn-round">Inscription</a>
@@ -58,11 +58,24 @@
                             <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#connexion">Connexion</button>
                         </li>
                         {% else %}
-                        <li class="nav-item">
-{#                            <a href="{{ path('display', {username: profile.username}) }}" class="btn btn-info btn-round">Profile</a>"#}
+                        <form class="form-inline my-2 my-lg-0" action="{{ path('search') }}" method="get">
+                            <input class="form-control mr-sm-2" type="text"  name="q" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="{{ path('display', { username : user_manager.user.username }) }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ user_manager.user.username }}
+                            </a>
+                            <ul class="dropdown-menu p-2">
+                                <a href="{{ path('display', { username : user_manager.user.username }) }}" class="dropdown-item">Profil</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="{{ path('logout') }}" class="dropdown-item">Déconnexion</a>
+                            </ul>
+                        </li>
+                        {#<li class="nav-item">
                             <a href="{{ path('display', { username : user_manager.user.username }) }}" class="btn btn-info btn-round">{{ user_manager.user.username }}</a>
                             <a href="{{ path('logout') }}" class="btn btn-info btn-round">Déconnexion</a>
-                        </li>
+                        </li>#}
                         {% endif %}
                     </ul>
                 </div>
@@ -82,14 +95,18 @@
         
         
         
-        {% block content %}{% endblock %}
+        {% block content %}
+        
+        {% endblock %}
+        
+        
         <!--Connexion  -->
         <div class="modal fade" id="connexion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content card card-register">
                     <div class="modal-body">
                         <h3 class="title">Welcome</h3>
-                        <div class="social-line text-center">
+                        {#<div class="social-line text-center">
                             <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
                                 <i class="fa fa-facebook-square"></i>
                             </a>
@@ -99,7 +116,7 @@
                             <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
                                 <i class="fa fa-twitter"></i>
                             </a>
-                        </div>
+                        </div>#}
                         <form method="post" action="{{ path('login') }}" class="register-form">
                             <label>Email</label>
                             <div class="input-group form-group-no-border">
@@ -124,10 +141,11 @@
                 </div>
             </div>
         </div>
-
+    
         <!-- succes message ajex -->
         <div class="panel-ajax"></div>
-    
+                            
+        {% block script %}                    
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
@@ -149,93 +167,69 @@
         <script src="{{ asset('js/moment.min.js') }}"></script>
         <script src="{{ asset('js/bootstrap-datetimepicker.min.js') }}"></script>
 
-        <!--  Paper Kit Initialization snd functons -->
+        <!--  Paper Kit Initialization and functions -->
         <script src="{{ asset('js/paper-kit.js?v=2.0.0') }}"></script>
         <!-- a refaire en propre -->
+        {% endblock %}
         <script>
             $(function () {
-
                 // player stop and play
                 $('.play').on('click', function() {
                     $this = $(this);
                     i = $this.children();
-
                     $('audio').each(function () {
                         //console.log($(this).get(0));
                         $(this).get(0).pause();
                         $(this).get(0).currentTime = 0;
                     });
-
-
                     if(i.hasClass('fa-play-circle')){
                         i.removeClass('fa-play-circle').addClass('fa-pause-circle');
                         $this.next().get(0).play()
-
                     }else{
                         i.removeClass('fa-pause-circle').addClass('fa-play-circle');
                         $this.next().get(0).pause()
                     }
-
                     $('audio').on('pause', function () {
                         $(this).prev().children().removeClass('fa-pause-circle').addClass('fa-play-circle');
                     })
-
                     $('audio').on('ended', function () {
                         $(this).prev().children().removeClass('fa-pause-circle').addClass('fa-play-circle');
                     })
-
                 })
-
-
-
-
                 // ajout d'un titre dans la bibliotheque
                 $('.addToLibrary').on('click', function () {
                     var $this = $(this);
                     var id_track = $this.data('id');
-
-
                     $.post( "{{ path('ajax_addTrack') }}", { id: id_track } ,function( data ) {
-
                         $('.panel-ajax').html( data.message );
                         $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
                             $(this).removeClass('move-panel-ajax');
                             next();
-
                         }).delay(500).queue(function(next){
                             $(this).removeClass(data.status);
                             next();
                         });
-
                     });
                 })
-
                 // retirer un titre de la biliotheque
                 $('.removeToLibrary').on('click', function () {
                     var $this = $(this);
                     var id_track = $this.data('id');
-
                     $.post( "{{ path('ajax_removeTrack') }}", { id: id_track } ,function( data ) {
-
                         $('.panel-ajax').html( data.message );
-
                         $this.closest('li').slideUp('slow');
                         $this.closest('li').next().hide();
-
                         $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
                             $(this).removeClass('move-panel-ajax');
                             next();
-
                         }).delay(500).queue(function(next){
                             $(this).removeClass(data.status);
                             next();
-
                         });
-
                     });
                 })
-
-            });
+            });    
         </script>
+            
     </body>
 </html>

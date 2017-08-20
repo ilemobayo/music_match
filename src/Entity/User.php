@@ -32,7 +32,7 @@ class User {
     
     // Tableau de tags
     private $tags = [];
-
+    
     // Tableau de tracks de l'utilisateur
     private $idTracks = [];
     
@@ -109,6 +109,7 @@ class User {
         return $this;
     }
 
+    
     /**
      * @return array
      */
@@ -116,7 +117,6 @@ class User {
     {
         return $this->idTracks;
     }
-
     /**
      * @param array $idTracks
      * @return User
@@ -126,8 +126,5 @@ class User {
         $this->idTracks = $idTracks;
         return $this;
     }
-
-
-
-
+    
 }

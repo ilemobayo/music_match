@@ -12,6 +12,12 @@ namespace Repository;
 class ProfileRepository extends RepositoryAbstract
 {
     public function saveTag(array $tags, $id){
+        $this->db->delete('user_categories', 
+            [
+                'id_user' => $id
+            ]
+        );
+        
         foreach ($tags as $tag){
             $tagdb = $this->db->fetchAssoc('SELECT * FROM categories WHERE genre = :tag',
                 [
@@ -19,14 +25,14 @@ class ProfileRepository extends RepositoryAbstract
                 ]
             );
 
-            $tagIsRegister = $this->db->fetchAssoc('SELECT * FROM user_categories WHERE id_category = :id_category AND id_user = :id_user',
-                [
-                    ':id_category' => $tagdb['id_category'],
-                    'id_user' => $id
-                ]
-            );
+//            $tagIsRegister = $this->db->fetchAssoc('SELECT * FROM user_categories WHERE id_category = :id_category AND id_user = :id_user',
+//                [
+//                    ':id_category' => $tagdb['id_category'],
+//                    'id_user' => $id
+//                ]
+//            );
 
-            if($tagdb && !$tagIsRegister){
+            if($tagdb /*&& !$tagIsRegister*/){
                 $this->db->insert('user_categories',
                     [
                         'id_category' => $tagdb['id_category'],

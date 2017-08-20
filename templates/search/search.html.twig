@@ -1,0 +1,111 @@
+{% extends "layout.html.twig" %}
+
+{% block title query ? query : 'recherche' %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="page-header page-header-xs" style="background-image: url('{{asset('img/musician-664432.jpg')}}')">
+            <div class="filter">
+            </div>
+        </div>
+        
+        <div class="container">
+            <form action="{{ path('search') }}" method="get">
+                <div class="form-group my-3">
+                    <div class="row">
+                        <div class="col-sm-9 offset-sm-1">
+                            <input type="text" name="q" class="form-control" value="{% if query %}{{ query }}{% endif %}">
+                        </div>
+                        <div class="col-sm-1">
+                            <button type="submit" class="btn btn-light">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <h2 class="pb-3">Albums :</h2>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                {% if resultAlbums %}
+                    <div class="row">
+                        {% for album in resultAlbums.albums.items %}
+                            <div class="col-sm-3">
+                                <a href="{{ path('showAlbum', {'id_album' : album.id}) }}" class="link-music">
+                                    <img src="{{ album.images[1].url }}" alt="" class="img-fluid">
+                                    <p class="text-center"><strong>{{ album.name }}</strong></p>
+                                    {% for artist in album.artists %}
+                                        <a href="{{ path('showArtist', {'id_artist' : artist.id}) }}" class="link-music">
+                                            {% if loop.last %}
+                                                <p class="text-center">{{ artist.name }}</p>
+                                            {% else %}
+                                                <p class="text-center">{{ artist.name }},</p>
+                                            {% endif %}
+                                        </a>
+                                    {% endfor %}
+                                    
+                                </a>
+                            </div>
+                            {% if loop.index is divisible by(4) %}
+                                </div><div class="row">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                </div>
+            </div>
+            <h2 class="pb-3">Titres :</h2>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    {% if resultTracks %}
+                        <div class="row">
+                        {% for track in resultTracks.tracks.items %}
+                            <div class="col-sm-3">
+                                <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">
+                                    <img src="{{ track.album.images[0].url }}" alt="" class="img-fluid">
+                                    <p class="text-center"><strong>{{ track.name }}</strong></p>
+                                    {% for artist in track.artists %}
+                                        <a href="{{ path('showArtist', {'id_artist' : artist.id}) }}" class="link-music">
+                                            {% if loop.last %}
+                                                <p class="text-center">{{ artist.name }}</p>
+                                            {% else %}
+                                                <p class="text-center">{{ artist.name }},</p>
+                                            {% endif %}
+                                        </a>
+                                    {% endfor %}
+
+                                </a>
+                            </div>
+                            {% if loop.index is divisible by(4) %}
+                                </div><div class="row">
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <h2 class="pb-3">Artistes :</h2>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    {% if resultArtists %}
+                        <div class="row">
+                        {% for artist in resultArtists.artists.items %}
+                            <div class="col-sm-3">
+                                <a href="{{ path('showArtist', {'id_artist' : artist.id}) }}" class="link-music">
+                                    <img src="{% if artist.images %}{{ artist.images[0].url }}{% else %}{{ get_gravatar('', 210) }}{% endif %}" alt="" class="img-fluid rounded-circle">
+                                    <p class="text-center"><strong>{{ artist.name }}</strong></p>
+                                </a>
+                            </div>
+                            {% if loop.index is divisible by(4) %}
+                                </div><div class="row">
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    
