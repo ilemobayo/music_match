@@ -22,47 +22,47 @@ class __TwigTemplate_96a1194bd0a232a62c36e249ac9288bc48ace20938dd9f1b8d774848abb
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d63ccddb5e75438d8048e4c36fe07fdfffe986f4913b38d01e3b21de58dc56f1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d63ccddb5e75438d8048e4c36fe07fdfffe986f4913b38d01e3b21de58dc56f1->enter($__internal_d63ccddb5e75438d8048e4c36fe07fdfffe986f4913b38d01e3b21de58dc56f1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "search/search.html.twig"));
+        $__internal_2bc9184a65ca60be3caa11a5e4453170c95f62261bc6fd049f04dbb86dc21dd6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2bc9184a65ca60be3caa11a5e4453170c95f62261bc6fd049f04dbb86dc21dd6->enter($__internal_2bc9184a65ca60be3caa11a5e4453170c95f62261bc6fd049f04dbb86dc21dd6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "search/search.html.twig"));
 
-        $__internal_1c5c5b0792d6b301fc5e2dd3593f4e54aeb30e5e5d6aa8ab00357f5594d36633 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_1c5c5b0792d6b301fc5e2dd3593f4e54aeb30e5e5d6aa8ab00357f5594d36633->enter($__internal_1c5c5b0792d6b301fc5e2dd3593f4e54aeb30e5e5d6aa8ab00357f5594d36633_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "search/search.html.twig"));
+        $__internal_3da0bae7b02ed2e4246a09091aa539add2a71769e4f77c8e6f5c8d9c66a4bf95 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_3da0bae7b02ed2e4246a09091aa539add2a71769e4f77c8e6f5c8d9c66a4bf95->enter($__internal_3da0bae7b02ed2e4246a09091aa539add2a71769e4f77c8e6f5c8d9c66a4bf95_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "search/search.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d63ccddb5e75438d8048e4c36fe07fdfffe986f4913b38d01e3b21de58dc56f1->leave($__internal_d63ccddb5e75438d8048e4c36fe07fdfffe986f4913b38d01e3b21de58dc56f1_prof);
+        $__internal_2bc9184a65ca60be3caa11a5e4453170c95f62261bc6fd049f04dbb86dc21dd6->leave($__internal_2bc9184a65ca60be3caa11a5e4453170c95f62261bc6fd049f04dbb86dc21dd6_prof);
 
         
-        $__internal_1c5c5b0792d6b301fc5e2dd3593f4e54aeb30e5e5d6aa8ab00357f5594d36633->leave($__internal_1c5c5b0792d6b301fc5e2dd3593f4e54aeb30e5e5d6aa8ab00357f5594d36633_prof);
+        $__internal_3da0bae7b02ed2e4246a09091aa539add2a71769e4f77c8e6f5c8d9c66a4bf95->leave($__internal_3da0bae7b02ed2e4246a09091aa539add2a71769e4f77c8e6f5c8d9c66a4bf95_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_49b357b589ad168c460ffeb723c6f2359e19d06e1141ce2f3d6eb2c34aa1a775 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_49b357b589ad168c460ffeb723c6f2359e19d06e1141ce2f3d6eb2c34aa1a775->enter($__internal_49b357b589ad168c460ffeb723c6f2359e19d06e1141ce2f3d6eb2c34aa1a775_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_bd66555fa13682e4c0e822e4b8dc044f499318a487cb20f3d54c22499db59f53 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_bd66555fa13682e4c0e822e4b8dc044f499318a487cb20f3d54c22499db59f53->enter($__internal_bd66555fa13682e4c0e822e4b8dc044f499318a487cb20f3d54c22499db59f53_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_7a6cccfb82d975dd866b3bf4dc9109efb49dcd1e772a3ade5d5c457ac44b19f5 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_7a6cccfb82d975dd866b3bf4dc9109efb49dcd1e772a3ade5d5c457ac44b19f5->enter($__internal_7a6cccfb82d975dd866b3bf4dc9109efb49dcd1e772a3ade5d5c457ac44b19f5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_a9964422175610b20ecaff6422b4c7df3e2c8903837354b3d1661f9661c47063 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_a9964422175610b20ecaff6422b4c7df3e2c8903837354b3d1661f9661c47063->enter($__internal_a9964422175610b20ecaff6422b4c7df3e2c8903837354b3d1661f9661c47063_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, (((isset($context["query"]) ? $context["query"] : $this->getContext($context, "query"))) ? ((isset($context["query"]) ? $context["query"] : $this->getContext($context, "query"))) : ("recherche")), "html", null, true);
         
-        $__internal_7a6cccfb82d975dd866b3bf4dc9109efb49dcd1e772a3ade5d5c457ac44b19f5->leave($__internal_7a6cccfb82d975dd866b3bf4dc9109efb49dcd1e772a3ade5d5c457ac44b19f5_prof);
+        $__internal_a9964422175610b20ecaff6422b4c7df3e2c8903837354b3d1661f9661c47063->leave($__internal_a9964422175610b20ecaff6422b4c7df3e2c8903837354b3d1661f9661c47063_prof);
 
         
-        $__internal_49b357b589ad168c460ffeb723c6f2359e19d06e1141ce2f3d6eb2c34aa1a775->leave($__internal_49b357b589ad168c460ffeb723c6f2359e19d06e1141ce2f3d6eb2c34aa1a775_prof);
+        $__internal_bd66555fa13682e4c0e822e4b8dc044f499318a487cb20f3d54c22499db59f53->leave($__internal_bd66555fa13682e4c0e822e4b8dc044f499318a487cb20f3d54c22499db59f53_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_a5710064f594d3df755865e8f3dcca098ad8a8612df8f1ee121fa82bf03740ae = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a5710064f594d3df755865e8f3dcca098ad8a8612df8f1ee121fa82bf03740ae->enter($__internal_a5710064f594d3df755865e8f3dcca098ad8a8612df8f1ee121fa82bf03740ae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_8ef2eeadc86ad3fd9ef22fad99820eaf9c971e4b40411855ae120a7521dcb7fd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8ef2eeadc86ad3fd9ef22fad99820eaf9c971e4b40411855ae120a7521dcb7fd->enter($__internal_8ef2eeadc86ad3fd9ef22fad99820eaf9c971e4b40411855ae120a7521dcb7fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_bd7c5b161a45e5ec45b70907e284ddf08f339c626719e5d74240dd13d99371ba = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_bd7c5b161a45e5ec45b70907e284ddf08f339c626719e5d74240dd13d99371ba->enter($__internal_bd7c5b161a45e5ec45b70907e284ddf08f339c626719e5d74240dd13d99371ba_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_462eb550d11cc04e3e3ee3b0267fdb87050cbf0131fcb612f42bb32507e74368 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_462eb550d11cc04e3e3ee3b0267fdb87050cbf0131fcb612f42bb32507e74368->enter($__internal_462eb550d11cc04e3e3ee3b0267fdb87050cbf0131fcb612f42bb32507e74368_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "    <div class=\"wrapper\">
@@ -218,20 +218,24 @@ class __TwigTemplate_96a1194bd0a232a62c36e249ac9288bc48ace20938dd9f1b8d774848abb
             // line 54
             echo "                    </div>
                 ";
+        } else {
+            // line 56
+            echo "                    
+                ";
         }
-        // line 56
+        // line 58
         echo "                </div>
             </div>
             <h2 class=\"pb-3\">Titres :</h2>
             <div class=\"row\">
                 <div class=\"col-md-10 offset-md-1\">
                     ";
-        // line 61
+        // line 63
         if ((isset($context["resultTracks"]) ? $context["resultTracks"] : $this->getContext($context, "resultTracks"))) {
-            // line 62
+            // line 64
             echo "                        <div class=\"row\">
                         ";
-            // line 63
+            // line 65
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute((isset($context["resultTracks"]) ? $context["resultTracks"] : $this->getContext($context, "resultTracks")), "tracks", array()), "items", array()));
             $context['loop'] = array(
@@ -248,22 +252,22 @@ class __TwigTemplate_96a1194bd0a232a62c36e249ac9288bc48ace20938dd9f1b8d774848abb
                 $context['loop']['last'] = 1 === $length;
             }
             foreach ($context['_seq'] as $context["_key"] => $context["track"]) {
-                // line 64
+                // line 66
                 echo "                            <div class=\"col-sm-3\">
                                 <a href=\"";
-                // line 65
+                // line 67
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
                 echo "\" class=\"link-music\">
                                     <img src=\"";
-                // line 66
+                // line 68
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute($context["track"], "album", array()), "images", array()), 0, array(), "array"), "url", array()), "html", null, true);
                 echo "\" alt=\"\" class=\"img-fluid\">
                                     <p class=\"text-center\"><strong>";
-                // line 67
+                // line 69
                 echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "name", array()), "html", null, true);
                 echo "</strong></p>
                                     ";
-                // line 68
+                // line 70
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["track"], "artists", array()));
                 $context['loop'] = array(
@@ -280,26 +284,26 @@ class __TwigTemplate_96a1194bd0a232a62c36e249ac9288bc48ace20938dd9f1b8d774848abb
                     $context['loop']['last'] = 1 === $length;
                 }
                 foreach ($context['_seq'] as $context["_key"] => $context["artist"]) {
-                    // line 69
+                    // line 71
                     echo "                                        <a href=\"";
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showArtist", array("id_artist" => $this->getAttribute($context["artist"], "id", array()))), "html", null, true);
                     echo "\" class=\"link-music\">
                                             ";
-                    // line 70
+                    // line 72
                     if ($this->getAttribute($context["loop"], "last", array())) {
-                        // line 71
+                        // line 73
                         echo "                                                <p class=\"text-center\">";
                         echo twig_escape_filter($this->env, $this->getAttribute($context["artist"], "name", array()), "html", null, true);
                         echo "</p>
                                             ";
                     } else {
-                        // line 73
+                        // line 75
                         echo "                                                <p class=\"text-center\">";
                         echo twig_escape_filter($this->env, $this->getAttribute($context["artist"], "name", array()), "html", null, true);
                         echo ",</p>
                                             ";
                     }
-                    // line 75
+                    // line 77
                     echo "                                        </a>
                                     ";
                     ++$context['loop']['index0'];
@@ -314,18 +318,18 @@ class __TwigTemplate_96a1194bd0a232a62c36e249ac9288bc48ace20938dd9f1b8d774848abb
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['artist'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 77
+                // line 79
                 echo "
                                 </a>
                             </div>
                             ";
-                // line 80
+                // line 82
                 if ((0 == $this->getAttribute($context["loop"], "index", array()) % 4)) {
-                    // line 81
+                    // line 83
                     echo "                                </div><div class=\"row\">
                             ";
                 }
-                // line 83
+                // line 85
                 echo "                        ";
                 ++$context['loop']['index0'];
                 ++$context['loop']['index'];
@@ -339,23 +343,23 @@ class __TwigTemplate_96a1194bd0a232a62c36e249ac9288bc48ace20938dd9f1b8d774848abb
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['track'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 84
+            // line 86
             echo "                        </div>
                     ";
         }
-        // line 86
+        // line 88
         echo "                </div>
             </div>
             <h2 class=\"pb-3\">Artistes :</h2>
             <div class=\"row\">
                 <div class=\"col-md-10 offset-md-1\">
                     ";
-        // line 91
+        // line 93
         if ((isset($context["resultArtists"]) ? $context["resultArtists"] : $this->getContext($context, "resultArtists"))) {
-            // line 92
+            // line 94
             echo "                        <div class=\"row\">
                         ";
-            // line 93
+            // line 95
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute((isset($context["resultArtists"]) ? $context["resultArtists"] : $this->getContext($context, "resultArtists")), "artists", array()), "items", array()));
             $context['loop'] = array(
@@ -372,14 +376,14 @@ class __TwigTemplate_96a1194bd0a232a62c36e249ac9288bc48ace20938dd9f1b8d774848abb
                 $context['loop']['last'] = 1 === $length;
             }
             foreach ($context['_seq'] as $context["_key"] => $context["artist"]) {
-                // line 94
+                // line 96
                 echo "                            <div class=\"col-sm-3\">
                                 <a href=\"";
-                // line 95
+                // line 97
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showArtist", array("id_artist" => $this->getAttribute($context["artist"], "id", array()))), "html", null, true);
                 echo "\" class=\"link-music\">
                                     <img src=\"";
-                // line 96
+                // line 98
                 if ($this->getAttribute($context["artist"], "images", array())) {
                     echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["artist"], "images", array()), 0, array(), "array"), "url", array()), "html", null, true);
                 } else {
@@ -387,19 +391,19 @@ class __TwigTemplate_96a1194bd0a232a62c36e249ac9288bc48ace20938dd9f1b8d774848abb
                 }
                 echo "\" alt=\"\" class=\"img-fluid rounded-circle\">
                                     <p class=\"text-center\"><strong>";
-                // line 97
+                // line 99
                 echo twig_escape_filter($this->env, $this->getAttribute($context["artist"], "name", array()), "html", null, true);
                 echo "</strong></p>
                                 </a>
                             </div>
                             ";
-                // line 100
+                // line 102
                 if ((0 == $this->getAttribute($context["loop"], "index", array()) % 4)) {
-                    // line 101
+                    // line 103
                     echo "                                </div><div class=\"row\">
                             ";
                 }
-                // line 103
+                // line 105
                 echo "                        ";
                 ++$context['loop']['index0'];
                 ++$context['loop']['index'];
@@ -413,21 +417,21 @@ class __TwigTemplate_96a1194bd0a232a62c36e249ac9288bc48ace20938dd9f1b8d774848abb
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['artist'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 104
+            // line 106
             echo "                        </div>
                     ";
         }
-        // line 106
+        // line 108
         echo "                </div>
             </div>
         </div>
     </div>
 ";
         
-        $__internal_bd7c5b161a45e5ec45b70907e284ddf08f339c626719e5d74240dd13d99371ba->leave($__internal_bd7c5b161a45e5ec45b70907e284ddf08f339c626719e5d74240dd13d99371ba_prof);
+        $__internal_462eb550d11cc04e3e3ee3b0267fdb87050cbf0131fcb612f42bb32507e74368->leave($__internal_462eb550d11cc04e3e3ee3b0267fdb87050cbf0131fcb612f42bb32507e74368_prof);
 
         
-        $__internal_a5710064f594d3df755865e8f3dcca098ad8a8612df8f1ee121fa82bf03740ae->leave($__internal_a5710064f594d3df755865e8f3dcca098ad8a8612df8f1ee121fa82bf03740ae_prof);
+        $__internal_8ef2eeadc86ad3fd9ef22fad99820eaf9c971e4b40411855ae120a7521dcb7fd->leave($__internal_8ef2eeadc86ad3fd9ef22fad99820eaf9c971e4b40411855ae120a7521dcb7fd_prof);
 
     }
 
@@ -443,7 +447,7 @@ class __TwigTemplate_96a1194bd0a232a62c36e249ac9288bc48ace20938dd9f1b8d774848abb
 
     public function getDebugInfo()
     {
-        return array (  421 => 106,  417 => 104,  403 => 103,  399 => 101,  397 => 100,  391 => 97,  383 => 96,  379 => 95,  376 => 94,  359 => 93,  356 => 92,  354 => 91,  347 => 86,  343 => 84,  329 => 83,  325 => 81,  323 => 80,  318 => 77,  303 => 75,  297 => 73,  291 => 71,  289 => 70,  284 => 69,  267 => 68,  263 => 67,  259 => 66,  255 => 65,  252 => 64,  235 => 63,  232 => 62,  230 => 61,  223 => 56,  219 => 54,  205 => 53,  201 => 51,  199 => 50,  194 => 47,  179 => 45,  173 => 43,  167 => 41,  165 => 40,  160 => 39,  143 => 38,  139 => 37,  135 => 36,  131 => 35,  128 => 34,  111 => 33,  108 => 32,  106 => 31,  87 => 17,  80 => 13,  71 => 7,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
+        return array (  425 => 108,  421 => 106,  407 => 105,  403 => 103,  401 => 102,  395 => 99,  387 => 98,  383 => 97,  380 => 96,  363 => 95,  360 => 94,  358 => 93,  351 => 88,  347 => 86,  333 => 85,  329 => 83,  327 => 82,  322 => 79,  307 => 77,  301 => 75,  295 => 73,  293 => 72,  288 => 71,  271 => 70,  267 => 69,  263 => 68,  259 => 67,  256 => 66,  239 => 65,  236 => 64,  234 => 63,  227 => 58,  223 => 56,  219 => 54,  205 => 53,  201 => 51,  199 => 50,  194 => 47,  179 => 45,  173 => 43,  167 => 41,  165 => 40,  160 => 39,  143 => 38,  139 => 37,  135 => 36,  131 => 35,  128 => 34,  111 => 33,  108 => 32,  106 => 31,  87 => 17,  80 => 13,  71 => 7,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -510,6 +514,8 @@ class __TwigTemplate_96a1194bd0a232a62c36e249ac9288bc48ace20938dd9f1b8d774848abb
                             {% endif %}
                         {% endfor %}
                     </div>
+                {% else %}
+                    
                 {% endif %}
                 </div>
             </div>

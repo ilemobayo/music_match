@@ -28,7 +28,10 @@
                             {% endif %}" alt="Photo de profil" style="height: 250px;">
             </div>
             {% if user_manager.user.username == global.request.get('username') %}
-                <a href="{{ path('edit', {username: profile.username}) }}">Modifier votre profil</a>
+                <ul>
+                    <li><a href="{{ path('edit', {username: profile.username}) }}">Modifier votre profil</a></li>
+                    <li><a href="{{ path('user_delete') }}">Désinscription</a></li>
+                </ul>
             {% endif %}
         </div>
 

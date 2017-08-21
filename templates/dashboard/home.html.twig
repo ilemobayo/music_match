@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="wrapper">
-        <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('http://admin.traxmag.com/uploads/images/size800x1200/2017/01/justice-woman-cd-3_5880bd06b146e.jpg'); background-size: cover; background-position: center -630px">
+        <div class="page-header page-header-xs img-responsive" data-parallax="true" style="background-image: url('http://admin.traxmag.com/uploads/images/size800x1200/2017/01/justice-woman-cd-3_5880bd06b146e.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
             <div class="filter">
             </div>
         </div>
@@ -54,19 +54,19 @@
                                         {% for track in recommendations.tracks %}
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-1 offset-md-0">
+                                                    <div class="col-md-1 col-xs-1 offset-md-0" id="image_m">
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
                                                             <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>
                                                     </div>
-                                                    <div class="col-md-1 mt-3 text-center">
+                                                    <div class="col-md-1 col-xs-1 mt-3 text-center" id="play_m">
                                                         <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
                                                         <audio >
                                                             <source src="{{ track.preview_url }}" type="audio/mp3">
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class="col-md-7 col-xs-4">
+                                                    <div class="col-md-7 col-xs-2" id="track_m">
                                                         <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
                                                             <small>
                                                                 Artiste : 
@@ -85,13 +85,13 @@
                                                             </small><br/>
                                                         </h6>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 offset-1">
+                                                    <div class="col-md-1 col-xs-2 offset-1" id="lien_spotify_m">
                                                         <div class="py-3" >
                                                             <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 ">
-                                                        <div class="mt-3" >
+                                                    <div class="col-md-1 col-xs-2 " id="library_m">
+                                                        <div class="mt-3">
                                                             <button class="addToLibrary" data-id="{{ track.id }}"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                                         </div>
                                                     </div>
@@ -112,25 +112,25 @@
                     </div>
                     <div class="tab-pane " id="recomcat" role="tabpanel">
                        <div class="row">
-                            <div class="col-md-10 offset-md-1">
+                            <div class="col-md-10 offset-md-1 col-xs-10 ">
                                 <ul class="list-unstyled follows">
                                     {% if recommendationsTag %}
                                         {% for track in recommendationsTag.tracks %}
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-1 offset-md-0">
+                                                    <div class="col-md-1 offset-md-0 col-xs-1" id="image_c">
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
                                                             <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>
                                                     </div>
-                                                    <div class="col-md-1 mt-3 text-center">
+                                                    <div class="col-md-1 mt-3 col-xs-1 text-center" id="play_c">
                                                         <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
                                                         <audio >
                                                             <source src="{{ track.preview_url }}" type="audio/mp3">
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class="col-md-7 col-xs-4">
+                                                    <div class="col-md-7 col-xs-4" id="track_c">
                                                         <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
                                                             <small>
                                                                 Artiste :
@@ -149,12 +149,12 @@
                                                             </small><br/>
                                                         </h6>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 offset-1">
+                                                    <div class="col-md-1 col-xs-2 offset-1" id="lien_spotify_c">
                                                         <div class="py-3" >
                                                             <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 ">
+                                                    <div class="col-md-1 col-xs-2 " id="library_c">
                                                         <div class="mt-3" >
                                                             <button class="addToLibrary" data-id="{{ track.id }}"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                                         </div>
@@ -177,25 +177,25 @@
                     <!-- recommendation artiste -->
                     <div class="tab-pane " id="artist-recommendation" role="tabpanel">
                         <div class="row">
-                            <div class="col-md-10 offset-md-1">
+                            <div class="col-md-10 col-xs-10 offset-md-1">
                                 <ul class="list-unstyled follows">
                                     {% if recommendationsArtist %}
                                         {% for track in recommendationsArtist.tracks %}
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-1 offset-md-0">
+                                                    <div class="col-md-1 offset-md-0 col-xs-1" id="image_a">
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
                                                             <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>
                                                     </div>
-                                                    <div class="col-md-1 mt-3 text-center">
+                                                    <div class="col-md-1 col-xs-1 mt-3 text-center" id="play_a">
                                                         <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
                                                         <audio >
                                                             <source src="{{ track.preview_url }}" type="audio/mp3">
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class="col-md-7 col-xs-4">
+                                                    <div class="col-md-7 col-xs-4" id="track_a">
                                                         <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
                                                             <small>
                                                                 Artiste :
@@ -214,12 +214,12 @@
                                                             </small><br/>
                                                         </h6>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 offset-1">
+                                                    <div class="col-md-1 col-xs-2 offset-1" id="lien_spotify_a">
                                                         <div class="py-3" >
                                                             <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 ">
+                                                    <div class="col-md-1 col-xs-2 " id="library_a">
                                                         <div class="mt-3" >
                                                             <button class="addToLibrary" data-id="{{ track.id }}"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                                         </div>

@@ -70,6 +70,11 @@ $app
     ->bind('logout')
 ;
 
+$app
+    ->get('/desinscription', 'user.controller:deleteUserAction')
+    ->bind('user_delete')
+;
+
 // ----------------- Dashboard ----------------- //
 
 $app

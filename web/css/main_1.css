@@ -81,3 +81,49 @@ a button.btn.btn-success.btn-round{
     font-weight: bold;
     padding: 10px;
 }
+
+/*body {
+background: #ECE9E6;   fallback for old browsers 
+background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);   Chrome 10-25, Safari 5.1-6 
+background: linear-gradient(to right, #FFFFFF, #ECE9E6);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+
+}*/
+
+
+@media (min-width:576px){
+    i.fa.fa-play-circle.fa-2x {
+        margin-left: 25px;
+    }
+    
+    .col-md-7 h6{
+        margin-left: 25px;
+    }
+}
+
+
+@media (max-width:768px){
+    li div{
+        display: inline;
+    }
+    
+    col-md-1.col-xs-1.offset-md-0, col-md-1.col-xs-1.mt-3.text-center, col-md-7.col-xs-2, col-md-1.col-xs-2.offset-1, col-md-1.col-xs-2 {
+        display: inline;
+    }
+    
+    #image_m, #play_m, #image_c, #play_c,#image_a, #play_a{
+        width: 15%;
+    }
+    
+    #track_m, #track_c, #track_a{
+        width: 40%;
+    }
+    
+    #lien_spotify_m, #lien_spotify_c, #lien_spotify_a{
+        width: 10%;
+    }
+    
+    #library_m, #library_c, #library_a{
+        width: 5%;
+    }
+    
+}

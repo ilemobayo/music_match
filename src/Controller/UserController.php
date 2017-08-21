@@ -96,13 +96,19 @@ class UserController extends ControllerAbstract{
         return $this->redirectRoute('homepage');
     }
     
-    public function selectTagsAction(){
-        $tags = $this->app['user.manager']->getUser()->getTags();
-        
-        return $this->render('edit.html.twig', 
-            [
-                'tags' => getTags()
-            ]
-        );
+//    public function selectTagsAction(){
+//        $tags = $this->app['user.manager']->getUser()->getTags();
+//        
+//        return $this->render('edit.html.twig', 
+//            [
+//                'tags' => getTags()
+//            ]
+//        );
+//    }
+    
+    public function deleteUserAction(){
+        $this->app['user.repository']->deleteUser($this->app['user.manager']->getUser());
+        $this->app['session']->getFlashBag()->add('success', 'Votre compte a bien été supprimé');
+        return $this->logoutAction();
     }
 }

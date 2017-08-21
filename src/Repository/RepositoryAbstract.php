@@ -101,6 +101,14 @@ abstract class RepositoryAbstract {
             ['id' => $Entity->getId()]
         );
     }
+    
+    public function deleteUser($Entity)
+    {
+        $this->db->delete(
+        $this->getTable(),
+            ['id_user' => $Entity->getId()]
+        );
+    }
 
     public function persist(array $data, array $where = null)
     {
