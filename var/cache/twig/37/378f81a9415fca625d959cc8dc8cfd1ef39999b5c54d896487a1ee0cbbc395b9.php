@@ -22,47 +22,47 @@ class __TwigTemplate_634ed68d4ac4f4e3a2cfdc6b65cd2c763f6c32a0711986f58cc395b580f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_300730f9f4454b9f9d59605afcb162602d6700a4cbd9e3afc8b7fb4b275f4f13 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_300730f9f4454b9f9d59605afcb162602d6700a4cbd9e3afc8b7fb4b275f4f13->enter($__internal_300730f9f4454b9f9d59605afcb162602d6700a4cbd9e3afc8b7fb4b275f4f13_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "album/artist.html.twig"));
+        $__internal_94068b3912e34aadbac8dc55219014d21c3da2e45fcfbed8cbf347af22c44d13 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_94068b3912e34aadbac8dc55219014d21c3da2e45fcfbed8cbf347af22c44d13->enter($__internal_94068b3912e34aadbac8dc55219014d21c3da2e45fcfbed8cbf347af22c44d13_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "album/artist.html.twig"));
 
-        $__internal_e4ed4ccd75f30ac3ba9d6af8945accd4d64b7ccacab606f438e4f4d0ef741c79 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_e4ed4ccd75f30ac3ba9d6af8945accd4d64b7ccacab606f438e4f4d0ef741c79->enter($__internal_e4ed4ccd75f30ac3ba9d6af8945accd4d64b7ccacab606f438e4f4d0ef741c79_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "album/artist.html.twig"));
+        $__internal_305267cef4c5a70cc74c1ab11b35bfcae400df357da138e3df3991af8e2b5f77 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_305267cef4c5a70cc74c1ab11b35bfcae400df357da138e3df3991af8e2b5f77->enter($__internal_305267cef4c5a70cc74c1ab11b35bfcae400df357da138e3df3991af8e2b5f77_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "album/artist.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_300730f9f4454b9f9d59605afcb162602d6700a4cbd9e3afc8b7fb4b275f4f13->leave($__internal_300730f9f4454b9f9d59605afcb162602d6700a4cbd9e3afc8b7fb4b275f4f13_prof);
+        $__internal_94068b3912e34aadbac8dc55219014d21c3da2e45fcfbed8cbf347af22c44d13->leave($__internal_94068b3912e34aadbac8dc55219014d21c3da2e45fcfbed8cbf347af22c44d13_prof);
 
         
-        $__internal_e4ed4ccd75f30ac3ba9d6af8945accd4d64b7ccacab606f438e4f4d0ef741c79->leave($__internal_e4ed4ccd75f30ac3ba9d6af8945accd4d64b7ccacab606f438e4f4d0ef741c79_prof);
+        $__internal_305267cef4c5a70cc74c1ab11b35bfcae400df357da138e3df3991af8e2b5f77->leave($__internal_305267cef4c5a70cc74c1ab11b35bfcae400df357da138e3df3991af8e2b5f77_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_b7b32612a3efb7af6e9098a8b25c928acd6bdda163cbdfc1fc5cae7dcf6fdf50 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b7b32612a3efb7af6e9098a8b25c928acd6bdda163cbdfc1fc5cae7dcf6fdf50->enter($__internal_b7b32612a3efb7af6e9098a8b25c928acd6bdda163cbdfc1fc5cae7dcf6fdf50_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_a89ff3c628a2a403c1bae7bd1ca6f3d7ad72c11e361140c23e22d6fa08f5b8eb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a89ff3c628a2a403c1bae7bd1ca6f3d7ad72c11e361140c23e22d6fa08f5b8eb->enter($__internal_a89ff3c628a2a403c1bae7bd1ca6f3d7ad72c11e361140c23e22d6fa08f5b8eb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_e9352604c28bf893edab8cf9695a7f8d78fd0316e5fc2b9c313e3ebe149df6eb = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_e9352604c28bf893edab8cf9695a7f8d78fd0316e5fc2b9c313e3ebe149df6eb->enter($__internal_e9352604c28bf893edab8cf9695a7f8d78fd0316e5fc2b9c313e3ebe149df6eb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_6ce9b98422e33e253150e66d590643cf99a122f7950367775c78c5a07442bfeb = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_6ce9b98422e33e253150e66d590643cf99a122f7950367775c78c5a07442bfeb->enter($__internal_6ce9b98422e33e253150e66d590643cf99a122f7950367775c78c5a07442bfeb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artist"]) ? $context["artist"] : $this->getContext($context, "artist")), "name", array()), "html", null, true);
         
-        $__internal_e9352604c28bf893edab8cf9695a7f8d78fd0316e5fc2b9c313e3ebe149df6eb->leave($__internal_e9352604c28bf893edab8cf9695a7f8d78fd0316e5fc2b9c313e3ebe149df6eb_prof);
+        $__internal_6ce9b98422e33e253150e66d590643cf99a122f7950367775c78c5a07442bfeb->leave($__internal_6ce9b98422e33e253150e66d590643cf99a122f7950367775c78c5a07442bfeb_prof);
 
         
-        $__internal_b7b32612a3efb7af6e9098a8b25c928acd6bdda163cbdfc1fc5cae7dcf6fdf50->leave($__internal_b7b32612a3efb7af6e9098a8b25c928acd6bdda163cbdfc1fc5cae7dcf6fdf50_prof);
+        $__internal_a89ff3c628a2a403c1bae7bd1ca6f3d7ad72c11e361140c23e22d6fa08f5b8eb->leave($__internal_a89ff3c628a2a403c1bae7bd1ca6f3d7ad72c11e361140c23e22d6fa08f5b8eb_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_0b713960a7683e44c6a2a448d7b2f6bd837ec5cbee4e7ed8ecc235b5c97cc43d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0b713960a7683e44c6a2a448d7b2f6bd837ec5cbee4e7ed8ecc235b5c97cc43d->enter($__internal_0b713960a7683e44c6a2a448d7b2f6bd837ec5cbee4e7ed8ecc235b5c97cc43d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_78732d56b013fbe1b9397283410c9c9ed2dfddd5d41ade88f81db725e533e357 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_78732d56b013fbe1b9397283410c9c9ed2dfddd5d41ade88f81db725e533e357->enter($__internal_78732d56b013fbe1b9397283410c9c9ed2dfddd5d41ade88f81db725e533e357_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_bcfd57a3184396e8c9704fa5537bfe31d71df6ea6d3479800fb776f2282e8f40 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_bcfd57a3184396e8c9704fa5537bfe31d71df6ea6d3479800fb776f2282e8f40->enter($__internal_bcfd57a3184396e8c9704fa5537bfe31d71df6ea6d3479800fb776f2282e8f40_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_e56110a73bcfa9805760b888215558eaa570d0afd30cdda0e5190148b8b7a57a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_e56110a73bcfa9805760b888215558eaa570d0afd30cdda0e5190148b8b7a57a->enter($__internal_e56110a73bcfa9805760b888215558eaa570d0afd30cdda0e5190148b8b7a57a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "<div class=\"wrapper\">
@@ -243,6 +243,14 @@ class __TwigTemplate_634ed68d4ac4f4e3a2cfdc6b65cd2c763f6c32a0711986f58cc395b580f
                 echo "\" target=\"blank\"><i class=\"fa fa-spotify fa-2x text-success\" aria-hidden=\"true\"></i></a>
                                                     </div>
                                                 </div>
+                                                <div class=\"col-md-1 col-xs-2 \">
+                                                    <div class=\"mt-3\" >
+                                                        <button class=\"addToLibrary\" data-id=\"";
+                // line 91
+                echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "id", array()), "html", null, true);
+                echo "\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </li>
                                         <hr />
@@ -251,10 +259,10 @@ class __TwigTemplate_634ed68d4ac4f4e3a2cfdc6b65cd2c763f6c32a0711986f58cc395b580f
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['track'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 93
+            // line 98
             echo "                                ";
         }
-        // line 94
+        // line 99
         echo "                            </ul>
                         </div>
                     </div>
@@ -264,12 +272,12 @@ class __TwigTemplate_634ed68d4ac4f4e3a2cfdc6b65cd2c763f6c32a0711986f58cc395b580f
                     <div class=\"row\">
                         <div class=\"col-md-10 offset-md-1\">
                         ";
-        // line 102
+        // line 107
         if ((isset($context["albumArtist"]) ? $context["albumArtist"] : $this->getContext($context, "albumArtist"))) {
-            // line 103
+            // line 108
             echo "                            <div class=\"row\">
                                 ";
-            // line 104
+            // line 109
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["albumArtist"]) ? $context["albumArtist"] : $this->getContext($context, "albumArtist")), "items", array()));
             $context['loop'] = array(
@@ -286,30 +294,30 @@ class __TwigTemplate_634ed68d4ac4f4e3a2cfdc6b65cd2c763f6c32a0711986f58cc395b580f
                 $context['loop']['last'] = 1 === $length;
             }
             foreach ($context['_seq'] as $context["_key"] => $context["album"]) {
-                // line 105
+                // line 110
                 echo "                                    <div class=\"col-sm-3\">
                                         <a href=\"";
-                // line 106
+                // line 111
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($context["album"], "id", array()))), "html", null, true);
                 echo "\" class=\"link-music\">
                                             <img src=\"";
-                // line 107
+                // line 112
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["album"], "images", array()), 1, array(), "array"), "url", array()), "html", null, true);
                 echo "\" alt=\"\" class=\"img-fluid\">
                                             <p><strong>";
-                // line 108
+                // line 113
                 echo twig_escape_filter($this->env, $this->getAttribute($context["album"], "name", array()), "html", null, true);
                 echo "</strong></p>
                                         </a>
                                     </div>
                                     ";
-                // line 111
+                // line 116
                 if ((0 == $this->getAttribute($context["loop"], "index", array()) % 4)) {
-                    // line 112
+                    // line 117
                     echo "                                        </div><div class=\"row\">
                                     ";
                 }
-                // line 114
+                // line 119
                 echo "                                ";
                 ++$context['loop']['index0'];
                 ++$context['loop']['index'];
@@ -323,11 +331,11 @@ class __TwigTemplate_634ed68d4ac4f4e3a2cfdc6b65cd2c763f6c32a0711986f58cc395b580f
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['album'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 115
+            // line 120
             echo "                            </div>
                         ";
         }
-        // line 117
+        // line 122
         echo "                        </div>
                     </div>
                 </div>
@@ -336,12 +344,12 @@ class __TwigTemplate_634ed68d4ac4f4e3a2cfdc6b65cd2c763f6c32a0711986f58cc395b580f
                     <div class=\"row\">
                         <div class=\"col-md-10 offset-md-1\">
                             ";
-        // line 124
+        // line 129
         if ((isset($context["relatedArtists"]) ? $context["relatedArtists"] : $this->getContext($context, "relatedArtists"))) {
-            // line 125
+            // line 130
             echo "                                <div class=\"row\">
                                 ";
-            // line 126
+            // line 131
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["relatedArtists"]) ? $context["relatedArtists"] : $this->getContext($context, "relatedArtists")), "artists", array()));
             $context['loop'] = array(
@@ -358,43 +366,43 @@ class __TwigTemplate_634ed68d4ac4f4e3a2cfdc6b65cd2c763f6c32a0711986f58cc395b580f
                 $context['loop']['last'] = 1 === $length;
             }
             foreach ($context['_seq'] as $context["_key"] => $context["relatedArtist"]) {
-                // line 127
+                // line 132
                 echo "                                    <div class=\"col-sm-3\">
                                         <a href=\"";
-                // line 128
+                // line 133
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showArtist", array("id_artist" => $this->getAttribute($context["relatedArtist"], "id", array()))), "html", null, true);
                 echo "\" class=\"link-music\">
                                             ";
-                // line 129
+                // line 134
                 if ($this->getAttribute($context["relatedArtist"], "images", array())) {
-                    // line 130
+                    // line 135
                     echo "                                                <img src=\"";
                     echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["relatedArtist"], "images", array()), 0, array(), "array"), "url", array()), "html", null, true);
                     echo "\" alt=\"\"  height=\"200\" width=\"100%\">
                                             ";
                 } else {
-                    // line 132
+                    // line 137
                     echo "                                                <img src=\"http://www.juicenothing.com/images/scapart/kanye-west-yeezus-v2.jpg\" alt=\"\"  height=\"200\" width=\"100%\">
                                             ";
                 }
-                // line 134
+                // line 139
                 echo "                                            <p class=\"mt-1\"><strong>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["relatedArtist"], "name", array()), "html", null, true);
                 echo "</strong></pclass>
                                             <p><small>follower : <span class=\"fa fa-star-o\"></span> ";
-                // line 135
+                // line 140
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["relatedArtist"], "followers", array()), "total", array()), "html", null, true);
                 echo "</small></p>
                                         </a>
                                     </div>
                                     ";
-                // line 138
+                // line 143
                 if ((0 == $this->getAttribute($context["loop"], "index", array()) % 4)) {
-                    // line 139
+                    // line 144
                     echo "                                        </div><div class=\"row\">
                                     ";
                 }
-                // line 141
+                // line 146
                 echo "                                ";
                 ++$context['loop']['index0'];
                 ++$context['loop']['index'];
@@ -408,11 +416,11 @@ class __TwigTemplate_634ed68d4ac4f4e3a2cfdc6b65cd2c763f6c32a0711986f58cc395b580f
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['relatedArtist'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 142
+            // line 147
             echo "                                </div>
                             ";
         }
-        // line 144
+        // line 149
         echo "                        </div>
                     </div>
                 </div>
@@ -421,14 +429,12 @@ class __TwigTemplate_634ed68d4ac4f4e3a2cfdc6b65cd2c763f6c32a0711986f58cc395b580f
     </div>
 </div>
 
-    </div>
-</div>
 ";
         
-        $__internal_bcfd57a3184396e8c9704fa5537bfe31d71df6ea6d3479800fb776f2282e8f40->leave($__internal_bcfd57a3184396e8c9704fa5537bfe31d71df6ea6d3479800fb776f2282e8f40_prof);
+        $__internal_e56110a73bcfa9805760b888215558eaa570d0afd30cdda0e5190148b8b7a57a->leave($__internal_e56110a73bcfa9805760b888215558eaa570d0afd30cdda0e5190148b8b7a57a_prof);
 
         
-        $__internal_0b713960a7683e44c6a2a448d7b2f6bd837ec5cbee4e7ed8ecc235b5c97cc43d->leave($__internal_0b713960a7683e44c6a2a448d7b2f6bd837ec5cbee4e7ed8ecc235b5c97cc43d_prof);
+        $__internal_78732d56b013fbe1b9397283410c9c9ed2dfddd5d41ade88f81db725e533e357->leave($__internal_78732d56b013fbe1b9397283410c9c9ed2dfddd5d41ade88f81db725e533e357_prof);
 
     }
 
@@ -444,7 +450,7 @@ class __TwigTemplate_634ed68d4ac4f4e3a2cfdc6b65cd2c763f6c32a0711986f58cc395b580f
 
     public function getDebugInfo()
     {
-        return array (  416 => 144,  412 => 142,  398 => 141,  394 => 139,  392 => 138,  386 => 135,  381 => 134,  377 => 132,  371 => 130,  369 => 129,  365 => 128,  362 => 127,  345 => 126,  342 => 125,  340 => 124,  331 => 117,  327 => 115,  313 => 114,  309 => 112,  307 => 111,  301 => 108,  297 => 107,  293 => 106,  290 => 105,  273 => 104,  270 => 103,  268 => 102,  258 => 94,  255 => 93,  242 => 86,  231 => 80,  227 => 78,  213 => 77,  207 => 75,  201 => 73,  198 => 72,  181 => 71,  173 => 68,  165 => 63,  156 => 57,  152 => 56,  147 => 53,  142 => 52,  140 => 51,  110 => 24,  107 => 23,  98 => 21,  94 => 20,  90 => 18,  86 => 16,  82 => 15,  71 => 7,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
+        return array (  424 => 149,  420 => 147,  406 => 146,  402 => 144,  400 => 143,  394 => 140,  389 => 139,  385 => 137,  379 => 135,  377 => 134,  373 => 133,  370 => 132,  353 => 131,  350 => 130,  348 => 129,  339 => 122,  335 => 120,  321 => 119,  317 => 117,  315 => 116,  309 => 113,  305 => 112,  301 => 111,  298 => 110,  281 => 109,  278 => 108,  276 => 107,  266 => 99,  263 => 98,  250 => 91,  242 => 86,  231 => 80,  227 => 78,  213 => 77,  207 => 75,  201 => 73,  198 => 72,  181 => 71,  173 => 68,  165 => 63,  156 => 57,  152 => 56,  147 => 53,  142 => 52,  140 => 51,  110 => 24,  107 => 23,  98 => 21,  94 => 20,  90 => 18,  86 => 16,  82 => 15,  71 => 7,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -545,6 +551,11 @@ class __TwigTemplate_634ed68d4ac4f4e3a2cfdc6b65cd2c763f6c32a0711986f58cc395b580f
                                                         <a href=\"{{ track.external_urls.spotify }}\" target=\"blank\"><i class=\"fa fa-spotify fa-2x text-success\" aria-hidden=\"true\"></i></a>
                                                     </div>
                                                 </div>
+                                                <div class=\"col-md-1 col-xs-2 \">
+                                                    <div class=\"mt-3\" >
+                                                        <button class=\"addToLibrary\" data-id=\"{{ track.id }}\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </li>
                                         <hr />
@@ -608,8 +619,6 @@ class __TwigTemplate_634ed68d4ac4f4e3a2cfdc6b65cd2c763f6c32a0711986f58cc395b580f
     </div>
 </div>
 
-    </div>
-</div>
 {% endblock %}", "album/artist.html.twig", "C:\\xampp\\htdocs\\music_match\\music_match\\templates\\album\\artist.html.twig");
     }
 }

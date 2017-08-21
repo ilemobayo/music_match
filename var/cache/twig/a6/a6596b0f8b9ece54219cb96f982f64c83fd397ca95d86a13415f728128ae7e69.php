@@ -10,7 +10,7 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
         // line 1
         $this->parent = $this->loadTemplate("layout.html.twig", "dashboard/library.html.twig", 1);
         $this->blocks = array(
-            'titile' => array($this, 'block_titile'),
+            'title' => array($this, 'block_title'),
             'content' => array($this, 'block_content'),
         );
     }
@@ -22,47 +22,47 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1b06b279799df56babbafe4781bf587534890d3e7a212bbf5db665ab4d899a8f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1b06b279799df56babbafe4781bf587534890d3e7a212bbf5db665ab4d899a8f->enter($__internal_1b06b279799df56babbafe4781bf587534890d3e7a212bbf5db665ab4d899a8f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/library.html.twig"));
+        $__internal_7a4fdb364beb3a0df254942810ecbcf9969b45950be17b5aea12b32fa58df9af = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7a4fdb364beb3a0df254942810ecbcf9969b45950be17b5aea12b32fa58df9af->enter($__internal_7a4fdb364beb3a0df254942810ecbcf9969b45950be17b5aea12b32fa58df9af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/library.html.twig"));
 
-        $__internal_c38a9e30ae7c29e93c20cbeac691eb33ef9fcd1d0cf425119dc983242d1966bc = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_c38a9e30ae7c29e93c20cbeac691eb33ef9fcd1d0cf425119dc983242d1966bc->enter($__internal_c38a9e30ae7c29e93c20cbeac691eb33ef9fcd1d0cf425119dc983242d1966bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/library.html.twig"));
+        $__internal_36f452b6a20ffbf9372cf0960939cec36bef5782c3c33f963992de1aab224f72 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_36f452b6a20ffbf9372cf0960939cec36bef5782c3c33f963992de1aab224f72->enter($__internal_36f452b6a20ffbf9372cf0960939cec36bef5782c3c33f963992de1aab224f72_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/library.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1b06b279799df56babbafe4781bf587534890d3e7a212bbf5db665ab4d899a8f->leave($__internal_1b06b279799df56babbafe4781bf587534890d3e7a212bbf5db665ab4d899a8f_prof);
+        $__internal_7a4fdb364beb3a0df254942810ecbcf9969b45950be17b5aea12b32fa58df9af->leave($__internal_7a4fdb364beb3a0df254942810ecbcf9969b45950be17b5aea12b32fa58df9af_prof);
 
         
-        $__internal_c38a9e30ae7c29e93c20cbeac691eb33ef9fcd1d0cf425119dc983242d1966bc->leave($__internal_c38a9e30ae7c29e93c20cbeac691eb33ef9fcd1d0cf425119dc983242d1966bc_prof);
+        $__internal_36f452b6a20ffbf9372cf0960939cec36bef5782c3c33f963992de1aab224f72->leave($__internal_36f452b6a20ffbf9372cf0960939cec36bef5782c3c33f963992de1aab224f72_prof);
 
     }
 
     // line 3
-    public function block_titile($context, array $blocks = array())
+    public function block_title($context, array $blocks = array())
     {
-        $__internal_7ad98feafd92973139dd52af347c7aa3be1eb54d522329d73d148a7087a089b5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7ad98feafd92973139dd52af347c7aa3be1eb54d522329d73d148a7087a089b5->enter($__internal_7ad98feafd92973139dd52af347c7aa3be1eb54d522329d73d148a7087a089b5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "titile"));
+        $__internal_1e1db4073324440cf2f456006986b729de61c20d5b85da4ee2dd324ae61b2df0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1e1db4073324440cf2f456006986b729de61c20d5b85da4ee2dd324ae61b2df0->enter($__internal_1e1db4073324440cf2f456006986b729de61c20d5b85da4ee2dd324ae61b2df0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_bce0d857567854e6824bb6dda16ffba28d536d283f2480aecb0bccdfd4afbce2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_bce0d857567854e6824bb6dda16ffba28d536d283f2480aecb0bccdfd4afbce2->enter($__internal_bce0d857567854e6824bb6dda16ffba28d536d283f2480aecb0bccdfd4afbce2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "titile"));
+        $__internal_d384a1f22d4377092dd877e58b8a96667d84a1cb51a31831ea283a39d41e06ae = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_d384a1f22d4377092dd877e58b8a96667d84a1cb51a31831ea283a39d41e06ae->enter($__internal_d384a1f22d4377092dd877e58b8a96667d84a1cb51a31831ea283a39d41e06ae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Bibliotheque";
         
-        $__internal_bce0d857567854e6824bb6dda16ffba28d536d283f2480aecb0bccdfd4afbce2->leave($__internal_bce0d857567854e6824bb6dda16ffba28d536d283f2480aecb0bccdfd4afbce2_prof);
+        $__internal_d384a1f22d4377092dd877e58b8a96667d84a1cb51a31831ea283a39d41e06ae->leave($__internal_d384a1f22d4377092dd877e58b8a96667d84a1cb51a31831ea283a39d41e06ae_prof);
 
         
-        $__internal_7ad98feafd92973139dd52af347c7aa3be1eb54d522329d73d148a7087a089b5->leave($__internal_7ad98feafd92973139dd52af347c7aa3be1eb54d522329d73d148a7087a089b5_prof);
+        $__internal_1e1db4073324440cf2f456006986b729de61c20d5b85da4ee2dd324ae61b2df0->leave($__internal_1e1db4073324440cf2f456006986b729de61c20d5b85da4ee2dd324ae61b2df0_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_33ead35ad546f56cba3107793327382061c0bcc746d805799263297b693046a3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_33ead35ad546f56cba3107793327382061c0bcc746d805799263297b693046a3->enter($__internal_33ead35ad546f56cba3107793327382061c0bcc746d805799263297b693046a3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_de91a43a5c5d8726edd68646c596e0d9c0e149914ea68a840a66c12d3cf19acb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_de91a43a5c5d8726edd68646c596e0d9c0e149914ea68a840a66c12d3cf19acb->enter($__internal_de91a43a5c5d8726edd68646c596e0d9c0e149914ea68a840a66c12d3cf19acb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_57e1384eefd3495333b16a3f0d32eba3f5d604879904e1c4afc34c294059a9dc = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_57e1384eefd3495333b16a3f0d32eba3f5d604879904e1c4afc34c294059a9dc->enter($__internal_57e1384eefd3495333b16a3f0d32eba3f5d604879904e1c4afc34c294059a9dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_fea5675f9c48c630b61c9143345d1e91389c184cb79c42f80f1d6c4c35e70ed9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_fea5675f9c48c630b61c9143345d1e91389c184cb79c42f80f1d6c4c35e70ed9->enter($__internal_fea5675f9c48c630b61c9143345d1e91389c184cb79c42f80f1d6c4c35e70ed9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "    <div class=\"wrapper\">
@@ -76,15 +76,28 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                     <div class=\"name\">
                         <img src=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("photo/"), "html", null, true);
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "picture", array()), "html", null, true);
+        if ($this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "picture", array())) {
+            // line 16
+            echo "                            ";
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("photo/"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "picture", array()), "html", null, true);
+            echo "
+                            ";
+        } else {
+            // line 18
+            echo "                            ";
+            echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('get_gravatar')->getCallable(), array($this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "email", array()), 80, "retro")), "html", null, true);
+            echo "
+                            ";
+        }
+        // line 19
         echo "\" class='rounded-circle profil' width='150' height='150'>
                         <h4 class=\"title\">";
-        // line 16
+        // line 20
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username", array()), "html", null, true);
         echo "<br /></h4>
                         ";
-        // line 18
+        // line 22
         echo "                    </div>
                     <div class=\"container flex\">
                         <div class=\"flexItem\">
@@ -99,30 +112,40 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                             <div class=\"col-md-10 offset-md-1\">
                                 <ul class=\"list-unstyled follows\">
                                     ";
-        // line 31
+        // line 35
         if ((isset($context["tracksUser"]) ? $context["tracksUser"] : $this->getContext($context, "tracksUser"))) {
-            // line 32
+            // line 36
             echo "                                        ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["tracksUser"]) ? $context["tracksUser"] : $this->getContext($context, "tracksUser")), "tracks", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["track"]) {
-                // line 33
+                // line 37
                 echo "                                            <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-2 offset-md-0\">
+                                                    <div class=\"col-md-1 offset-md-0\">
                                                         <a href=\"";
-                // line 36
+                // line 40
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
                 echo "\">
                                                             <img src=\"";
-                // line 37
+                // line 41
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute($context["track"], "album", array()), "images", array()), 0, array(), "array"), "url", array()), "html", null, true);
                 echo "\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
                                                     </div>
+                                                    <div class=\"col-md-1 mt-3 text-center\">
+                                                        <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
+                                                        <audio >
+                                                            <source src=\"";
+                // line 47
+                echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "preview_url", array()), "html", null, true);
+                echo "\" type=\"audio/mp3\">
+                                                            Your browser does not support the audio element.
+                                                        </audio>
+                                                    </div>
                                                     <div class=\"col-md-7 col-xs-4\">
                                                         <h6><a href=\"";
-                // line 41
+                // line 52
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
                 echo "\" class=\"link-music\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "name", array()), "html", null, true);
@@ -130,7 +153,7 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                                                             <small>
                                                                 Artiste :
                                                                 ";
-                // line 44
+                // line 55
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["track"], "artists", array()));
                 $context['loop'] = array(
@@ -147,26 +170,26 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                     $context['loop']['last'] = 1 === $length;
                 }
                 foreach ($context['_seq'] as $context["_key"] => $context["artist"]) {
-                    // line 45
+                    // line 56
                     echo "                                                                    <a href=\"";
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showArtist", array("id_artist" => $this->getAttribute($context["artist"], "id", array()))), "html", null, true);
                     echo "\" class=\"link-music\">
                                                                         ";
-                    // line 46
+                    // line 57
                     if ($this->getAttribute($context["loop"], "last", array())) {
-                        // line 47
+                        // line 58
                         echo "                                                                            ";
                         echo twig_escape_filter($this->env, $this->getAttribute($context["artist"], "name", array()), "html", null, true);
                         echo "
                                                                         ";
                     } else {
-                        // line 49
+                        // line 60
                         echo "                                                                            ";
                         echo twig_escape_filter($this->env, $this->getAttribute($context["artist"], "name", array()), "html", null, true);
                         echo ",
                                                                         ";
                     }
-                    // line 51
+                    // line 62
                     echo "                                                                    </a>
                                                                 ";
                     ++$context['loop']['index0'];
@@ -181,11 +204,11 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['artist'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 53
+                // line 64
                 echo "                                                            </small><br/>
                                                             <small>
                                                                 Album : <a href=\"";
-                // line 55
+                // line 66
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
                 echo "\" class=\"link-music\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["track"], "album", array()), "name", array()), "html", null, true);
@@ -196,7 +219,7 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                                                     <div class=\"col-md-1 col-xs-2 offset-sm-1\">
                                                         <div class=\"py-3\" >
                                                             <a href=\"";
-                // line 61
+                // line 72
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["track"], "external_urls", array()), "spotify", array()), "html", null, true);
                 echo "\" target=\"blank\"><i class=\"fa fa-spotify fa-2x text-success\" aria-hidden=\"true\"></i></a>
                                                         </div>
@@ -204,7 +227,7 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                                                     <div class=\"col-md-1 col-xs-2 \">
                                                         <div class=\"mt-3\" >
                                                             <button class=\"removeToLibrary\" data-id=\"";
-                // line 66
+                // line 77
                 echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "id", array()), "html", null, true);
                 echo "\"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></button>
                                                         </div>
@@ -217,10 +240,10 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['track'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 73
+            // line 84
             echo "                                    ";
         } else {
-            // line 74
+            // line 85
             echo "                                        <li>
                                             <p><strong>No tracks</strong></p>
                                             <h3 class=\"text-muted\">Not following anyone yet :(</h3>
@@ -228,7 +251,7 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                                         </li>
                                     ";
         }
-        // line 80
+        // line 91
         echo "                                </ul>
                             </div>
                         </div>
@@ -240,10 +263,10 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
     </div>
 ";
         
-        $__internal_57e1384eefd3495333b16a3f0d32eba3f5d604879904e1c4afc34c294059a9dc->leave($__internal_57e1384eefd3495333b16a3f0d32eba3f5d604879904e1c4afc34c294059a9dc_prof);
+        $__internal_fea5675f9c48c630b61c9143345d1e91389c184cb79c42f80f1d6c4c35e70ed9->leave($__internal_fea5675f9c48c630b61c9143345d1e91389c184cb79c42f80f1d6c4c35e70ed9_prof);
 
         
-        $__internal_33ead35ad546f56cba3107793327382061c0bcc746d805799263297b693046a3->leave($__internal_33ead35ad546f56cba3107793327382061c0bcc746d805799263297b693046a3_prof);
+        $__internal_de91a43a5c5d8726edd68646c596e0d9c0e149914ea68a840a66c12d3cf19acb->leave($__internal_de91a43a5c5d8726edd68646c596e0d9c0e149914ea68a840a66c12d3cf19acb_prof);
 
     }
 
@@ -259,7 +282,7 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
 
     public function getDebugInfo()
     {
-        return array (  232 => 80,  224 => 74,  221 => 73,  208 => 66,  200 => 61,  189 => 55,  185 => 53,  170 => 51,  164 => 49,  158 => 47,  156 => 46,  151 => 45,  134 => 44,  126 => 41,  119 => 37,  115 => 36,  110 => 33,  105 => 32,  103 => 31,  88 => 18,  84 => 16,  79 => 15,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
+        return array (  255 => 91,  247 => 85,  244 => 84,  231 => 77,  223 => 72,  212 => 66,  208 => 64,  193 => 62,  187 => 60,  181 => 58,  179 => 57,  174 => 56,  157 => 55,  149 => 52,  141 => 47,  132 => 41,  128 => 40,  123 => 37,  118 => 36,  116 => 35,  101 => 22,  97 => 20,  94 => 19,  88 => 18,  81 => 16,  79 => 15,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -274,7 +297,7 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
     {
         return new Twig_Source("{% extends \"layout.html.twig\" %}
 
-{% block titile 'Bibliotheque' %}
+{% block title 'Bibliotheque' %}
 
 {% block content %}
     <div class=\"wrapper\">
@@ -286,7 +309,11 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
             <div class=\"container\">
                 <div class=\"owner\">
                     <div class=\"name\">
-                        <img src=\"{{ asset('photo/') }}{{ user.picture }}\" class='rounded-circle profil' width='150' height='150'>
+                        <img src=\"{% if user.picture %}
+                            {{ asset('photo/') }}{{ user.picture }}
+                            {% else %}
+                            {{ get_gravatar(user.email, 80, 'retro') }}
+                            {% endif %}\" class='rounded-circle profil' width='150' height='150'>
                         <h4 class=\"title\">{{ user.username}}<br /></h4>
                         {# <h6 class=\"description\">Music Producer</h6> #}
                     </div>
@@ -306,10 +333,17 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                                         {% for track in tracksUser.tracks %}
                                             <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-2 offset-md-0\">
+                                                    <div class=\"col-md-1 offset-md-0\">
                                                         <a href=\"{{ path('showAlbum', {'id_album' : track.album.id}) }}\">
                                                             <img src=\"{{ track.album.images[0].url }}\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
+                                                    </div>
+                                                    <div class=\"col-md-1 mt-3 text-center\">
+                                                        <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
+                                                        <audio >
+                                                            <source src=\"{{ track.preview_url }}\" type=\"audio/mp3\">
+                                                            Your browser does not support the audio element.
+                                                        </audio>
                                                     </div>
                                                     <div class=\"col-md-7 col-xs-4\">
                                                         <h6><a href=\"{{ path('showAlbum', {'id_album' : track.album.id}) }}\" class=\"link-music\">{{ track.name }}</a><br/>

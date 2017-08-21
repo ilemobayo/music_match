@@ -60,3 +60,18 @@ span i {
     background-color: #51cbce !important;
     color: white !important;
 }
+
+.dropdown-menu .dropdown-item:first-child a, .dropdown-menu .dropdown-item:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.dropdown-menu .dropdown-item:last-child a, .dropdown-menu .dropdown-item:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.navbar .navbar-nav .dropdown-menu {
+    border-radius: 6px;
+    margin-top: 1px;
+}

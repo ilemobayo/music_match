@@ -12,7 +12,12 @@
             <div class="container">
                 <div class="owner">
                     <div class="name">
-                        <img src="{{ asset('photo/') }}{{ user.picture }}" class='rounded-circle profil' width='150' height='150'>
+                        <img src="{% if user.picture %}
+                            {{ asset('photo/') }}{{ user.picture }}
+                            {% else %}
+                            {{ get_gravatar(user.email, 80, 'retro') }}
+                            {% endif %}"
+                             class='rounded-circle profil' width='150' height='150'>
                         <h4 class="title">{{ user.username}}<br /></h4>
                     </div>
                     <div class="container flex">
@@ -28,17 +33,20 @@
                     <div class="nav-tabs-wrapper">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#follows" role="tab">Recommandations musicales</a>
+                                <a class="nav-link active" data-toggle="tab" href="#recommendations" role="tab">Recommandations musicales</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#following" role="tab">Recommandations basées sur la catégorie : {{ tag }}</a>
+                                <a class="nav-link" data-toggle="tab" href="#recomcat" role="tab">Recommandations basées sur la catégorie : </br> {{ tag }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#artist-recommendation" role="tab">Recommandations basées sur un artiste  : </br> {{ artist }}</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <!-- Tab panes -->
                 <div class="tab-content following">
-                    <div class="tab-pane active" id="follows" role="tabpanel">
+                    <div class="tab-pane active" id="recommendations" role="tabpanel">
                         <div class="row">
                             <div class="col-md-10 offset-md-1">
                                 <ul class="list-unstyled follows">
@@ -48,7 +56,7 @@
                                                 <div class="row">
                                                     <div class="col-md-1 offset-md-0">
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
-                                                            <img src="{{ track.album.images[0].url }}" alt="Circle Image" class=" img-responsive">
+                                                            <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>
                                                     </div>
                                                     <div class="col-md-1 mt-3 text-center">
@@ -102,7 +110,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane " id="following" role="tabpanel">
+                    <div class="tab-pane " id="recomcat" role="tabpanel">
                        <div class="row">
                             <div class="col-md-10 offset-md-1">
                                 <ul class="list-unstyled follows">
@@ -112,7 +120,72 @@
                                                 <div class="row">
                                                     <div class="col-md-1 offset-md-0">
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
-                                                            <img src="{{ track.album.images[0].url }}" alt="Circle Image" class=" img-responsive">
+                                                            <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-1 mt-3 text-center">
+                                                        <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
+                                                        <audio >
+                                                            <source src="{{ track.preview_url }}" type="audio/mp3">
+                                                            Your browser does not support the audio element.
+                                                        </audio>
+                                                    </div>
+                                                    <div class="col-md-7 col-xs-4">
+                                                        <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
+                                                            <small>
+                                                                Artiste :
+                                                                {% for artist in track.artists %}
+                                                                    <a href="{{ path('showArtist', {'id_artist' : artist.id}) }}" class="link-music">
+                                                                        {% if loop.last %}
+                                                                            {{ artist.name }}
+                                                                        {% else %}
+                                                                            {{ artist.name }},
+                                                                        {% endif %}
+                                                                    </a>
+                                                                {% endfor %}
+                                                            </small><br/>
+                                                            <small>
+                                                                Album : <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.album.name }}</a>
+                                                            </small><br/>
+                                                        </h6>
+                                                    </div>
+                                                    <div class="col-md-1 col-xs-2 offset-1">
+                                                        <div class="py-3" >
+                                                            <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1 col-xs-2 ">
+                                                        <div class="mt-3" >
+                                                            <button class="addToLibrary" data-id="{{ track.id }}"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <hr />
+                                        {% endfor %}
+                                    {% else %}
+                                        <li>
+                                            <p><strong>No tracks</strong></p>
+                                            <h3 class="text-muted">Not following anyone yet :(</h3>
+                                            <button class="btn btn-warning btn-round">Find artists</button>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                       </div>
+                    </div>
+                    <!-- recommendation artiste -->
+                    <div class="tab-pane " id="artist-recommendation" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <ul class="list-unstyled follows">
+                                    {% if recommendationsArtist %}
+                                        {% for track in recommendationsArtist.tracks %}
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-1 offset-md-0">
+                                                        <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
+                                                            <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>
                                                     </div>
                                                     <div class="col-md-1 mt-3 text-center">
@@ -165,7 +238,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>

@@ -37,6 +37,23 @@ $app->register(new HttpFragmentServiceProvider());
 $app['twig'] = $app->extend('twig', function ($twig, $app) {
     // add custom globals, filters, tags, ...
     $twig->addGlobal('user_manager', $app['user.manager']);
+    
+    // function gravatar
+    $function = new Twig_SimpleFunction('get_gravatar', function ($email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts = array() ) {
+        $url = 'https://www.gravatar.com/avatar/';
+        $url .= md5(strtolower(trim($email)));
+        $url .= "?s=$s&d=$d&r=$r";
+        if ($img) {
+            $url = '<img src="' . $url . '"';
+            foreach ($atts as $key => $val)
+                $url .= ' ' . $key . '="' . $val . '"';
+            $url .= ' />';
+        }
+        return $url;
+    });
+    $twig->addFunction($function);
+
+    
     return $twig;
 });
 

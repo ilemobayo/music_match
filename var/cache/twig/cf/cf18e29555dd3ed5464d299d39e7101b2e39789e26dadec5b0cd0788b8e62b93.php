@@ -13,6 +13,7 @@ class __TwigTemplate_b439a1ba4e3dc5bfa7e114b23cbda5553c353239d6228b067a73b93ea76
             'title' => array($this, 'block_title'),
             'stylesheet' => array($this, 'block_stylesheet'),
             'content' => array($this, 'block_content'),
+            'script' => array($this, 'block_script'),
         );
     }
 
@@ -177,7 +178,7 @@ class __TwigTemplate_b439a1ba4e3dc5bfa7e114b23cbda5553c353239d6228b067a73b93ea76
         ";
         // line 98
         $this->displayBlock('content', $context, $blocks);
-        // line 99
+        // line 101
         echo "        
         
         <!--Connexion  -->
@@ -186,19 +187,9 @@ class __TwigTemplate_b439a1ba4e3dc5bfa7e114b23cbda5553c353239d6228b067a73b93ea76
                 <div class=\"modal-content card card-register\">
                     <div class=\"modal-body\">
                         <h3 class=\"title\">Welcome</h3>
-                        <div class=\"social-line text-center\">
-                            <a href=\"#pablo\" class=\"btn btn-neutral btn-facebook btn-just-icon\">
-                                <i class=\"fa fa-facebook-square\"></i>
-                            </a>
-                            <a href=\"#pablo\" class=\"btn btn-neutral btn-google btn-just-icon\">
-                                <i class=\"fa fa-google-plus\"></i>
-                            </a>
-                            <a href=\"#pablo\" class=\"btn btn-neutral btn-twitter btn-just-icon\">
-                                <i class=\"fa fa-twitter\"></i>
-                            </a>
-                        </div>
-                        <form method=\"post\" action=\"";
-        // line 118
+                        ";
+        // line 120
+        echo "                        <form method=\"post\" action=\"";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("login");
         echo "\" class=\"register-form\">
                             <label>Email</label>
@@ -225,72 +216,79 @@ class __TwigTemplate_b439a1ba4e3dc5bfa7e114b23cbda5553c353239d6228b067a73b93ea76
             </div>
         </div>
     
+        <!-- succes message ajex -->
+        <div class=\"panel-ajax\"></div>
                             
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js\"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>
-        
-        <!-- Core JS Files -->
-        <script src=\"";
-        // line 150
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery-3.2.1.js"), "html", null, true);
-        echo "\" type=\"text/javascript\"></script>
-        <script src=\"";
-        // line 151
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery-ui-1.12.1.custom.min.js"), "html", null, true);
-        echo "\" type=\"text/javascript\"></script>
-        <script src=\"";
-        // line 152
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/tether.min.js"), "html", null, true);
-        echo "\" type=\"text/javascript\"></script>
-        <script src=\"";
-        // line 153
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
-        echo "\" type=\"text/javascript\"></script>
-
-        <!-- Switches -->
-        <script src=\"";
-        // line 156
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap-switch.min.js"), "html", null, true);
-        echo "\"></script>
-
-        <!--  Plugins for Slider -->
-        <script src=\"";
-        // line 159
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/nouislider.js"), "html", null, true);
-        echo "\"></script>
-
-        <!--  Plugins for DateTimePicker -->
-        <script src=\"";
-        // line 162
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/moment.min.js"), "html", null, true);
-        echo "\"></script>
-        <script src=\"";
-        // line 163
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap-datetimepicker.min.js"), "html", null, true);
-        echo "\"></script>
-
-        <!--  Paper Kit Initialization snd functons -->
-        <script src=\"";
-        // line 166
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/paper-kit.js?v=2.0.0"), "html", null, true);
-        echo "\"></script>
-        <!-- a refaire en propre -->
-        <script>
+        ";
+        // line 148
+        $this->displayBlock('script', $context, $blocks);
+        // line 174
+        echo "        <script>
             \$(function () {
+                // player stop and play
                 \$('.play').on('click', function() {
-                    //console.log(\$(this).next())
-                    \$(this).next()[0].play()
+                    \$this = \$(this);
+                    i = \$this.children();
+                    \$('audio').each(function () {
+                        //console.log(\$(this).get(0));
+                        \$(this).get(0).pause();
+                        \$(this).get(0).currentTime = 0;
+                    });
+                    if(i.hasClass('fa-play-circle')){
+                        i.removeClass('fa-play-circle').addClass('fa-pause-circle');
+                        \$this.next().get(0).play()
+                    }else{
+                        i.removeClass('fa-pause-circle').addClass('fa-play-circle');
+                        \$this.next().get(0).pause()
+                    }
+                    \$('audio').on('pause', function () {
+                        \$(this).prev().children().removeClass('fa-pause-circle').addClass('fa-play-circle');
+                    })
+                    \$('audio').on('ended', function () {
+                        \$(this).prev().children().removeClass('fa-pause-circle').addClass('fa-play-circle');
+                    })
                 })
-                
-                //-----------------------------------
-                
-                \$.get('ajax/getTags', function(data){
-                    console.log(data);
+                // ajout d'un titre dans la bibliotheque
+                \$('.addToLibrary').on('click', function () {
+                    var \$this = \$(this);
+                    var id_track = \$this.data('id');
+                    \$.post( \"";
+        // line 203
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ajax_addTrack");
+        echo "\", { id: id_track } ,function( data ) {
+                        \$('.panel-ajax').html( data.message );
+                        \$('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
+                            \$(this).removeClass('move-panel-ajax');
+                            next();
+                        }).delay(500).queue(function(next){
+                            \$(this).removeClass(data.status);
+                            next();
+                        });
+                    });
                 })
-            });
+                // retirer un titre de la biliotheque
+                \$('.removeToLibrary').on('click', function () {
+                    var \$this = \$(this);
+                    var id_track = \$this.data('id');
+                    \$.post( \"";
+        // line 218
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ajax_removeTrack");
+        echo "\", { id: id_track } ,function( data ) {
+                        \$('.panel-ajax').html( data.message );
+                        \$this.closest('li').slideUp('slow');
+                        \$this.closest('li').next().hide();
+                        \$('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
+                            \$(this).removeClass('move-panel-ajax');
+                            next();
+                        }).delay(500).queue(function(next){
+                            \$(this).removeClass(data.status);
+                            next();
+                        });
+                    });
+                })
+            });    
         </script>
+            
     </body>
 </html>";
     }
@@ -347,6 +345,67 @@ class __TwigTemplate_b439a1ba4e3dc5bfa7e114b23cbda5553c353239d6228b067a73b93ea76
     // line 98
     public function block_content($context, array $blocks = array())
     {
+        // line 99
+        echo "        
+        ";
+    }
+
+    // line 148
+    public function block_script($context, array $blocks = array())
+    {
+        echo "                    
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js\"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>
+        
+        <!-- Core JS Files -->
+        <script src=\"";
+        // line 155
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery-3.2.1.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+        <script src=\"";
+        // line 156
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery-ui-1.12.1.custom.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+        <script src=\"";
+        // line 157
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/tether.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+        <script src=\"";
+        // line 158
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+
+        <!-- Switches -->
+        <script src=\"";
+        // line 161
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap-switch.min.js"), "html", null, true);
+        echo "\"></script>
+
+        <!--  Plugins for Slider -->
+        <script src=\"";
+        // line 164
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/nouislider.js"), "html", null, true);
+        echo "\"></script>
+
+        <!--  Plugins for DateTimePicker -->
+        <script src=\"";
+        // line 167
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/moment.min.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 168
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap-datetimepicker.min.js"), "html", null, true);
+        echo "\"></script>
+
+        <!--  Paper Kit Initialization and functions -->
+        <script src=\"";
+        // line 171
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/paper-kit.js?v=2.0.0"), "html", null, true);
+        echo "\"></script>
+        <!-- a refaire en propre -->
+        ";
     }
 
     public function getTemplateName()
@@ -361,7 +420,7 @@ class __TwigTemplate_b439a1ba4e3dc5bfa7e114b23cbda5553c353239d6228b067a73b93ea76
 
     public function getDebugInfo()
     {
-        return array (  348 => 98,  342 => 29,  333 => 23,  329 => 22,  325 => 21,  321 => 20,  317 => 19,  313 => 18,  308 => 15,  305 => 14,  299 => 9,  277 => 166,  271 => 163,  267 => 162,  261 => 159,  255 => 156,  249 => 153,  245 => 152,  241 => 151,  237 => 150,  202 => 118,  181 => 99,  179 => 98,  173 => 94,  167 => 93,  156 => 91,  153 => 90,  150 => 89,  147 => 88,  142 => 87,  138 => 86,  130 => 80,  127 => 79,  121 => 72,  116 => 70,  110 => 67,  106 => 66,  97 => 61,  88 => 55,  85 => 54,  83 => 53,  77 => 49,  71 => 47,  65 => 45,  63 => 44,  48 => 31,  46 => 14,  38 => 9,  32 => 6,  28 => 5,  22 => 1,);
+        return array (  405 => 171,  399 => 168,  395 => 167,  389 => 164,  383 => 161,  377 => 158,  373 => 157,  369 => 156,  365 => 155,  354 => 148,  349 => 99,  346 => 98,  340 => 29,  331 => 23,  327 => 22,  323 => 21,  319 => 20,  315 => 19,  311 => 18,  306 => 15,  303 => 14,  297 => 9,  275 => 218,  257 => 203,  226 => 174,  224 => 148,  192 => 120,  182 => 101,  180 => 98,  174 => 94,  168 => 93,  157 => 91,  154 => 90,  151 => 89,  148 => 88,  143 => 87,  139 => 86,  131 => 80,  128 => 79,  122 => 72,  117 => 70,  111 => 67,  107 => 66,  98 => 61,  89 => 55,  86 => 54,  84 => 53,  78 => 49,  72 => 47,  66 => 45,  64 => 44,  49 => 31,  47 => 14,  39 => 9,  33 => 6,  29 => 5,  23 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

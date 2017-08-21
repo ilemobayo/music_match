@@ -15,12 +15,12 @@ class AjaxController extends ControllerAbstract
         if($ifRegisterTrack) {
             $data = [
                 'status' => 'succes',
-                'message' => 'le titre a été ajouter à votre bibliotheque'
+                'message' => 'Le titre a été ajouté à votre bibliotheque'
             ];
         }else{
             $data = [
                 'status' => 'error',
-                'message' => 'le titre est deja present dans votre bibliotheque'
+                'message' => 'Le titre est déjà présent dans votre bibliotheque'
             ];
         }
         return $this->app->json($data, 200);
@@ -30,7 +30,7 @@ class AjaxController extends ControllerAbstract
         $this->app['dashboard.repository']->deleteTrack($id, $this->app['user.manager']->getUser()->getId());
             $data = [
                 'status' => 'succes',
-                'message' => 'le titre à été supprimer de votre bibliotheque'
+                'message' => 'Le titre à été supprimé de votre bibliotheque'
             ];
         return $this->app->json($data, 200);
     }

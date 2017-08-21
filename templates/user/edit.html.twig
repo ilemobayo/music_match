@@ -49,9 +49,7 @@
                                 {% if tag in profile.tags %}
                                     selected
                                 {% endif %}
-                                >
-                                    {{tag|replace({'-' : ' '})}}
-                                </option>
+                                >{{tag|replace({'-' : ' '})}}</option>
                             {% endfor %}
                         </select>
                     </div>
@@ -69,7 +67,11 @@
                 
             <div class='col-sm-4 offset-2'>
                 <div class="form-group">
-                    <img src="{{ asset('photo/') }}{{ profile.picture }}" alt="Photo de profil" style="height: 250px;"><br><br>
+                    <img src="{% if profile.picture %}
+                            {{ asset('photo/') }}{{ profile.picture }}
+                            {% else %}
+                            {{ get_gravatar(profile.email, 80, 'retro') }}
+                            {% endif %}" alt="Photo de profil" style="height: 250px;"><br><br>
                 </div>
             </div>
         </div>

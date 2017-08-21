@@ -1,6 +1,6 @@
 {% extends "layout.html.twig" %}
 
-{% block titile 'Bibliotheque' %}
+{% block title 'Bibliotheque' %}
 
 {% block content %}
     <div class="wrapper">
@@ -12,7 +12,11 @@
             <div class="container">
                 <div class="owner">
                     <div class="name">
-                        <img src="{{ asset('photo/') }}{{ user.picture }}" class='rounded-circle profil' width='150' height='150'>
+                        <img src="{% if user.picture %}
+                            {{ asset('photo/') }}{{ user.picture }}
+                            {% else %}
+                            {{ get_gravatar(user.email, 80, 'retro') }}
+                            {% endif %}" class='rounded-circle profil' width='150' height='150'>
                         <h4 class="title">{{ user.username}}<br /></h4>
                         {# <h6 class="description">Music Producer</h6> #}
                     </div>
@@ -32,10 +36,17 @@
                                         {% for track in tracksUser.tracks %}
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-2 offset-md-0">
+                                                    <div class="col-md-1 offset-md-0">
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
                                                             <img src="{{ track.album.images[0].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>
+                                                    </div>
+                                                    <div class="col-md-1 mt-3 text-center">
+                                                        <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
+                                                        <audio >
+                                                            <source src="{{ track.preview_url }}" type="audio/mp3">
+                                                            Your browser does not support the audio element.
+                                                        </audio>
                                                     </div>
                                                     <div class="col-md-7 col-xs-4">
                                                         <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
