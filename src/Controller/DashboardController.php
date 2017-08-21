@@ -25,9 +25,12 @@ class DashboardController extends ControllerAbstract {
         $tags = array_slice( $tags, 0, 4 );
         $tag = $tags[array_rand($tags)];
 
+
         // me sort un titre au hasard
         $idTracks = $user->getIdTracks();
-        $idTrack = $idTracks[array_rand($idTracks)];
+        if($idTracks){
+            $idTrack = $idTracks[array_rand($idTracks)];
+        }
 
         $recommendationsTag = '';
         $recommendations = null;

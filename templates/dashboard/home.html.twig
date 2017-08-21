@@ -15,7 +15,7 @@
                         <img src="{% if user.picture %}
                             {{ asset('photo/') }}{{ user.picture }}
                             {% else %}
-                            {{ get_gravatar(user.email, 80, 'identicon') }}
+                            {{ get_gravatar(user.email, 80, 'retro') }}
                             {% endif %}"
                              class='rounded-circle profil' width='150' height='150'>
                         <h4 class="title">{{ user.username}}<br /></h4>
