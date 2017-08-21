@@ -75,3 +75,9 @@ span i {
     border-radius: 6px;
     margin-top: 1px;
 }
+
+a button.btn.btn-success.btn-round{
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}

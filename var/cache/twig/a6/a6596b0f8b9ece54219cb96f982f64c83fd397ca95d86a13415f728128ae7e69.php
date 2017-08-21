@@ -22,47 +22,47 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7a4fdb364beb3a0df254942810ecbcf9969b45950be17b5aea12b32fa58df9af = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7a4fdb364beb3a0df254942810ecbcf9969b45950be17b5aea12b32fa58df9af->enter($__internal_7a4fdb364beb3a0df254942810ecbcf9969b45950be17b5aea12b32fa58df9af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/library.html.twig"));
+        $__internal_19c246858e7f85571ebcead660cd506378e0b70e326111061b1e466b0fbc7647 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_19c246858e7f85571ebcead660cd506378e0b70e326111061b1e466b0fbc7647->enter($__internal_19c246858e7f85571ebcead660cd506378e0b70e326111061b1e466b0fbc7647_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/library.html.twig"));
 
-        $__internal_36f452b6a20ffbf9372cf0960939cec36bef5782c3c33f963992de1aab224f72 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_36f452b6a20ffbf9372cf0960939cec36bef5782c3c33f963992de1aab224f72->enter($__internal_36f452b6a20ffbf9372cf0960939cec36bef5782c3c33f963992de1aab224f72_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/library.html.twig"));
+        $__internal_b826797aaae3328652cb6e36eb06382900249c657dbc1cf0ea23821c13a2653a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_b826797aaae3328652cb6e36eb06382900249c657dbc1cf0ea23821c13a2653a->enter($__internal_b826797aaae3328652cb6e36eb06382900249c657dbc1cf0ea23821c13a2653a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/library.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7a4fdb364beb3a0df254942810ecbcf9969b45950be17b5aea12b32fa58df9af->leave($__internal_7a4fdb364beb3a0df254942810ecbcf9969b45950be17b5aea12b32fa58df9af_prof);
+        $__internal_19c246858e7f85571ebcead660cd506378e0b70e326111061b1e466b0fbc7647->leave($__internal_19c246858e7f85571ebcead660cd506378e0b70e326111061b1e466b0fbc7647_prof);
 
         
-        $__internal_36f452b6a20ffbf9372cf0960939cec36bef5782c3c33f963992de1aab224f72->leave($__internal_36f452b6a20ffbf9372cf0960939cec36bef5782c3c33f963992de1aab224f72_prof);
+        $__internal_b826797aaae3328652cb6e36eb06382900249c657dbc1cf0ea23821c13a2653a->leave($__internal_b826797aaae3328652cb6e36eb06382900249c657dbc1cf0ea23821c13a2653a_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_1e1db4073324440cf2f456006986b729de61c20d5b85da4ee2dd324ae61b2df0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1e1db4073324440cf2f456006986b729de61c20d5b85da4ee2dd324ae61b2df0->enter($__internal_1e1db4073324440cf2f456006986b729de61c20d5b85da4ee2dd324ae61b2df0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_c1e81dc013cc62a9b91583533a58cbd538e6fd0db2c898f6dc11372db1b494d2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c1e81dc013cc62a9b91583533a58cbd538e6fd0db2c898f6dc11372db1b494d2->enter($__internal_c1e81dc013cc62a9b91583533a58cbd538e6fd0db2c898f6dc11372db1b494d2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_d384a1f22d4377092dd877e58b8a96667d84a1cb51a31831ea283a39d41e06ae = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_d384a1f22d4377092dd877e58b8a96667d84a1cb51a31831ea283a39d41e06ae->enter($__internal_d384a1f22d4377092dd877e58b8a96667d84a1cb51a31831ea283a39d41e06ae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_21cd19f85262aa2b7e994afcc19ab99d83cc45d0b924ec1b14d3a5d6130e682d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_21cd19f85262aa2b7e994afcc19ab99d83cc45d0b924ec1b14d3a5d6130e682d->enter($__internal_21cd19f85262aa2b7e994afcc19ab99d83cc45d0b924ec1b14d3a5d6130e682d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Bibliotheque";
         
-        $__internal_d384a1f22d4377092dd877e58b8a96667d84a1cb51a31831ea283a39d41e06ae->leave($__internal_d384a1f22d4377092dd877e58b8a96667d84a1cb51a31831ea283a39d41e06ae_prof);
+        $__internal_21cd19f85262aa2b7e994afcc19ab99d83cc45d0b924ec1b14d3a5d6130e682d->leave($__internal_21cd19f85262aa2b7e994afcc19ab99d83cc45d0b924ec1b14d3a5d6130e682d_prof);
 
         
-        $__internal_1e1db4073324440cf2f456006986b729de61c20d5b85da4ee2dd324ae61b2df0->leave($__internal_1e1db4073324440cf2f456006986b729de61c20d5b85da4ee2dd324ae61b2df0_prof);
+        $__internal_c1e81dc013cc62a9b91583533a58cbd538e6fd0db2c898f6dc11372db1b494d2->leave($__internal_c1e81dc013cc62a9b91583533a58cbd538e6fd0db2c898f6dc11372db1b494d2_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_de91a43a5c5d8726edd68646c596e0d9c0e149914ea68a840a66c12d3cf19acb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_de91a43a5c5d8726edd68646c596e0d9c0e149914ea68a840a66c12d3cf19acb->enter($__internal_de91a43a5c5d8726edd68646c596e0d9c0e149914ea68a840a66c12d3cf19acb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_7d9df14d62cd76c6bf66a36a4f4f6e7a8ef72ac6b07423ad8ecc022b2fcab25c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7d9df14d62cd76c6bf66a36a4f4f6e7a8ef72ac6b07423ad8ecc022b2fcab25c->enter($__internal_7d9df14d62cd76c6bf66a36a4f4f6e7a8ef72ac6b07423ad8ecc022b2fcab25c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_fea5675f9c48c630b61c9143345d1e91389c184cb79c42f80f1d6c4c35e70ed9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_fea5675f9c48c630b61c9143345d1e91389c184cb79c42f80f1d6c4c35e70ed9->enter($__internal_fea5675f9c48c630b61c9143345d1e91389c184cb79c42f80f1d6c4c35e70ed9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_7ed7d17d4777e1c0673f3aa2b969832eba1ec8d4e2381dffe718887650b858be = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_7ed7d17d4777e1c0673f3aa2b969832eba1ec8d4e2381dffe718887650b858be->enter($__internal_7ed7d17d4777e1c0673f3aa2b969832eba1ec8d4e2381dffe718887650b858be_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "    <div class=\"wrapper\">
@@ -101,7 +101,7 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
         echo "                    </div>
                     <div class=\"container flex\">
                         <div class=\"flexItem\">
-                            <h2>Bibliotheque</h2>
+                            <h2>Bibliothèque</h2>
                         </div>
                     </div>
                 </div>
@@ -245,9 +245,12 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
         } else {
             // line 85
             echo "                                        <li>
-                                            <p><strong>No tracks</strong></p>
-                                            <h3 class=\"text-muted\">Not following anyone yet :(</h3>
-                                            <button class=\"btn btn-warning btn-round\">Find artists</button>
+                                            <p><strong>Votre bibliothèque est vide</strong></p>
+                                            <h3 class=\"text-muted\">Aucun morceau ajouté à votre bibliothèque pour le moment :(</h3>
+                                            <a href=\"";
+            // line 88
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("dashboardDisplay", array("username" => $this->getAttribute($this->getAttribute((isset($context["user_manager"]) ? $context["user_manager"] : $this->getContext($context, "user_manager")), "user", array()), "username", array()))), "html", null, true);
+            echo "\"><button class=\"btn btn-success btn-round\">Pour en trouver, c'est par ici !</button></a>
                                         </li>
                                     ";
         }
@@ -263,10 +266,10 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
     </div>
 ";
         
-        $__internal_fea5675f9c48c630b61c9143345d1e91389c184cb79c42f80f1d6c4c35e70ed9->leave($__internal_fea5675f9c48c630b61c9143345d1e91389c184cb79c42f80f1d6c4c35e70ed9_prof);
+        $__internal_7ed7d17d4777e1c0673f3aa2b969832eba1ec8d4e2381dffe718887650b858be->leave($__internal_7ed7d17d4777e1c0673f3aa2b969832eba1ec8d4e2381dffe718887650b858be_prof);
 
         
-        $__internal_de91a43a5c5d8726edd68646c596e0d9c0e149914ea68a840a66c12d3cf19acb->leave($__internal_de91a43a5c5d8726edd68646c596e0d9c0e149914ea68a840a66c12d3cf19acb_prof);
+        $__internal_7d9df14d62cd76c6bf66a36a4f4f6e7a8ef72ac6b07423ad8ecc022b2fcab25c->leave($__internal_7d9df14d62cd76c6bf66a36a4f4f6e7a8ef72ac6b07423ad8ecc022b2fcab25c_prof);
 
     }
 
@@ -282,7 +285,7 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
 
     public function getDebugInfo()
     {
-        return array (  255 => 91,  247 => 85,  244 => 84,  231 => 77,  223 => 72,  212 => 66,  208 => 64,  193 => 62,  187 => 60,  181 => 58,  179 => 57,  174 => 56,  157 => 55,  149 => 52,  141 => 47,  132 => 41,  128 => 40,  123 => 37,  118 => 36,  116 => 35,  101 => 22,  97 => 20,  94 => 19,  88 => 18,  81 => 16,  79 => 15,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
+        return array (  258 => 91,  252 => 88,  247 => 85,  244 => 84,  231 => 77,  223 => 72,  212 => 66,  208 => 64,  193 => 62,  187 => 60,  181 => 58,  179 => 57,  174 => 56,  157 => 55,  149 => 52,  141 => 47,  132 => 41,  128 => 40,  123 => 37,  118 => 36,  116 => 35,  101 => 22,  97 => 20,  94 => 19,  88 => 18,  81 => 16,  79 => 15,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -319,7 +322,7 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                     </div>
                     <div class=\"container flex\">
                         <div class=\"flexItem\">
-                            <h2>Bibliotheque</h2>
+                            <h2>Bibliothèque</h2>
                         </div>
                     </div>
                 </div>
@@ -380,9 +383,9 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                                         {% endfor %}
                                     {% else %}
                                         <li>
-                                            <p><strong>No tracks</strong></p>
-                                            <h3 class=\"text-muted\">Not following anyone yet :(</h3>
-                                            <button class=\"btn btn-warning btn-round\">Find artists</button>
+                                            <p><strong>Votre bibliothèque est vide</strong></p>
+                                            <h3 class=\"text-muted\">Aucun morceau ajouté à votre bibliothèque pour le moment :(</h3>
+                                            <a href=\"{{ path('dashboardDisplay', { username : user_manager.user.username }) }}\"><button class=\"btn btn-success btn-round\">Pour en trouver, c'est par ici !</button></a>
                                         </li>
                                     {% endif %}
                                 </ul>
