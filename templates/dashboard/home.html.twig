@@ -54,19 +54,19 @@
                                         {% for track in recommendations.tracks %}
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-1 col-xs-1 offset-md-0" id="image_m">
+                                                    <div class="col-md-1 col-xs-1 offset-md-0 image" >
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
                                                             <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-1 mt-3 text-center" id="play_m">
+                                                    <div class="col-md-1 col-xs-1 mt-3 text-center playbutton">
                                                         <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
                                                         <audio >
                                                             <source src="{{ track.preview_url }}" type="audio/mp3">
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class="col-md-7 col-xs-2" id="track_m">
+                                                    <div class="col-md-7 col-xs-2 track">
                                                         <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
                                                             <small>
                                                                 Artiste : 
@@ -85,12 +85,12 @@
                                                             </small><br/>
                                                         </h6>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 offset-1" id="lien_spotify_m">
+                                                    <div class="col-md-1 col-xs-2 offset-1 lien_spotify">
                                                         <div class="py-3" >
                                                             <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 " id="library_m">
+                                                    <div class="col-md-1 col-xs-2 library">
                                                         <div class="mt-3">
                                                             <button class="addToLibrary" data-id="{{ track.id }}"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                                         </div>
@@ -118,19 +118,19 @@
                                         {% for track in recommendationsTag.tracks %}
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-1 offset-md-0 col-xs-1" id="image_c">
+                                                    <div class="col-md-1 offset-md-0 col-xs-1 image">
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
                                                             <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>
                                                     </div>
-                                                    <div class="col-md-1 mt-3 col-xs-1 text-center" id="play_c">
+                                                    <div class="col-md-1 mt-3 col-xs-1 text-center playbutton">
                                                         <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
                                                         <audio >
                                                             <source src="{{ track.preview_url }}" type="audio/mp3">
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class="col-md-7 col-xs-4" id="track_c">
+                                                    <div class="col-md-7 col-xs-4 track">
                                                         <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
                                                             <small>
                                                                 Artiste :
@@ -149,12 +149,12 @@
                                                             </small><br/>
                                                         </h6>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 offset-1" id="lien_spotify_c">
+                                                    <div class="col-md-1 col-xs-2 offset-1 lien_spotify">
                                                         <div class="py-3" >
                                                             <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 " id="library_c">
+                                                    <div class="col-md-1 col-xs-2 library">
                                                         <div class="mt-3" >
                                                             <button class="addToLibrary" data-id="{{ track.id }}"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                                         </div>
@@ -183,19 +183,19 @@
                                         {% for track in recommendationsArtist.tracks %}
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-1 offset-md-0 col-xs-1" id="image_a">
+                                                    <div class="col-md-1 offset-md-0 col-xs-1 image">
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
                                                             <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-1 mt-3 text-center" id="play_a">
+                                                    <div class="col-md-1 col-xs-1 mt-3 text-center playbutton">
                                                         <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
                                                         <audio >
                                                             <source src="{{ track.preview_url }}" type="audio/mp3">
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class="col-md-7 col-xs-4" id="track_a">
+                                                    <div class="col-md-7 col-xs-4 track">
                                                         <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
                                                             <small>
                                                                 Artiste :
@@ -214,12 +214,12 @@
                                                             </small><br/>
                                                         </h6>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 offset-1" id="lien_spotify_a">
+                                                    <div class="col-md-1 col-xs-2 offset-1 lien_spotify">
                                                         <div class="py-3" >
                                                             <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 " id="library_a">
+                                                    <div class="col-md-1 col-xs-2 library ">
                                                         <div class="mt-3" >
                                                             <button class="addToLibrary" data-id="{{ track.id }}"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                                         </div>

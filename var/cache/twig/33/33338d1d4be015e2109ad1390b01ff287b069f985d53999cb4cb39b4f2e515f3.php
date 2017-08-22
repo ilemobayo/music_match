@@ -22,47 +22,47 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e6db6bcefdc2d10dd3d7b781ccb3e7b657cefb680832d2e7e9214612a90f9461 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e6db6bcefdc2d10dd3d7b781ccb3e7b657cefb680832d2e7e9214612a90f9461->enter($__internal_e6db6bcefdc2d10dd3d7b781ccb3e7b657cefb680832d2e7e9214612a90f9461_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/home.html.twig"));
+        $__internal_3c00ffe708ad103175329fd96c8a8be0e33d16a1c93039f134f66c18d8fffa71 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3c00ffe708ad103175329fd96c8a8be0e33d16a1c93039f134f66c18d8fffa71->enter($__internal_3c00ffe708ad103175329fd96c8a8be0e33d16a1c93039f134f66c18d8fffa71_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/home.html.twig"));
 
-        $__internal_1c5e27784b83b5ea1f64d1bcabe1589517ca870bfb595daa293467e54214086d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_1c5e27784b83b5ea1f64d1bcabe1589517ca870bfb595daa293467e54214086d->enter($__internal_1c5e27784b83b5ea1f64d1bcabe1589517ca870bfb595daa293467e54214086d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/home.html.twig"));
+        $__internal_4596200c523bc5ffa24a03a3315fb04a584fdcaf291b2209da4851c4489163f6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_4596200c523bc5ffa24a03a3315fb04a584fdcaf291b2209da4851c4489163f6->enter($__internal_4596200c523bc5ffa24a03a3315fb04a584fdcaf291b2209da4851c4489163f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/home.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_e6db6bcefdc2d10dd3d7b781ccb3e7b657cefb680832d2e7e9214612a90f9461->leave($__internal_e6db6bcefdc2d10dd3d7b781ccb3e7b657cefb680832d2e7e9214612a90f9461_prof);
+        $__internal_3c00ffe708ad103175329fd96c8a8be0e33d16a1c93039f134f66c18d8fffa71->leave($__internal_3c00ffe708ad103175329fd96c8a8be0e33d16a1c93039f134f66c18d8fffa71_prof);
 
         
-        $__internal_1c5e27784b83b5ea1f64d1bcabe1589517ca870bfb595daa293467e54214086d->leave($__internal_1c5e27784b83b5ea1f64d1bcabe1589517ca870bfb595daa293467e54214086d_prof);
+        $__internal_4596200c523bc5ffa24a03a3315fb04a584fdcaf291b2209da4851c4489163f6->leave($__internal_4596200c523bc5ffa24a03a3315fb04a584fdcaf291b2209da4851c4489163f6_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_a5e5dfb52492894dab81f285c00e0b52795285e59261f7b62ae4f464e84aa090 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a5e5dfb52492894dab81f285c00e0b52795285e59261f7b62ae4f464e84aa090->enter($__internal_a5e5dfb52492894dab81f285c00e0b52795285e59261f7b62ae4f464e84aa090_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_aaa1d682ad6eacf476c28dd6f3260e9520d8660df174a20a84433b85f9d25868 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_aaa1d682ad6eacf476c28dd6f3260e9520d8660df174a20a84433b85f9d25868->enter($__internal_aaa1d682ad6eacf476c28dd6f3260e9520d8660df174a20a84433b85f9d25868_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_4c141f523aed36762dd3d08b7f1f9f9eb54cd3e967fcd4a8559bbf3fca26a082 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_4c141f523aed36762dd3d08b7f1f9f9eb54cd3e967fcd4a8559bbf3fca26a082->enter($__internal_4c141f523aed36762dd3d08b7f1f9f9eb54cd3e967fcd4a8559bbf3fca26a082_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_2f624bd4db962e8e3e00dd1a1b4bc8e217d86e474fc788ee2fa73d6b8409b113 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2f624bd4db962e8e3e00dd1a1b4bc8e217d86e474fc788ee2fa73d6b8409b113->enter($__internal_2f624bd4db962e8e3e00dd1a1b4bc8e217d86e474fc788ee2fa73d6b8409b113_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Home";
         
-        $__internal_4c141f523aed36762dd3d08b7f1f9f9eb54cd3e967fcd4a8559bbf3fca26a082->leave($__internal_4c141f523aed36762dd3d08b7f1f9f9eb54cd3e967fcd4a8559bbf3fca26a082_prof);
+        $__internal_2f624bd4db962e8e3e00dd1a1b4bc8e217d86e474fc788ee2fa73d6b8409b113->leave($__internal_2f624bd4db962e8e3e00dd1a1b4bc8e217d86e474fc788ee2fa73d6b8409b113_prof);
 
         
-        $__internal_a5e5dfb52492894dab81f285c00e0b52795285e59261f7b62ae4f464e84aa090->leave($__internal_a5e5dfb52492894dab81f285c00e0b52795285e59261f7b62ae4f464e84aa090_prof);
+        $__internal_aaa1d682ad6eacf476c28dd6f3260e9520d8660df174a20a84433b85f9d25868->leave($__internal_aaa1d682ad6eacf476c28dd6f3260e9520d8660df174a20a84433b85f9d25868_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_22215161596fe23e98b29f848c8c9df1253d036f1a9f051c8b98b0d01fea6762 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_22215161596fe23e98b29f848c8c9df1253d036f1a9f051c8b98b0d01fea6762->enter($__internal_22215161596fe23e98b29f848c8c9df1253d036f1a9f051c8b98b0d01fea6762_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_bd330bcae4c495ee3e2e20eb17e5aed2d2f7caddfdd355149019c13e831b4a14 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_bd330bcae4c495ee3e2e20eb17e5aed2d2f7caddfdd355149019c13e831b4a14->enter($__internal_bd330bcae4c495ee3e2e20eb17e5aed2d2f7caddfdd355149019c13e831b4a14_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_e2f73a75462d6b583d8054aa8f03ff8e75a86f3cd07235dd941bad3639748c8e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_e2f73a75462d6b583d8054aa8f03ff8e75a86f3cd07235dd941bad3639748c8e->enter($__internal_e2f73a75462d6b583d8054aa8f03ff8e75a86f3cd07235dd941bad3639748c8e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_9d61e1f030ce751ef3d3a08ccb3c24a0dff9e08d46d04b7b0f49fe79e37eea26 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_9d61e1f030ce751ef3d3a08ccb3c24a0dff9e08d46d04b7b0f49fe79e37eea26->enter($__internal_9d61e1f030ce751ef3d3a08ccb3c24a0dff9e08d46d04b7b0f49fe79e37eea26_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "    <div class=\"wrapper\">
@@ -145,7 +145,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 // line 55
                 echo "                                            <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 col-xs-1 offset-md-0\" id=\"image_m\">
+                                                    <div class=\"col-md-1 col-xs-1 offset-md-0 image\" >
                                                         <a href=\"";
                 // line 58
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
@@ -156,7 +156,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 echo "\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-1 mt-3 text-center\" id=\"play_m\">
+                                                    <div class=\"col-md-1 col-xs-1 mt-3 text-center playbutton\">
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"";
@@ -166,7 +166,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class=\"col-md-7 col-xs-2\" id=\"track_m\">
+                                                    <div class=\"col-md-7 col-xs-2 track\">
                                                         <h6><a href=\"";
                 // line 70
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
@@ -239,7 +239,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                             </small><br/>
                                                         </h6>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-2 offset-1\" id=\"lien_spotify_m\">
+                                                    <div class=\"col-md-1 col-xs-2 offset-1 lien_spotify\">
                                                         <div class=\"py-3\" >
                                                             <a href=\"";
                 // line 90
@@ -247,7 +247,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 echo "\" target=\"blank\"><i class=\"fa fa-spotify fa-2x text-success\" aria-hidden=\"true\"></i></a>
                                                         </div>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-2 \" id=\"library_m\">
+                                                    <div class=\"col-md-1 col-xs-2 library\">
                                                         <div class=\"mt-3\">
                                                             <button class=\"addToLibrary\" data-id=\"";
                 // line 95
@@ -294,7 +294,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 // line 119
                 echo "                                            <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 offset-md-0 col-xs-1\" id=\"image_c\">
+                                                    <div class=\"col-md-1 offset-md-0 col-xs-1 image\">
                                                         <a href=\"";
                 // line 122
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
@@ -305,7 +305,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 echo "\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
                                                     </div>
-                                                    <div class=\"col-md-1 mt-3 col-xs-1 text-center\" id=\"play_c\">
+                                                    <div class=\"col-md-1 mt-3 col-xs-1 text-center playbutton\">
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"";
@@ -315,7 +315,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class=\"col-md-7 col-xs-4\" id=\"track_c\">
+                                                    <div class=\"col-md-7 col-xs-4 track\">
                                                         <h6><a href=\"";
                 // line 134
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
@@ -388,7 +388,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                             </small><br/>
                                                         </h6>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-2 offset-1\" id=\"lien_spotify_c\">
+                                                    <div class=\"col-md-1 col-xs-2 offset-1 lien_spotify\">
                                                         <div class=\"py-3\" >
                                                             <a href=\"";
                 // line 154
@@ -396,7 +396,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 echo "\" target=\"blank\"><i class=\"fa fa-spotify fa-2x text-success\" aria-hidden=\"true\"></i></a>
                                                         </div>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-2 \" id=\"library_c\">
+                                                    <div class=\"col-md-1 col-xs-2 library\">
                                                         <div class=\"mt-3\" >
                                                             <button class=\"addToLibrary\" data-id=\"";
                 // line 159
@@ -444,7 +444,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 // line 184
                 echo "                                            <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 offset-md-0 col-xs-1\" id=\"image_a\">
+                                                    <div class=\"col-md-1 offset-md-0 col-xs-1 image\">
                                                         <a href=\"";
                 // line 187
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
@@ -455,7 +455,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 echo "\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-1 mt-3 text-center\" id=\"play_a\">
+                                                    <div class=\"col-md-1 col-xs-1 mt-3 text-center playbutton\">
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"";
@@ -465,7 +465,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class=\"col-md-7 col-xs-4\" id=\"track_a\">
+                                                    <div class=\"col-md-7 col-xs-4 track\">
                                                         <h6><a href=\"";
                 // line 199
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
@@ -538,7 +538,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                             </small><br/>
                                                         </h6>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-2 offset-1\" id=\"lien_spotify_a\">
+                                                    <div class=\"col-md-1 col-xs-2 offset-1 lien_spotify\">
                                                         <div class=\"py-3\" >
                                                             <a href=\"";
                 // line 219
@@ -546,7 +546,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 echo "\" target=\"blank\"><i class=\"fa fa-spotify fa-2x text-success\" aria-hidden=\"true\"></i></a>
                                                         </div>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-2 \" id=\"library_a\">
+                                                    <div class=\"col-md-1 col-xs-2 library \">
                                                         <div class=\"mt-3\" >
                                                             <button class=\"addToLibrary\" data-id=\"";
                 // line 224
@@ -585,10 +585,10 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
              
 ";
         
-        $__internal_e2f73a75462d6b583d8054aa8f03ff8e75a86f3cd07235dd941bad3639748c8e->leave($__internal_e2f73a75462d6b583d8054aa8f03ff8e75a86f3cd07235dd941bad3639748c8e_prof);
+        $__internal_9d61e1f030ce751ef3d3a08ccb3c24a0dff9e08d46d04b7b0f49fe79e37eea26->leave($__internal_9d61e1f030ce751ef3d3a08ccb3c24a0dff9e08d46d04b7b0f49fe79e37eea26_prof);
 
         
-        $__internal_22215161596fe23e98b29f848c8c9df1253d036f1a9f051c8b98b0d01fea6762->leave($__internal_22215161596fe23e98b29f848c8c9df1253d036f1a9f051c8b98b0d01fea6762_prof);
+        $__internal_bd330bcae4c495ee3e2e20eb17e5aed2d2f7caddfdd355149019c13e831b4a14->leave($__internal_bd330bcae4c495ee3e2e20eb17e5aed2d2f7caddfdd355149019c13e831b4a14_prof);
 
     }
 
@@ -673,19 +673,19 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                         {% for track in recommendations.tracks %}
                                             <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 col-xs-1 offset-md-0\" id=\"image_m\">
+                                                    <div class=\"col-md-1 col-xs-1 offset-md-0 image\" >
                                                         <a href=\"{{ path('showAlbum', {'id_album' : track.album.id}) }}\">
                                                             <img src=\"{{ track.album.images[1].url }}\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-1 mt-3 text-center\" id=\"play_m\">
+                                                    <div class=\"col-md-1 col-xs-1 mt-3 text-center playbutton\">
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"{{ track.preview_url }}\" type=\"audio/mp3\">
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class=\"col-md-7 col-xs-2\" id=\"track_m\">
+                                                    <div class=\"col-md-7 col-xs-2 track\">
                                                         <h6><a href=\"{{ path('showAlbum', {'id_album' : track.album.id}) }}\" class=\"link-music\">{{ track.name }}</a><br/>
                                                             <small>
                                                                 Artiste : 
@@ -704,12 +704,12 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                             </small><br/>
                                                         </h6>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-2 offset-1\" id=\"lien_spotify_m\">
+                                                    <div class=\"col-md-1 col-xs-2 offset-1 lien_spotify\">
                                                         <div class=\"py-3\" >
                                                             <a href=\"{{ track.external_urls.spotify }}\" target=\"blank\"><i class=\"fa fa-spotify fa-2x text-success\" aria-hidden=\"true\"></i></a>
                                                         </div>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-2 \" id=\"library_m\">
+                                                    <div class=\"col-md-1 col-xs-2 library\">
                                                         <div class=\"mt-3\">
                                                             <button class=\"addToLibrary\" data-id=\"{{ track.id }}\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>
                                                         </div>
@@ -737,19 +737,19 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                         {% for track in recommendationsTag.tracks %}
                                             <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 offset-md-0 col-xs-1\" id=\"image_c\">
+                                                    <div class=\"col-md-1 offset-md-0 col-xs-1 image\">
                                                         <a href=\"{{ path('showAlbum', {'id_album' : track.album.id}) }}\">
                                                             <img src=\"{{ track.album.images[1].url }}\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
                                                     </div>
-                                                    <div class=\"col-md-1 mt-3 col-xs-1 text-center\" id=\"play_c\">
+                                                    <div class=\"col-md-1 mt-3 col-xs-1 text-center playbutton\">
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"{{ track.preview_url }}\" type=\"audio/mp3\">
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class=\"col-md-7 col-xs-4\" id=\"track_c\">
+                                                    <div class=\"col-md-7 col-xs-4 track\">
                                                         <h6><a href=\"{{ path('showAlbum', {'id_album' : track.album.id}) }}\" class=\"link-music\">{{ track.name }}</a><br/>
                                                             <small>
                                                                 Artiste :
@@ -768,12 +768,12 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                             </small><br/>
                                                         </h6>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-2 offset-1\" id=\"lien_spotify_c\">
+                                                    <div class=\"col-md-1 col-xs-2 offset-1 lien_spotify\">
                                                         <div class=\"py-3\" >
                                                             <a href=\"{{ track.external_urls.spotify }}\" target=\"blank\"><i class=\"fa fa-spotify fa-2x text-success\" aria-hidden=\"true\"></i></a>
                                                         </div>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-2 \" id=\"library_c\">
+                                                    <div class=\"col-md-1 col-xs-2 library\">
                                                         <div class=\"mt-3\" >
                                                             <button class=\"addToLibrary\" data-id=\"{{ track.id }}\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>
                                                         </div>
@@ -802,19 +802,19 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                         {% for track in recommendationsArtist.tracks %}
                                             <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 offset-md-0 col-xs-1\" id=\"image_a\">
+                                                    <div class=\"col-md-1 offset-md-0 col-xs-1 image\">
                                                         <a href=\"{{ path('showAlbum', {'id_album' : track.album.id}) }}\">
                                                             <img src=\"{{ track.album.images[1].url }}\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-1 mt-3 text-center\" id=\"play_a\">
+                                                    <div class=\"col-md-1 col-xs-1 mt-3 text-center playbutton\">
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"{{ track.preview_url }}\" type=\"audio/mp3\">
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class=\"col-md-7 col-xs-4\" id=\"track_a\">
+                                                    <div class=\"col-md-7 col-xs-4 track\">
                                                         <h6><a href=\"{{ path('showAlbum', {'id_album' : track.album.id}) }}\" class=\"link-music\">{{ track.name }}</a><br/>
                                                             <small>
                                                                 Artiste :
@@ -833,12 +833,12 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                             </small><br/>
                                                         </h6>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-2 offset-1\" id=\"lien_spotify_a\">
+                                                    <div class=\"col-md-1 col-xs-2 offset-1 lien_spotify\">
                                                         <div class=\"py-3\" >
                                                             <a href=\"{{ track.external_urls.spotify }}\" target=\"blank\"><i class=\"fa fa-spotify fa-2x text-success\" aria-hidden=\"true\"></i></a>
                                                         </div>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-2 \" id=\"library_a\">
+                                                    <div class=\"col-md-1 col-xs-2 library \">
                                                         <div class=\"mt-3\" >
                                                             <button class=\"addToLibrary\" data-id=\"{{ track.id }}\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>
                                                         </div>

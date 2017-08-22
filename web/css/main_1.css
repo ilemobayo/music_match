@@ -91,10 +91,22 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6);  W3C, IE 10+/ Edge, Fir
 
 
 @media (min-width:576px){
-    i.fa.fa-play-circle.fa-2x {
+/*    i.fa.fa-play-circle.fa-2x {
         margin-left: 25px;
     }
     
+    i.fa.fa-pause-circle.fa-2x {
+        margin-left: 25px;
+    }*/
+    
+    .image{
+        margin-right: 25px;
+    }
+    
+    .lien_spotify{
+        margin-left: 0;
+    }
+
     .col-md-7 h6{
         margin-left: 25px;
     }
@@ -109,21 +121,23 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6);  W3C, IE 10+/ Edge, Fir
     col-md-1.col-xs-1.offset-md-0, col-md-1.col-xs-1.mt-3.text-center, col-md-7.col-xs-2, col-md-1.col-xs-2.offset-1, col-md-1.col-xs-2 {
         display: inline;
     }
-    
-    #image_m, #play_m, #image_c, #play_c,#image_a, #play_a{
+
+    .image, .playbutton{
         width: 15%;
     }
     
-    #track_m, #track_c, #track_a{
+    .track{
         width: 40%;
     }
     
-    #lien_spotify_m, #lien_spotify_c, #lien_spotify_a{
+    .lien_spotify{
         width: 10%;
+        padding-top: 1em;
     }
     
-    #library_m, #library_c, #library_a{
+    .library{
         width: 5%;
+        padding-top: 1em;
     }
-    
 }
+

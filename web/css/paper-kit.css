@@ -3352,7 +3352,7 @@ textarea.form-control {
     content: "";
     display: inline-block;
     position: absolute;
-    right: 12px;
+    left: 12px;
     top: -11px;
   }
 
@@ -3361,7 +3361,7 @@ textarea.form-control {
     right: auto;
   }
 
-  .navbar-nav li .dropdown-menu:after,
+/*  .navbar-nav li .dropdown-menu:after,
   #dropdown-row .dropdown .dropdown-menu:after,
   .card.card-just-text .dropdown .dropdown-menu:after,
   .card-just-text .dropdown .dropdown-menu:after,
@@ -3374,7 +3374,7 @@ textarea.form-control {
     position: absolute;
     right: 12px;
     top: -10px;
-  }
+  }*/
 
   #dropdown-row .dropdown .dropdown-menu:after {
     left: 12px !important;

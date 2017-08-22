@@ -33,7 +33,7 @@ class DashboardController extends ControllerAbstract {
             if($idTracks) {
                 $seed['seed_tracks'] = [$idTrack];
             }
-            $recommendations = $this->app['spotify.api']->getRecommendations($seed);
+            $recommendations = $this->app['spotify.api']->getRecommendations($seed, ['market' => 'FR']);
             $recommendationsTag = $this->app['spotify.api']->getRecommendations(
                 [
                     'seed_genres' => [$tag]
