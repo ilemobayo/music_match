@@ -35,12 +35,12 @@
                                         {% for track in tracksUser.tracks %}
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-1 offset-md-0 image">
+                                                    <div class="col-md-1 offset-md-0 image text-center">
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
                                                             <img src="{{ track.album.images[0].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>
                                                     </div>
-                                                    <div class="col-md-1 mt-3 text-center playbutton">
+                                                    <div class="col-md-1 mt-3 col-xs-2 text-center playbutton">
                                                         <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
                                                         <audio >
                                                             <source src="{{ track.preview_url }}" type="audio/mp3">

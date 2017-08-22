@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="wrapper">
-        <div class="page-header page-header-xs img-responsive" data-parallax="true" style="background-image: url('http://admin.traxmag.com/uploads/images/size800x1200/2017/01/justice-woman-cd-3_5880bd06b146e.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('http://admin.traxmag.com/uploads/images/size800x1200/2017/01/justice-woman-cd-3_5880bd06b146e.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
             <div class="filter">
             </div>
         </div>
@@ -54,19 +54,19 @@
                                         {% for track in recommendations.tracks %}
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-1 col-xs-1 offset-md-0 image" >
+                                                    <div class="col-md-1 col-xs-1 offset-md-0 image text-center" >
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
                                                             <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-1 mt-3 text-center playbutton">
+                                                    <div class="col-md-1 col-xs-2 mt-3 text-center playbutton">
                                                         <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
                                                         <audio >
                                                             <source src="{{ track.preview_url }}" type="audio/mp3">
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class="col-md-7 col-xs-2 track">
+                                                    <div class="col-md-7 col-xs-4 track">
                                                         <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
                                                             <small>
                                                                 Artiste : 
@@ -118,12 +118,12 @@
                                         {% for track in recommendationsTag.tracks %}
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-1 offset-md-0 col-xs-1 image">
+                                                    <div class="col-md-1 offset-md-0 col-xs-1 image text-center">
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
                                                             <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>
                                                     </div>
-                                                    <div class="col-md-1 mt-3 col-xs-1 text-center playbutton">
+                                                    <div class="col-md-1 mt-3 col-xs-2 text-center playbutton">
                                                         <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
                                                         <audio >
                                                             <source src="{{ track.preview_url }}" type="audio/mp3">
@@ -183,7 +183,7 @@
                                         {% for track in recommendationsArtist.tracks %}
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-1 offset-md-0 col-xs-1 image">
+                                                    <div class="col-md-1 offset-md-0 col-xs-1 image text-center">
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
                                                             <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>

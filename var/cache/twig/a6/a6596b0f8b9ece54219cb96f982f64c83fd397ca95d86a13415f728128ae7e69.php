@@ -22,47 +22,47 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a8c17f7159c44502368e1b125f82e9fe731e5f0e710f355a66ed05130550f45e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a8c17f7159c44502368e1b125f82e9fe731e5f0e710f355a66ed05130550f45e->enter($__internal_a8c17f7159c44502368e1b125f82e9fe731e5f0e710f355a66ed05130550f45e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/library.html.twig"));
+        $__internal_914d69890dc59a444098503cbb2ac0aa44cebabfecb687832b3944b3e1c90e8a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_914d69890dc59a444098503cbb2ac0aa44cebabfecb687832b3944b3e1c90e8a->enter($__internal_914d69890dc59a444098503cbb2ac0aa44cebabfecb687832b3944b3e1c90e8a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/library.html.twig"));
 
-        $__internal_6b889cf2d570157c456d52f69de75bddb110fced0b745eea6122040eee06b7d0 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_6b889cf2d570157c456d52f69de75bddb110fced0b745eea6122040eee06b7d0->enter($__internal_6b889cf2d570157c456d52f69de75bddb110fced0b745eea6122040eee06b7d0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/library.html.twig"));
+        $__internal_60ab906a719a648b50d56904cca6bb3fa1f1c6b2c798d1ad495400425ba18efd = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_60ab906a719a648b50d56904cca6bb3fa1f1c6b2c798d1ad495400425ba18efd->enter($__internal_60ab906a719a648b50d56904cca6bb3fa1f1c6b2c798d1ad495400425ba18efd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/library.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a8c17f7159c44502368e1b125f82e9fe731e5f0e710f355a66ed05130550f45e->leave($__internal_a8c17f7159c44502368e1b125f82e9fe731e5f0e710f355a66ed05130550f45e_prof);
+        $__internal_914d69890dc59a444098503cbb2ac0aa44cebabfecb687832b3944b3e1c90e8a->leave($__internal_914d69890dc59a444098503cbb2ac0aa44cebabfecb687832b3944b3e1c90e8a_prof);
 
         
-        $__internal_6b889cf2d570157c456d52f69de75bddb110fced0b745eea6122040eee06b7d0->leave($__internal_6b889cf2d570157c456d52f69de75bddb110fced0b745eea6122040eee06b7d0_prof);
+        $__internal_60ab906a719a648b50d56904cca6bb3fa1f1c6b2c798d1ad495400425ba18efd->leave($__internal_60ab906a719a648b50d56904cca6bb3fa1f1c6b2c798d1ad495400425ba18efd_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_a9ac23cab814613cc5ee0250f313cfdd322cdae1f80407489bda3a73d02cf62e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a9ac23cab814613cc5ee0250f313cfdd322cdae1f80407489bda3a73d02cf62e->enter($__internal_a9ac23cab814613cc5ee0250f313cfdd322cdae1f80407489bda3a73d02cf62e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_6b02c087681f931ff753c04ba588ea738a69e2454f662596c7b2dad9822fdb4e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6b02c087681f931ff753c04ba588ea738a69e2454f662596c7b2dad9822fdb4e->enter($__internal_6b02c087681f931ff753c04ba588ea738a69e2454f662596c7b2dad9822fdb4e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_2daf9c92afee4b572a252171773b604ef1d7e6a70d1b16b4abb8e2c4a9a333a0 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_2daf9c92afee4b572a252171773b604ef1d7e6a70d1b16b4abb8e2c4a9a333a0->enter($__internal_2daf9c92afee4b572a252171773b604ef1d7e6a70d1b16b4abb8e2c4a9a333a0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_ac5a560a096e1ab69a3753bc0484d8665a23ce762bd11d1de3017ccd2edc1e13 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_ac5a560a096e1ab69a3753bc0484d8665a23ce762bd11d1de3017ccd2edc1e13->enter($__internal_ac5a560a096e1ab69a3753bc0484d8665a23ce762bd11d1de3017ccd2edc1e13_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Bibliotheque";
         
-        $__internal_2daf9c92afee4b572a252171773b604ef1d7e6a70d1b16b4abb8e2c4a9a333a0->leave($__internal_2daf9c92afee4b572a252171773b604ef1d7e6a70d1b16b4abb8e2c4a9a333a0_prof);
+        $__internal_ac5a560a096e1ab69a3753bc0484d8665a23ce762bd11d1de3017ccd2edc1e13->leave($__internal_ac5a560a096e1ab69a3753bc0484d8665a23ce762bd11d1de3017ccd2edc1e13_prof);
 
         
-        $__internal_a9ac23cab814613cc5ee0250f313cfdd322cdae1f80407489bda3a73d02cf62e->leave($__internal_a9ac23cab814613cc5ee0250f313cfdd322cdae1f80407489bda3a73d02cf62e_prof);
+        $__internal_6b02c087681f931ff753c04ba588ea738a69e2454f662596c7b2dad9822fdb4e->leave($__internal_6b02c087681f931ff753c04ba588ea738a69e2454f662596c7b2dad9822fdb4e_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_aabc7fb77f5efc18339148a5059be1f1e371c6aaef5bcc92dad504781ddbb7ba = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_aabc7fb77f5efc18339148a5059be1f1e371c6aaef5bcc92dad504781ddbb7ba->enter($__internal_aabc7fb77f5efc18339148a5059be1f1e371c6aaef5bcc92dad504781ddbb7ba_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_42526660dc764c05b43ed6e3e90e8062cd34e7d55c2c050b5fbd781a6e42f5e7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_42526660dc764c05b43ed6e3e90e8062cd34e7d55c2c050b5fbd781a6e42f5e7->enter($__internal_42526660dc764c05b43ed6e3e90e8062cd34e7d55c2c050b5fbd781a6e42f5e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_d1089e9798cbb3f60c4382b1b78ddc8df71dcf13499367572c9bca4bb7a124ac = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_d1089e9798cbb3f60c4382b1b78ddc8df71dcf13499367572c9bca4bb7a124ac->enter($__internal_d1089e9798cbb3f60c4382b1b78ddc8df71dcf13499367572c9bca4bb7a124ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_492489eded931647ca6c04d6042befc0a868e3ad604e8c4cf551ae2411520460 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_492489eded931647ca6c04d6042befc0a868e3ad604e8c4cf551ae2411520460->enter($__internal_492489eded931647ca6c04d6042befc0a868e3ad604e8c4cf551ae2411520460_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "    <div class=\"wrapper\">
@@ -123,7 +123,7 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                 // line 36
                 echo "                                            <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 offset-md-0 image\">
+                                                    <div class=\"col-md-1 offset-md-0 image text-center\">
                                                         <a href=\"";
                 // line 39
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
@@ -134,7 +134,7 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                 echo "\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
                                                     </div>
-                                                    <div class=\"col-md-1 mt-3 text-center playbutton\">
+                                                    <div class=\"col-md-1 mt-3 col-xs-2 text-center playbutton\">
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"";
@@ -267,10 +267,10 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
     </div>
 ";
         
-        $__internal_d1089e9798cbb3f60c4382b1b78ddc8df71dcf13499367572c9bca4bb7a124ac->leave($__internal_d1089e9798cbb3f60c4382b1b78ddc8df71dcf13499367572c9bca4bb7a124ac_prof);
+        $__internal_492489eded931647ca6c04d6042befc0a868e3ad604e8c4cf551ae2411520460->leave($__internal_492489eded931647ca6c04d6042befc0a868e3ad604e8c4cf551ae2411520460_prof);
 
         
-        $__internal_aabc7fb77f5efc18339148a5059be1f1e371c6aaef5bcc92dad504781ddbb7ba->leave($__internal_aabc7fb77f5efc18339148a5059be1f1e371c6aaef5bcc92dad504781ddbb7ba_prof);
+        $__internal_42526660dc764c05b43ed6e3e90e8062cd34e7d55c2c050b5fbd781a6e42f5e7->leave($__internal_42526660dc764c05b43ed6e3e90e8062cd34e7d55c2c050b5fbd781a6e42f5e7_prof);
 
     }
 
@@ -336,12 +336,12 @@ class __TwigTemplate_87d34244843d3fb67e742237a91abbc386a8c67eee6e84b53627fa289ad
                                         {% for track in tracksUser.tracks %}
                                             <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 offset-md-0 image\">
+                                                    <div class=\"col-md-1 offset-md-0 image text-center\">
                                                         <a href=\"{{ path('showAlbum', {'id_album' : track.album.id}) }}\">
                                                             <img src=\"{{ track.album.images[0].url }}\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
                                                     </div>
-                                                    <div class=\"col-md-1 mt-3 text-center playbutton\">
+                                                    <div class=\"col-md-1 mt-3 col-xs-2 text-center playbutton\">
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"{{ track.preview_url }}\" type=\"audio/mp3\">

@@ -21,10 +21,14 @@ class ProfileController extends ControllerAbstract {
     
     public function displayProfileAction($username){
         $profile = $this->app['user.repository']->findByUsername($username);
-    
+        
+        if(!empty($profile->getIdTracks())){
+            $tracks = $this->app['spotify.api']->getTracks($profile->getIdTracks());
+        }
         return $this->render('user/profile.html.twig',
             [
-                'profile' => $profile
+                'profile' => $profile,
+                'tracks' => (isset($tracks)) ? $tracks : null
             ]);
     }
     

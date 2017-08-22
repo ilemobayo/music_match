@@ -22,51 +22,51 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3c00ffe708ad103175329fd96c8a8be0e33d16a1c93039f134f66c18d8fffa71 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3c00ffe708ad103175329fd96c8a8be0e33d16a1c93039f134f66c18d8fffa71->enter($__internal_3c00ffe708ad103175329fd96c8a8be0e33d16a1c93039f134f66c18d8fffa71_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/home.html.twig"));
+        $__internal_2c6df0198729b1a034077abcb276382390ad395d44217e890621eb034a342e66 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2c6df0198729b1a034077abcb276382390ad395d44217e890621eb034a342e66->enter($__internal_2c6df0198729b1a034077abcb276382390ad395d44217e890621eb034a342e66_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/home.html.twig"));
 
-        $__internal_4596200c523bc5ffa24a03a3315fb04a584fdcaf291b2209da4851c4489163f6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_4596200c523bc5ffa24a03a3315fb04a584fdcaf291b2209da4851c4489163f6->enter($__internal_4596200c523bc5ffa24a03a3315fb04a584fdcaf291b2209da4851c4489163f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/home.html.twig"));
+        $__internal_a8db25fd5c0019557fdd19cdd5207198d90e2bfb564127aba30e40bfba33c692 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_a8db25fd5c0019557fdd19cdd5207198d90e2bfb564127aba30e40bfba33c692->enter($__internal_a8db25fd5c0019557fdd19cdd5207198d90e2bfb564127aba30e40bfba33c692_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/home.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_3c00ffe708ad103175329fd96c8a8be0e33d16a1c93039f134f66c18d8fffa71->leave($__internal_3c00ffe708ad103175329fd96c8a8be0e33d16a1c93039f134f66c18d8fffa71_prof);
+        $__internal_2c6df0198729b1a034077abcb276382390ad395d44217e890621eb034a342e66->leave($__internal_2c6df0198729b1a034077abcb276382390ad395d44217e890621eb034a342e66_prof);
 
         
-        $__internal_4596200c523bc5ffa24a03a3315fb04a584fdcaf291b2209da4851c4489163f6->leave($__internal_4596200c523bc5ffa24a03a3315fb04a584fdcaf291b2209da4851c4489163f6_prof);
+        $__internal_a8db25fd5c0019557fdd19cdd5207198d90e2bfb564127aba30e40bfba33c692->leave($__internal_a8db25fd5c0019557fdd19cdd5207198d90e2bfb564127aba30e40bfba33c692_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_aaa1d682ad6eacf476c28dd6f3260e9520d8660df174a20a84433b85f9d25868 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_aaa1d682ad6eacf476c28dd6f3260e9520d8660df174a20a84433b85f9d25868->enter($__internal_aaa1d682ad6eacf476c28dd6f3260e9520d8660df174a20a84433b85f9d25868_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_a16c4b925376ce9f8b84e73c9304c3a9ef8039f8a19507fba7724cb7a3ee9c8e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a16c4b925376ce9f8b84e73c9304c3a9ef8039f8a19507fba7724cb7a3ee9c8e->enter($__internal_a16c4b925376ce9f8b84e73c9304c3a9ef8039f8a19507fba7724cb7a3ee9c8e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_2f624bd4db962e8e3e00dd1a1b4bc8e217d86e474fc788ee2fa73d6b8409b113 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_2f624bd4db962e8e3e00dd1a1b4bc8e217d86e474fc788ee2fa73d6b8409b113->enter($__internal_2f624bd4db962e8e3e00dd1a1b4bc8e217d86e474fc788ee2fa73d6b8409b113_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_b6556dbd5a936f0c69b8f94c3329aae244f1501f4f8701dc7726756c9b542e2f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_b6556dbd5a936f0c69b8f94c3329aae244f1501f4f8701dc7726756c9b542e2f->enter($__internal_b6556dbd5a936f0c69b8f94c3329aae244f1501f4f8701dc7726756c9b542e2f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Home";
         
-        $__internal_2f624bd4db962e8e3e00dd1a1b4bc8e217d86e474fc788ee2fa73d6b8409b113->leave($__internal_2f624bd4db962e8e3e00dd1a1b4bc8e217d86e474fc788ee2fa73d6b8409b113_prof);
+        $__internal_b6556dbd5a936f0c69b8f94c3329aae244f1501f4f8701dc7726756c9b542e2f->leave($__internal_b6556dbd5a936f0c69b8f94c3329aae244f1501f4f8701dc7726756c9b542e2f_prof);
 
         
-        $__internal_aaa1d682ad6eacf476c28dd6f3260e9520d8660df174a20a84433b85f9d25868->leave($__internal_aaa1d682ad6eacf476c28dd6f3260e9520d8660df174a20a84433b85f9d25868_prof);
+        $__internal_a16c4b925376ce9f8b84e73c9304c3a9ef8039f8a19507fba7724cb7a3ee9c8e->leave($__internal_a16c4b925376ce9f8b84e73c9304c3a9ef8039f8a19507fba7724cb7a3ee9c8e_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_bd330bcae4c495ee3e2e20eb17e5aed2d2f7caddfdd355149019c13e831b4a14 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bd330bcae4c495ee3e2e20eb17e5aed2d2f7caddfdd355149019c13e831b4a14->enter($__internal_bd330bcae4c495ee3e2e20eb17e5aed2d2f7caddfdd355149019c13e831b4a14_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_d041a821876dc1357963d156fa5507a97c6168e56aca8ef8f57feaf2e539537e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d041a821876dc1357963d156fa5507a97c6168e56aca8ef8f57feaf2e539537e->enter($__internal_d041a821876dc1357963d156fa5507a97c6168e56aca8ef8f57feaf2e539537e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_9d61e1f030ce751ef3d3a08ccb3c24a0dff9e08d46d04b7b0f49fe79e37eea26 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_9d61e1f030ce751ef3d3a08ccb3c24a0dff9e08d46d04b7b0f49fe79e37eea26->enter($__internal_9d61e1f030ce751ef3d3a08ccb3c24a0dff9e08d46d04b7b0f49fe79e37eea26_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_aba8a542462117f0cf4a8461c138ad6f8b69e9230739b69278b9bd4653822f95 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_aba8a542462117f0cf4a8461c138ad6f8b69e9230739b69278b9bd4653822f95->enter($__internal_aba8a542462117f0cf4a8461c138ad6f8b69e9230739b69278b9bd4653822f95_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "    <div class=\"wrapper\">
-        <div class=\"page-header page-header-xs img-responsive\" data-parallax=\"true\" style=\"background-image: url('http://admin.traxmag.com/uploads/images/size800x1200/2017/01/justice-woman-cd-3_5880bd06b146e.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;\">
+        <div class=\"page-header page-header-xs\" data-parallax=\"true\" style=\"background-image: url('http://admin.traxmag.com/uploads/images/size800x1200/2017/01/justice-woman-cd-3_5880bd06b146e.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;\">
             <div class=\"filter\">
             </div>
         </div>
@@ -145,7 +145,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 // line 55
                 echo "                                            <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 col-xs-1 offset-md-0 image\" >
+                                                    <div class=\"col-md-1 col-xs-1 offset-md-0 image text-center\" >
                                                         <a href=\"";
                 // line 58
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
@@ -156,7 +156,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 echo "\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-1 mt-3 text-center playbutton\">
+                                                    <div class=\"col-md-1 col-xs-2 mt-3 text-center playbutton\">
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"";
@@ -166,7 +166,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class=\"col-md-7 col-xs-2 track\">
+                                                    <div class=\"col-md-7 col-xs-4 track\">
                                                         <h6><a href=\"";
                 // line 70
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
@@ -294,7 +294,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 // line 119
                 echo "                                            <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 offset-md-0 col-xs-1 image\">
+                                                    <div class=\"col-md-1 offset-md-0 col-xs-1 image text-center\">
                                                         <a href=\"";
                 // line 122
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
@@ -305,7 +305,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 echo "\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
                                                     </div>
-                                                    <div class=\"col-md-1 mt-3 col-xs-1 text-center playbutton\">
+                                                    <div class=\"col-md-1 mt-3 col-xs-2 text-center playbutton\">
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"";
@@ -444,7 +444,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 // line 184
                 echo "                                            <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 offset-md-0 col-xs-1 image\">
+                                                    <div class=\"col-md-1 offset-md-0 col-xs-1 image text-center\">
                                                         <a href=\"";
                 // line 187
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
@@ -585,10 +585,10 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
              
 ";
         
-        $__internal_9d61e1f030ce751ef3d3a08ccb3c24a0dff9e08d46d04b7b0f49fe79e37eea26->leave($__internal_9d61e1f030ce751ef3d3a08ccb3c24a0dff9e08d46d04b7b0f49fe79e37eea26_prof);
+        $__internal_aba8a542462117f0cf4a8461c138ad6f8b69e9230739b69278b9bd4653822f95->leave($__internal_aba8a542462117f0cf4a8461c138ad6f8b69e9230739b69278b9bd4653822f95_prof);
 
         
-        $__internal_bd330bcae4c495ee3e2e20eb17e5aed2d2f7caddfdd355149019c13e831b4a14->leave($__internal_bd330bcae4c495ee3e2e20eb17e5aed2d2f7caddfdd355149019c13e831b4a14_prof);
+        $__internal_d041a821876dc1357963d156fa5507a97c6168e56aca8ef8f57feaf2e539537e->leave($__internal_d041a821876dc1357963d156fa5507a97c6168e56aca8ef8f57feaf2e539537e_prof);
 
     }
 
@@ -623,7 +623,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
 
 {% block content %}
     <div class=\"wrapper\">
-        <div class=\"page-header page-header-xs img-responsive\" data-parallax=\"true\" style=\"background-image: url('http://admin.traxmag.com/uploads/images/size800x1200/2017/01/justice-woman-cd-3_5880bd06b146e.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;\">
+        <div class=\"page-header page-header-xs\" data-parallax=\"true\" style=\"background-image: url('http://admin.traxmag.com/uploads/images/size800x1200/2017/01/justice-woman-cd-3_5880bd06b146e.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;\">
             <div class=\"filter\">
             </div>
         </div>
@@ -673,19 +673,19 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                         {% for track in recommendations.tracks %}
                                             <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 col-xs-1 offset-md-0 image\" >
+                                                    <div class=\"col-md-1 col-xs-1 offset-md-0 image text-center\" >
                                                         <a href=\"{{ path('showAlbum', {'id_album' : track.album.id}) }}\">
                                                             <img src=\"{{ track.album.images[1].url }}\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
                                                     </div>
-                                                    <div class=\"col-md-1 col-xs-1 mt-3 text-center playbutton\">
+                                                    <div class=\"col-md-1 col-xs-2 mt-3 text-center playbutton\">
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"{{ track.preview_url }}\" type=\"audio/mp3\">
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class=\"col-md-7 col-xs-2 track\">
+                                                    <div class=\"col-md-7 col-xs-4 track\">
                                                         <h6><a href=\"{{ path('showAlbum', {'id_album' : track.album.id}) }}\" class=\"link-music\">{{ track.name }}</a><br/>
                                                             <small>
                                                                 Artiste : 
@@ -737,12 +737,12 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                         {% for track in recommendationsTag.tracks %}
                                             <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 offset-md-0 col-xs-1 image\">
+                                                    <div class=\"col-md-1 offset-md-0 col-xs-1 image text-center\">
                                                         <a href=\"{{ path('showAlbum', {'id_album' : track.album.id}) }}\">
                                                             <img src=\"{{ track.album.images[1].url }}\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
                                                     </div>
-                                                    <div class=\"col-md-1 mt-3 col-xs-1 text-center playbutton\">
+                                                    <div class=\"col-md-1 mt-3 col-xs-2 text-center playbutton\">
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"{{ track.preview_url }}\" type=\"audio/mp3\">
@@ -802,7 +802,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                         {% for track in recommendationsArtist.tracks %}
                                             <li>
                                                 <div class=\"row\">
-                                                    <div class=\"col-md-1 offset-md-0 col-xs-1 image\">
+                                                    <div class=\"col-md-1 offset-md-0 col-xs-1 image text-center\">
                                                         <a href=\"{{ path('showAlbum', {'id_album' : track.album.id}) }}\">
                                                             <img src=\"{{ track.album.images[1].url }}\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>

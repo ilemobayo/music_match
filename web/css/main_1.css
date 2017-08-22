@@ -89,7 +89,6 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6);  W3C, IE 10+/ Edge, Fir
 
 }*/
 
-
 @media (min-width:576px){
 /*    i.fa.fa-play-circle.fa-2x {
         margin-left: 25px;
@@ -110,8 +109,11 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6);  W3C, IE 10+/ Edge, Fir
     .col-md-7 h6{
         margin-left: 25px;
     }
+    
+    .playbutton{
+        margin-left: 20px;
+    }
 }
-
 
 @media (max-width:768px){
     li div{
@@ -139,5 +141,24 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6);  W3C, IE 10+/ Edge, Fir
         width: 5%;
         padding-top: 1em;
     }
+    
+    .playbutton{
+        margin-left: 0;
+    }
 }
 
+@media (max-width:575px){
+    .image{
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+    
+/*    .row{
+        width: 100%;
+    }
+    
+    .wrapper, .page-header, .container{
+    width: 100% !important;
+}*/
+
+}

@@ -33,7 +33,7 @@ class DashboardController extends ControllerAbstract {
             if($idTracks) {
                 $seed['seed_tracks'] = [$idTrack];
             }
-            $recommendations = $this->app['spotify.api']->getRecommendations($seed, ['market' => 'FR']);
+            $recommendations = $this->app['spotify.api']->getRecommendations($seed);
             $recommendationsTag = $this->app['spotify.api']->getRecommendations(
                 [
                     'seed_genres' => [$tag]
@@ -70,5 +70,17 @@ class DashboardController extends ControllerAbstract {
                 'tracksUser' => $tracksUser
             ]
         );
+    }
+    public function userFriendsDisplayAction(){
+        $usersFriends = $this->app['user.repository']->findUserFriend($this->app['user.manager']->getUser()->getId());
+        $usersFriends2 = $this->app['user.repository']->findUserFriend($this->app['user.manager']->getUser()->getId(), true);
+        
+        return $this->render('dashboard/friends.html.twig',
+             [
+                 'user' => $this->app['user.manager']->getUser(),
+                 'usersFriends' => $usersFriends,
+                 'usersFriends2' =>$usersFriends2
+             ]
+         );
     }
 }

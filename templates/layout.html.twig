@@ -69,6 +69,7 @@
                             <ul class="dropdown-menu p-2">
                                 <a href="{{ path('display', { username : user_manager.user.username }) }}" class="dropdown-item">Profil</a>
                                 <a href="{{ path('dashboardLibrary', { username : user_manager.user.username }) }}" class="dropdown-item">Bibliothèque</a>                                
+                                <a href="{{ path('dashboardfriend')}}" class="dropdown-item">Amis</a>                                
                                 <div class="dropdown-divider"></div>
                                 <a href="{{ path('logout') }}" class="dropdown-item">Déconnexion</a>
                             </ul>
@@ -111,14 +112,14 @@
                             <label>Email</label>
                             <div class="input-group form-group-no-border">
                                 <span class="input-group-addon">
-                                    <i class="nc-icon nc-email-85"></i>
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
                                 </span>
                                 <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                             </div>
                             <label>Password</label>
                             <div class="input-group form-group-no-border">
                                 <span class="input-group-addon">
-                                    <i class="nc-icon nc-key-25"></i>
+                                    <i class="fa fa-key" aria-hidden="true"></i>
                                 </span>
                                 <input type="text" id="mdp" name="password" class="form-control" placeholder="Password">
                             </div>
@@ -209,6 +210,56 @@
                         $('.panel-ajax').html( data.message );
                         $this.closest('li').slideUp('slow');
                         $this.closest('li').next().hide();
+                        $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
+                            $(this).removeClass('move-panel-ajax');
+                            next();
+                        }).delay(500).queue(function(next){
+                            $(this).removeClass(data.status);
+                            next();
+                        });
+                    });
+                })
+                
+                // ajout d'un amie dans la liste
+                $('.addToFriends').on('click', function () {
+                    var $this = $(this);
+                    var id_friend = $this.data('id');
+                    $.post( "{{ path('ajax_addFriend') }}", { id: id_friend } ,function( data ) {
+                        $('.panel-ajax').html( data.message );
+                        $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
+                            $(this).removeClass('move-panel-ajax');
+                            next();
+                        }).delay(500).queue(function(next){
+                            $(this).removeClass(data.status);
+                            next();
+                        });
+                    });
+                })
+                
+                // retirer un amie de la liste
+                $('.removeToFriends').on('click', function () {
+                    var $this = $(this);
+                    var id_friend = $this.data('id');
+                    $.post( "{{ path('ajax_removeFriend') }}", { id: id_friend } ,function( data ) {
+                        $('.panel-ajax').html( data.message );
+                        $this.closest('.col-sm-3').fadeOut('slow');
+                        $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
+                            $(this).removeClass('move-panel-ajax');
+                            next();
+                        }).delay(500).queue(function(next){
+                            $(this).removeClass(data.status);
+                            next();
+                        });
+                    });
+                })
+                
+                // retirer un amie de la liste
+                $('.removeToFriends2').on('click', function () {
+                    var $this = $(this);
+                    var id_friend = $this.data('id');
+                    $.post( "{{ path('ajax_removeFriend') }}", { id_friend: id_friend } ,function( data ) {
+                        $('.panel-ajax').html( data.message );
+                        $this.closest('.col-sm-3').fadeOut('slow');
                         $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
                             $(this).removeClass('move-panel-ajax');
                             next();

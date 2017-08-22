@@ -12,27 +12,22 @@ use Symfony\Component\HttpFoundation\Request;
  * @author Hello
  */
 class SearchController extends ControllerAbstract {
-    
     public function searchAction(Request $request){
         $query = $request->query->get('q');
-        
         if($query){
             $resultAlbums = $this->app['spotify.api']->search($query, 'album', ['limit' => 8]);
             $resultTracks = $this->app['spotify.api']->search($query, 'track', ['limit' => 8]);
             $resultArtists = $this->app['spotify.api']->search($query, 'artist', ['limit' => 8]);
+            $resultUsers = $this->app['search.repository']->searchUsers($query) ;
         }
-        //dump($resultAlbums);
-        //dump($resultTracks);
-        //dump($resultArtists);
         return $this->render('search/search.html.twig',
             [
                 'resultAlbums' => (isset($resultAlbums)) ? $resultAlbums : null,
                 'resultTracks' => (isset($resultTracks)) ? $resultTracks : null,
                 'resultArtists' => (isset($resultArtists)) ? $resultArtists : null,
+                'resultUsers' => (!empty($resultUsers)) ? $resultUsers : null,
                 'query' => $query
             ]
         );
     }
-    
-            
 }
