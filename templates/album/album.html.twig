@@ -40,7 +40,7 @@
                             <tr>
                                 <th colspan="2">#</th>
                                 <th>Titre</th>
-                                <th>durée</th>
+                                <th colspan="2">Durée</th>
                                 <th class="text-center">Ajouter</th>
                             </tr>
                         </thead>
@@ -57,6 +57,7 @@
                                 </td>
                                 <td>{{ track.name  }}</td>
                                 <td>{{ ( track.duration_ms//1000 )|date('i:s') }}</td>
+                                <td class="text-center"><a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a></td>
                                 <td class="text-center"><button class="addToLibrary" data-id="{{ track.id }}"><i class="fa fa-plus" aria-hidden="true"></i></button></td>
                             </tr>
                         {% endfor %}

@@ -22,7 +22,9 @@
                 <div class="col-sm-10 offset-sm-1">
                     <select name="tags[]" class="form-control" id="tagsForm" multiple="multiple">
                         {% for tag in tags.genres %}
-                            <option value="{{tag}}">{{tag|replace({'-' : ' '})}}</option>
+                            <option value="{{tag}}">
+                                {{tag|replace({'-' : ' '})}}
+                            </option>
                         {% endfor %}
                     </select>
                     {% if errors %}

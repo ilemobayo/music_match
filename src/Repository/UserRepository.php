@@ -53,6 +53,30 @@ class UserRepository extends RepositoryAbstract {
         }
         
     }
+
+    public function findUserFriend($id_user){
+
+        $sql = 'SELECT users.id_user, users.pseudo, users.mdp, users.email, users.role, users.register_date, users.picture FROM user_relationships JOIN users ON user_relationships.id_friend = users.id_user  WHERE user_relationships.id_user = :id_user';
+
+        $dbUsers = $this->db->fetchAll($sql,
+            [
+                ':id_user' => $id_user
+            ]
+        );
+
+        if(empty($dbUsers)){
+            return false;
+        }
+
+        $users = [];
+
+        foreach ($dbUsers as $dbUser){
+            $users[] = $this->buildEntity($dbUser);
+        }
+
+        return $users;
+    }
+
     public function save($entity, array $data){
         // Si la catégorie a un id, on est en update
         // sinon, en insert
@@ -96,7 +120,8 @@ class UserRepository extends RepositoryAbstract {
         }
         return $tracks;
     }
-    protected function buildEntity(array $data, array $tags, array $idTracks) {
+
+    protected function buildEntity(array $data, array $tags = [], array $idTracks = []) {
         $user = new User();
         $user->setId($data['id_user']);
         $user->setUsername($data['pseudo']);

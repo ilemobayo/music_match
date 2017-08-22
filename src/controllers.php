@@ -33,6 +33,12 @@ $app
 $app
     ->match('/ajouter_tags', 'profile.controller:addTagsAction')
     ->bind('addTags')
+    ->before(function(Request $request, Application $app){
+        if(!$app['user.manager']->getUser()){
+            $app['session']->getFlashBag()->add('error', 'Veuillez vous connecter pour accéder au site');
+            return $app->redirect($app['url_generator']->generate('homepage'));
+        }        
+    })
 ;
 
 $app
@@ -40,13 +46,20 @@ $app
     /*->assert('username', '/^[a-zA-Z0-9_-]{6,20}$/') /* username caractères acceptés : 
     a-z, A-Z, 0-9, _ -, de 6 à 20 caractères */
     ->bind('display')
+    ->before(function(Request $request, Application $app){
+        if(!$app['user.manager']->getUser()){
+            $app['session']->getFlashBag()->add('error', 'Veuillez vous connecter pour accéder au site');
+            return $app->redirect($app['url_generator']->generate('homepage'));
+        }        
+    })
 ;
 
 $app
     ->match('/{username}/edition_profil', 'profile.controller:editProfileAction')
     ->bind('edit')
     ->before(function(Request $request, Application $app){
-        if($app['user.manager']->getUser()->getUsername() != $request->get('username')){
+        if(!$app['user.manager']->getUser() || $app['user.manager']->getUser()->getUsername() != $request->get('username')){
+            $app['session']->getFlashBag()->add('error', 'Veuillez vous connecter pour accéder au site');
             return $app->redirect($app['url_generator']->generate('homepage'));
         }        
     })
@@ -63,7 +76,8 @@ $app
     ->get('/{username}/accueil', 'dashboard.controller:userMusicDisplayAction')
     ->bind('dashboardDisplay')
     ->before(function(Request $request, Application $app){
-        if($app['user.manager']->getUser()->getUsername() != $request->get('username')){
+        if(!$app['user.manager']->getUser() || $app['user.manager']->getUser()->getUsername() != $request->get('username')){
+            $app['session']->getFlashBag()->add('error', 'Veuillez vous connecter pour accéder au site');
             return $app->redirect($app['url_generator']->generate('homepage'));
         }        
     })
@@ -73,7 +87,19 @@ $app
     ->get('/{username}/bibliotheque', 'dashboard.controller:userLibraryMusicDisplayAction')
     ->bind('dashboardLibrary')
     ->before(function(Request $request, Application $app){
-        if($app['user.manager']->getUser()->getUsername() != $request->get('username')){
+        if(!$app['user.manager']->getUser() || $app['user.manager']->getUser()->getUsername() != $request->get('username')){
+            $app['session']->getFlashBag()->add('error', 'Veuillez vous connecter pour accéder au site');
+            return $app->redirect($app['url_generator']->generate('homepage'));
+        }
+    })
+;
+
+$app
+    ->get('/amis', 'dashboard.controller:userFriendsDisplayAction')
+    ->bind('dashboardfriend')
+    ->before(function(Request $request, Application $app){
+        if(!$app['user.manager']->getUser()){
+            $app['session']->getFlashBag()->add('error', 'Veuillez vous connecter pour accéder au site');
             return $app->redirect($app['url_generator']->generate('homepage'));
         }
     })
@@ -109,6 +135,17 @@ $app
     ->post('/ajax/removeTrack', 'ajax.controller:removeTrackAction')
     ->bind('ajax_removeTrack')
 ;
+$app
+    ->post('/ajax/addFriend', 'ajax.controller:addFriendAction')
+    ->bind('ajax_addFriend')
+;
+
+$app
+    ->post('/ajax/removeFriend', 'ajax.controller:removeFriendAction')
+    ->bind('ajax_removeFriend')
+;
+
+//-------------------------------------------------------//
 
 $app->error(function (Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {

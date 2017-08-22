@@ -71,26 +71,7 @@ class UserController extends ControllerAbstract{
     }
     
     public function loginAction(Request $request){
-        /*
-        //$currentUser = new User;
-        
-        //$loginForm = $this->app['form.factory']->create(LoginType::class, $currentUser);
-        //$loginForm->handleRequest($request);
-        if($loginForm->isValid()){
-            $user = $this->app['user.repository']->findByEmail($currentUser->getEmail());
-            if(!is_null($user)){
-                if($this->app['user.manager']->verifyPassword($currentUser->getPassword(), $user->getPassword()))
-                {
-                    $this->app['user.manager']->login($user);
-
-                    return $this->redirectRoute('dashboardDisplay', ['username' => $user->getUsername()]);
-                }
-            }
-            $this->addFlashMessage('Identification incorrecte', 'error');
-        }
-         * */
-         
-        
+       
         if($request->isMethod('POST')){
             $user = $this->app['user.repository']->findByEmail($request->request->get('email'));
             
@@ -107,14 +88,6 @@ class UserController extends ControllerAbstract{
         
         return $this->redirectRoute('homepage');
         
-        /*
-        return $this->render('user/login.html.twig', 
-            [
-                //'loginForm' => $loginForm->createView(),
-            ] 
-        );
-         * */
-         
     }
     
     public function logoutAction(){

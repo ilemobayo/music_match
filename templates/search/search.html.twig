@@ -8,7 +8,7 @@
             <div class="filter">
             </div>
         </div>
-        
+
         <div class="container">
             <form action="{{ path('search') }}" method="get">
                 <div class="form-group my-3">
@@ -28,8 +28,8 @@
             <h2 class="pb-3">Albums :</h2>
             <div class="row">
                 <div class="col-md-10 offset-md-1">
-                {% if resultAlbums %}
-                    <div class="row">
+                    {% if  resultAlbums and resultAlbums.albums.items is not empty %}
+                        <div class="row">
                         {% for album in resultAlbums.albums.items %}
                             <div class="col-sm-3">
                                 <a href="{{ path('showAlbum', {'id_album' : album.id}) }}" class="link-music">
@@ -44,21 +44,23 @@
                                             {% endif %}
                                         </a>
                                     {% endfor %}
-                                    
+
                                 </a>
                             </div>
                             {% if loop.index is divisible by(4) %}
                                 </div><div class="row">
                             {% endif %}
                         {% endfor %}
-                    </div>
-                {% endif %}
+                        </div>
+                    {% else %}
+                        <p>Pas de résultat</p>
+                    {% endif %}
                 </div>
             </div>
             <h2 class="pb-3">Titres :</h2>
             <div class="row">
                 <div class="col-md-10 offset-md-1">
-                    {% if resultTracks %}
+                    {% if resultTracks and resultTracks.tracks.items is not empty %}
                         <div class="row">
                         {% for track in resultTracks.tracks.items %}
                             <div class="col-sm-3">
@@ -82,13 +84,15 @@
                             {% endif %}
                         {% endfor %}
                         </div>
+                    {% else %}
+                        <p>Pas de résultat</p>
                     {% endif %}
                 </div>
             </div>
             <h2 class="pb-3">Artistes :</h2>
             <div class="row">
                 <div class="col-md-10 offset-md-1">
-                    {% if resultArtists %}
+                    {% if resultArtists and resultArtists.artists.items is not empty %}
                         <div class="row">
                         {% for artist in resultArtists.artists.items %}
                             <div class="col-sm-3">
@@ -102,6 +106,34 @@
                             {% endif %}
                         {% endfor %}
                         </div>
+                    {% else %}
+                        <p>Pas de résultat</p>
+                    {% endif %}
+                </div>
+            </div>
+            <h2 class="pb-3">Profils :</h2>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    {% if resultUsers%}
+                        <div class="row">
+                        {% for profil in resultUsers %}
+                            <div class="col-sm-3">
+                                <div class="card" >
+                                    <img class="card-img-top" src="{% if profil.picture %}{{ profil.picture }}{% else %}{{ get_gravatar(profil.email, 210, 'retro') }}{% endif %}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{ profil.username }}</h4>
+                                        <a href="{{ path('display', {'username' : profil.username}) }}" class="btn btn-primary btn-block mb-1">voir profil</a>
+                                        <button class="addToFriends btn btn-info btn-block" data-id="{{ profil.id }}"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if loop.index is divisible by(4) %}
+                                </div><div class="row">
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+                    {% else %}
+                        <p>Pas de résultat</p>
                     {% endif %}
                 </div>
             </div>

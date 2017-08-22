@@ -5,7 +5,9 @@ use Controller\DashboardController;
 use Controller\MusicController;
 use Controller\ProfileController;
 use Controller\UserController;
+use Repository\DashboardRepository;
 use Repository\ProfileRepository;
+use Repository\SearchRepository;
 use Repository\UserRepository;
 use Service\UserManager;
 use Silex\Application;
@@ -37,7 +39,7 @@ $app->register(new HttpFragmentServiceProvider());
 $app['twig'] = $app->extend('twig', function ($twig, $app) {
     // add custom globals, filters, tags, ...
     $twig->addGlobal('user_manager', $app['user.manager']);
-
+    
     // function gravatar
     $function = new Twig_SimpleFunction('get_gravatar', function ($email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts = array() ) {
         $url = 'https://www.gravatar.com/avatar/';
@@ -53,6 +55,7 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
     });
     $twig->addFunction($function);
 
+    
     return $twig;
 });
 
@@ -124,7 +127,11 @@ $app['profile.repository'] = function() use($app){
 };
 
 $app['dashboard.repository'] = function() use($app){
-    return new \Repository\DashboardRepository($app);
+    return new DashboardRepository($app);
+};
+
+$app['search.repository'] = function() use($app){
+    return new SearchRepository($app);
 };
 
 // ----------------- Manager ----------------- //
