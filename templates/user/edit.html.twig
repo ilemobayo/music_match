@@ -2,44 +2,90 @@
 
 {% block title 'profile' %}
 
+{% block stylesheet %}
+    {{ parent() }}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+{% endblock %}
+    
 {% block content %}
-    <div class="container">
-        <form>
-            <div class="form-group">
-                <label>Pseudo</label>
-                <input type ="text" value="{{profile.username}}">
-            </div>
-
-            <div class="form-group">
-                <label>Mot de passe</label>
-                <input type ="text" value="">
-            </div>
-
-            <div class="form-group">
-                <label>Email</label>
-                <input type ="text" value="{{profile.email}}">
-            </div>
-
-            <div class="form-group">
-                <label>Photo de profil</label><br>
-                <img src="{{profile.picture}}" alt="Profile Picture"><br>
-                <input type="file" value="">
-            </div>
-            
-            <div class="form-group">
-                <label>Les styles que vous recherchez (séparés par des virgules)</label>
-                <input type="text" value="">
-            </div>
-            
-            
-            
-            <div class="form-group">
-                <input type ="submit" class="btn btn-primary" value="Valider vos modifications">
-            </div>
-            
-            
-        <a href="{{ path('display', {username: profile.username}) }}">Annuler et retourner vers votre profil</a>
-  
-        </form>
+    
+    <div>
+        <img src="{{ asset('img/vinyl-1437600_1920.jpg') }}" class="profile_page_photo" alt="vynils">
     </div>
+    
+    <div class="container container-top ">
+        <div class="starter-template">
+            <h1 id="profil"><span class = 'glyphicon glyphicon-user' style = 'color: green'></span> Modifier votre profil</h1>
+        </div><br>
+        <div class='row'>
+            <div class='col-sm-5'>
+                <form method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>Pseudo</label>
+                        <input class="form-control" type ="text" name="pseudo" value="{{profile.username}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mot de passe</label>
+                        <input class="form-control" type ="text" name="mdp" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input class="form-control" type ="text" name="email" value="{{profile.email}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Changer de photo</label>
+                        <input class="form-control" type="file" name="picture" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Les styles que vous recherchez</label>
+{#                        <input class="form-control" id="tagsForm" type="text" name="tags" value="{{ profile.tags|join(', ') }}">#}
+                        <select name="tags[]" class="form-control" id="tagsForm" multiple="multiple">
+                            {% for tag in tags.genres %}
+                                <option value="{{tag}}" 
+                                {% if tag in profile.tags %}
+                                    selected
+                                {% endif %}
+                                >{{tag|replace({'-' : ' '})}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type ="submit" class="btn btn-primary" value="Valider vos modifications">
+                    </div>
+
+
+                <a href="{{ path('display', {username: profile.username}) }}">Annuler et retourner vers votre profil</a>
+
+                </form>
+            </div>
+                
+            <div class='col-sm-4 offset-2'>
+                <div class="form-group">
+                    <img src="{% if profile.picture %}
+                            {{ asset('photo/') }}{{ profile.picture }}
+                            {% else %}
+                            {{ get_gravatar(profile.email, 80, 'retro') }}
+                            {% endif %}" alt="Photo de profil" style="height: 250px;"><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+{% endblock %}
+
+{% block script %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script>
+        $(function () {
+            $('#tagsForm').select2();
+        }); 
+    </script>
 {% endblock %}

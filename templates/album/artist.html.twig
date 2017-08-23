@@ -1,0 +1,157 @@
+{% extends "layout.html.twig" %}
+
+{% block title artist.name %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="page-header page-header-xs" style="background-image: url('{{ artist.images[0].url }}')">
+        <div class="filter">
+        </div>
+    </div>
+    <div class="section profile-content">
+        <div class="container">
+            <div class="owner">
+                <div class="name">
+                    <img src="{{ artist.images[1].url }}" class='rounded-circle profil' width='150' height='150'>
+                    <h4 class="title">{{ artist.name }}<br /></h4>
+                    {# <h6 class="description">Music Producer</h6> #}
+                    <p>
+                        Genres : </br>
+                        {% for genre in artist.genres %}
+                            <span class="badge badge-pill badge-success">{{ genre }}</span>
+                        {% endfor %}
+                    </p>
+                    <p>follower : <span class="fa fa-star-o"></span> {{ artist.followers.total }}</p>
+                </div>
+            </div>
+
+
+            <br/>
+            <div class="nav-tabs-navigation">
+                <div class="nav-tabs-wrapper">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#top" role="tab">Top Titre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#listAlbum" role="tab">Albums</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#relatedArtists" role="tab">Artistes associées</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active following" id="top" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <ul class="list-unstyled follows">
+                                {% if topArtistTrack %}
+                                    {% for track in topArtistTrack.tracks %}
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-md-1 offset-md-0">
+                                                    <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" >
+                                                        <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-1 mt-3 text-center">
+                                                    <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
+                                                    <audio >
+                                                        <source src="{{ track.preview_url }}" type="audio/mp3">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </div>
+                                                <div class="col-md-7 col-xs-4">
+                                                    <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
+                                                        <small>
+                                                            Artiste :
+                                                            {% for artist in track.artists %}
+                                                                {% if loop.last %}
+                                                                    {{ artist.name }}
+                                                                {% else %}
+                                                                    {{ artist.name }},
+                                                                {% endif %}
+                                                            {% endfor %}
+                                                        </small><br/>
+                                                        <small>
+                                                            Album : <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.album.name }}</a>
+                                                        </small><br/>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-md-1 col-xs-2 offset-1">
+                                                    <div class="py-3" >
+                                                        <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1 col-xs-2 ">
+                                                    <div class="mt-3" >
+                                                        <button class="addToLibrary" data-id="{{ track.id }}"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <hr />
+                                    {% endfor %}
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- list album -->
+                <div class="tab-pane " id="listAlbum" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                        {% if albumArtist %}
+                            <div class="row">
+                                {% for album in albumArtist.items %}
+                                    <div class="col-sm-3">
+                                        <a href="{{ path('showAlbum', {'id_album' : album.id}) }}" class="link-music">
+                                            <img src="{{ album.images[1].url }}" alt="" class="img-fluid">
+                                            <p><strong>{{ album.name }}</strong></p>
+                                        </a>
+                                    </div>
+                                    {% if loop.index is divisible by(4) %}
+                                        </div><div class="row">
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <!-- list artiste associé -->
+                <div class="tab-pane " id="relatedArtists" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            {% if relatedArtists %}
+                                <div class="row">
+                                {% for relatedArtist in relatedArtists.artists %}
+                                    <div class="col-sm-3">
+                                        <a href="{{ path('showArtist', {'id_artist' : relatedArtist.id}) }}" class="link-music">
+                                            {% if relatedArtist.images %}
+                                                <img src="{{ relatedArtist.images[0].url }}" alt=""  height="200" width="100%">
+                                            {% else %}
+                                                <img src="http://www.juicenothing.com/images/scapart/kanye-west-yeezus-v2.jpg" alt=""  height="200" width="100%">
+                                            {% endif %}
+                                            <p class="mt-1"><strong>{{ relatedArtist.name }}</strong></pclass>
+                                            <p><small>follower : <span class="fa fa-star-o"></span> {{ relatedArtist.followers.total }}</small></p>
+                                        </a>
+                                    </div>
+                                    {% if loop.index is divisible by(4) %}
+                                        </div><div class="row">
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

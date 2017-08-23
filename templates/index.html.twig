@@ -1,5 +1,73 @@
 {% extends "layout.html.twig" %}
 
+{% block title 'Accueil' %}
+
 {% block content %}
-    Welcome to your new Silex Application!
+<!--Main Section  -->
+<div class="wrapper">
+    <div class="page-header section-dark" style="background-image: url('{{ asset('img/backG/main_bg.jpg') }}')">
+        <div class="filter"></div>
+        <div class="content-center">
+            <div class="container">
+                <div class="title-brand">
+                    <h1 class="presentation-title animated fadeIn">MUSIC MATCH</h1>	 
+                </div>
+                <h2 class="presentation-subtitle text-center animated fadeInRight">Ne tombez plus jamais a court de nouveaux artistes </h2>
+            </div>
+        </div>
+        <div class="moving-clouds" style="background-image: url('{{ asset('img/clouds.png') }}')">
+        </div>
+        <div class="fog-low">
+            <img src="{{ asset('img/fog-low.png') }}" alt="">
+        </div>
+        <div class="fog-low right">
+            <img src="{{ asset('img/fog-low.png') }}" alt="">
+        </div>  
+        <h6 class="category category-absolute">Designed and coded by WF3 Team
+        </h6>
+    </div>
+
+    <!--Section 2  -->
+    <section class="section2 container-fluid">
+        <div class="container flex">
+            <div class="flexItem">
+                <img src="{{ asset('img/music_tree.png') }}" alt="">
+            </div>
+            <div class="flexItem">
+                <p class="description">Marre d'écouter les mêmes albums en boucle ? <span class="musicM">MusicMatch</span> est un espace pour les passionnés de musique, permettant de découvrir de nouveaux artistes en se basant sur vos préférences. <br>Plus besoin de s'ennuyer avec la radio, <span class="musicM">MusicMatch</span> est la !<br><br>
+                </p>
+            <div class="container">
+                <span class="rock">Are you ready to ...</span><img src="/MusicMatch/web/img/reggae.jpg" id="readyTo" alt="" width="334"><span class="rock2">?</span>
+            </div>
+            </div>
+            <div class="flexItem">
+                  
+            </div>
+            <div class="flexItem">
+                    </p>
+            </div>
+            </div>
+        </div>
+            
+        <div class="containerFlex">
+            
+        </div>
+    </div>
+      
+    </section>  
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="credits ml-auto">
+                    <span class="copyright">
+                        © <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by WF3 Team
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+        
 {% endblock %}
+    
+

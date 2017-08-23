@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+}
+h1 {
+    animation-delay: 0.3s;
+}
+h2 {
+    animation-delay: 0.5s;
+}
+
+.tree {
+    width: 10%;
+    height: 10%;
+}
+
+section.container-fluid {
+    margin: 85px auto;
+    margin-bottom: 0;
+    padding: 40px 0;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 120%;
+}
+
+div.flexItem p {
+    font-size: 2em;
+    padding: 0 20px;    
+    padding-top: 35px;
+}
+.vinyl {
+    background-image: url('../img/backG/vinyl.jpg');
+    height: 900px;
+}
+span i {
+    font-size: 15em;
+}
+
+.img-circle {
+    width: 30%;
+    margin: 0 27%;
+    
+}
+.centerImg {
+    margin-left: 25px;
+}
+
+.container-top {
+    margin-top: 100px;
+}
+
+.dropdown-menu {
+    background-color: #FFF;
+    border: 0 none;
+}
+
+.select2-selection__choice {
+    background-color: #51cbce !important;
+    color: white !important;
+}
+
+.dropdown-menu .dropdown-item:first-child a, .dropdown-menu .dropdown-item:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.dropdown-menu .dropdown-item:last-child a, .dropdown-menu .dropdown-item:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.navbar .navbar-nav .dropdown-menu {
+    border-radius: 6px;
+    margin-top: 1px;
+}
+.rock {
+    font-family: Bangers;
+    font-size: 3.5em;
+}
+.rock2 {
+    font-family: Bangers;
+    font-size: 8em;
+}
+.description {
+    font-family: Roboto;
+    font-size: 2.8em !important;
+}
+.theRock {
+    width: 334px;
+    height: 151px; 
+    margin: 0;
+}
+.containerFlex {
+    display: flex;
+    
+}
+.musicM {
+    font-weight: bold;
+}
