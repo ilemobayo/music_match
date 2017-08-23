@@ -45,23 +45,6 @@
                     {% endif %}
                     {% endfor %}
                 {% endif %}
-                {% if usersFriends2 %}
-                    {% for friend in usersFriends2 %}
-                    <div class="col-sm-3" >
-                        <div class="card">
-                            <img class="card-img-top " src="{% if friend.picture %}{{ asset('photo/') }}{{ friend.picture }}{% else %}{{ get_gravatar(friend.email, 210, 'retro') }}{% endif %}" alt="Card image cap" style='height: 210px;'>
-                            <div class="card-body ">
-                                <h4 class="card-title">{{ friend.username }}</h4>
-                                <a href="{{ path('display', {'username' : friend.username}) }}" class="btn btn-primary btn-block mb-1">voir profil</a>
-                                <button class="removeToFriends2 btn btn-danger btn-block" data-id="{{ friend.id }}"><i class="fa fa-remove" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    {% if loop.index is divisible by(4) %}
-                        </div><div class="row">
-                    {% endif %}
-                    {% endfor %}
-                {% endif %}
             </div>
         </div>
     </div>

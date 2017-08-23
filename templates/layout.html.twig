@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="{{ asset('img/favicon.ico') }}">
+    <link rel="icon" type="image/png" href="{{ asset('img/logo1.png') }}">
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/apple-icon.png') }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
@@ -20,6 +20,7 @@
     <link href="{{ asset('css/demo.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/main.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Indie+Flower|Bangers|Roboto" rel="stylesheet">
     <link href="{{ asset('css/main_1.css') }}" rel="stylesheet" />
     
 
@@ -150,7 +151,7 @@
 
         <!-- Switches -->
         <script src="{{ asset('js/bootstrap-switch.min.js') }}"></script>
-
+        
         <!--  Plugins for Slider -->
         <script src="{{ asset('js/nouislider.js') }}"></script>
 
@@ -160,117 +161,16 @@
 
         <!--  Paper Kit Initialization and functions -->
         <script src="{{ asset('js/paper-kit.js?v=2.0.0') }}"></script>
-        <!-- a refaire en propre -->
-        {% endblock %}
+        
         <script>
-            $(function () {
-                // player stop and play
-                $('.play').on('click', function() {
-                    $this = $(this);
-                    i = $this.children();
-                    $('audio').each(function () {
-                        //console.log($(this).get(0));
-                        $(this).get(0).pause();
-                        $(this).get(0).currentTime = 0;
-                    });
-                    if(i.hasClass('fa-play-circle')){
-                        i.removeClass('fa-play-circle').addClass('fa-pause-circle');
-                        $this.next().get(0).play()
-                    }else{
-                        i.removeClass('fa-pause-circle').addClass('fa-play-circle');
-                        $this.next().get(0).pause()
-                    }
-                    $('audio').on('pause', function () {
-                        $(this).prev().children().removeClass('fa-pause-circle').addClass('fa-play-circle');
-                    })
-                    $('audio').on('ended', function () {
-                        $(this).prev().children().removeClass('fa-pause-circle').addClass('fa-play-circle');
-                    })
-                })
-                // ajout d'un titre dans la bibliotheque
-                $('.addToLibrary').on('click', function () {
-                    var $this = $(this);
-                    var id_track = $this.data('id');
-                    $.post( "{{ path('ajax_addTrack') }}", { id: id_track } ,function( data ) {
-                        $('.panel-ajax').html( data.message );
-                        $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
-                            $(this).removeClass('move-panel-ajax');
-                            next();
-                        }).delay(500).queue(function(next){
-                            $(this).removeClass(data.status);
-                            next();
-                        });
-                    });
-                })
-                // retirer un titre de la biliotheque
-                $('.removeToLibrary').on('click', function () {
-                    var $this = $(this);
-                    var id_track = $this.data('id');
-                    $.post( "{{ path('ajax_removeTrack') }}", { id: id_track } ,function( data ) {
-                        $('.panel-ajax').html( data.message );
-                        $this.closest('li').slideUp('slow');
-                        $this.closest('li').next().hide();
-                        $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
-                            $(this).removeClass('move-panel-ajax');
-                            next();
-                        }).delay(500).queue(function(next){
-                            $(this).removeClass(data.status);
-                            next();
-                        });
-                    });
-                })
-                
-                // ajout d'un amie dans la liste
-                $('.addToFriends').on('click', function () {
-                    var $this = $(this);
-                    var id_friend = $this.data('id');
-                    $.post( "{{ path('ajax_addFriend') }}", { id: id_friend } ,function( data ) {
-                        $('.panel-ajax').html( data.message );
-                        $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
-                            $(this).removeClass('move-panel-ajax');
-                            next();
-                        }).delay(500).queue(function(next){
-                            $(this).removeClass(data.status);
-                            next();
-                        });
-                    });
-                })
-                
-                // retirer un amie de la liste
-                $('.removeToFriends').on('click', function () {
-                    var $this = $(this);
-                    var id_friend = $this.data('id');
-                    $.post( "{{ path('ajax_removeFriend') }}", { id: id_friend } ,function( data ) {
-                        $('.panel-ajax').html( data.message );
-                        $this.closest('.col-sm-3').fadeOut('slow');
-                        $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
-                            $(this).removeClass('move-panel-ajax');
-                            next();
-                        }).delay(500).queue(function(next){
-                            $(this).removeClass(data.status);
-                            next();
-                        });
-                    });
-                })
-                
-                // retirer un amie de la liste
-                $('.removeToFriends2').on('click', function () {
-                    var $this = $(this);
-                    var id_friend = $this.data('id');
-                    $.post( "{{ path('ajax_removeFriend') }}", { id_friend: id_friend } ,function( data ) {
-                        $('.panel-ajax').html( data.message );
-                        $this.closest('.col-sm-3').fadeOut('slow');
-                        $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
-                            $(this).removeClass('move-panel-ajax');
-                            next();
-                        }).delay(500).queue(function(next){
-                            $(this).removeClass(data.status);
-                            next();
-                        });
-                    });
-                })
-            });    
+            var ajaxAddTrack = "{{ path('ajax_addTrack') }}";
+            var ajaxRemoveTrack = "{{ path('ajax_removeTrack') }}";
+            var ajaxAddFriend = "{{ path('ajax_addFriend') }}";
+            var ajaxRemoveFriend = "{{ path('ajax_removeFriend') }}";
         </script>
-            
+        
+        <script src="{{ asset('js/main.js') }}"></script>
+        {% endblock %}
+        
     </body>
 </html>

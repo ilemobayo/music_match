@@ -10,15 +10,14 @@
         
     <div class="container container-top">
         <div class="starter-template">
-            <h1 id="profil"><span class = 'glyphicon glyphicon-user' style = 'color: green'></span> Profil</h1>
+            <h1 id="profil"><span class ='fat applepie'>{{ profile.username }}</span> </h1>
         </div><br>
-        <div class="row">
+        <div class="row infos">
             <ul class="col-sm-6">
-                <li class="list-group-item active">Vos informations</li>
-                <li class="list-group-item">Pseudo : {{ profile.username }}</li>
-                <li class="list-group-item">Email : {{ profile.email }}</li>
-                <li class="list-group-item">Date d'enregistrement : {{ profile.registerDate|date("d/m/Y")}}</li>
-                <li class="list-group-item">Vos styles musicaux : <span class="badge badge-primary">{{ profile.tags|join('</span>&nbsp<span class="badge badge-primary">')|raw }}</span></li>
+                <li class="list-group profile"><span class="fat">Vos informations</span></li><br>   
+                <li class="list-group profile"><span class="fat">Email : </span><span class="profile">{{ profile.email }}</span></li><br>
+                <li class="list-group profile"><span class="fat">Date d'enregistrement : </span><span class="profile"> {{ profile.registerDate|date("d/m/Y")}}</span></li><br>
+                <li class="list-group profile"><span class="fat">Vos styles musicaux : </span> <span class="badge badge-primary">{{ profile.tags|join('</span>&nbsp<span class="badge badge-primary">')|raw }}</span></li>
             </ul>
             <div class="col-sm-5 offset-1">
                 <img src="{% if profile.picture %}
@@ -29,8 +28,8 @@
             </div>
             {% if user_manager.user.username == global.request.get('username') %}
                 <ul>
-                    <li><a href="{{ path('edit', {username: profile.username}) }}">Modifier votre profil</a></li>
-                    <li><a href="{{ path('user_delete') }}">Désinscription</a></li>
+                    <li><button class="btn btn-success fat"><a href="{{ path('edit', {username: profile.username}) }}">Modifier votre profil</a></button></li>
+                    <li><button class="btn btn-danger fat"><a href="{{ path('user_delete') }}">Désinscription</a></button></li>
                 </ul>
             {% endif %}
             

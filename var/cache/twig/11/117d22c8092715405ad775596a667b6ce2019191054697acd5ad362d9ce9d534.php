@@ -12,6 +12,7 @@ class __TwigTemplate_177dfe9eaae9df75214ee42a81eedae01e6a2f356f035bcb9d701f0e7ac
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'content' => array($this, 'block_content'),
+            'script' => array($this, 'block_script'),
         );
     }
 
@@ -22,47 +23,47 @@ class __TwigTemplate_177dfe9eaae9df75214ee42a81eedae01e6a2f356f035bcb9d701f0e7ac
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a2e055bc6be9bc31c479319238923b0cf48d36517191e54dd60c6ab013465696 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a2e055bc6be9bc31c479319238923b0cf48d36517191e54dd60c6ab013465696->enter($__internal_a2e055bc6be9bc31c479319238923b0cf48d36517191e54dd60c6ab013465696_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "index.html.twig"));
+        $__internal_91836040cf20eda3cb085745d36c0aa9481d656b15a0419cf442068310d37009 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_91836040cf20eda3cb085745d36c0aa9481d656b15a0419cf442068310d37009->enter($__internal_91836040cf20eda3cb085745d36c0aa9481d656b15a0419cf442068310d37009_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "index.html.twig"));
 
-        $__internal_1ce003c19cfa397ecdb03cf79c6dedd06357b0f5bee80d8c2bddb6218dabd024 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_1ce003c19cfa397ecdb03cf79c6dedd06357b0f5bee80d8c2bddb6218dabd024->enter($__internal_1ce003c19cfa397ecdb03cf79c6dedd06357b0f5bee80d8c2bddb6218dabd024_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "index.html.twig"));
+        $__internal_88d5582c931c83ddbd1414a0eea6b7bc413bff94e717229886b77eca21fd8e6c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_88d5582c931c83ddbd1414a0eea6b7bc413bff94e717229886b77eca21fd8e6c->enter($__internal_88d5582c931c83ddbd1414a0eea6b7bc413bff94e717229886b77eca21fd8e6c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a2e055bc6be9bc31c479319238923b0cf48d36517191e54dd60c6ab013465696->leave($__internal_a2e055bc6be9bc31c479319238923b0cf48d36517191e54dd60c6ab013465696_prof);
+        $__internal_91836040cf20eda3cb085745d36c0aa9481d656b15a0419cf442068310d37009->leave($__internal_91836040cf20eda3cb085745d36c0aa9481d656b15a0419cf442068310d37009_prof);
 
         
-        $__internal_1ce003c19cfa397ecdb03cf79c6dedd06357b0f5bee80d8c2bddb6218dabd024->leave($__internal_1ce003c19cfa397ecdb03cf79c6dedd06357b0f5bee80d8c2bddb6218dabd024_prof);
+        $__internal_88d5582c931c83ddbd1414a0eea6b7bc413bff94e717229886b77eca21fd8e6c->leave($__internal_88d5582c931c83ddbd1414a0eea6b7bc413bff94e717229886b77eca21fd8e6c_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_5e025c2e9b3244ad007ea41c2c6524b3da0f609a6527ae3b16aed5b0baba079e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5e025c2e9b3244ad007ea41c2c6524b3da0f609a6527ae3b16aed5b0baba079e->enter($__internal_5e025c2e9b3244ad007ea41c2c6524b3da0f609a6527ae3b16aed5b0baba079e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_642d7693d34fc5b095f0a8cc921155dcb51d7d567f3dc0d2c252948bfbac62fd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_642d7693d34fc5b095f0a8cc921155dcb51d7d567f3dc0d2c252948bfbac62fd->enter($__internal_642d7693d34fc5b095f0a8cc921155dcb51d7d567f3dc0d2c252948bfbac62fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_b6b6df639eb2ec2a1776702df2415acca9a66be73f2aac66e91a90b0ef75b29c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_b6b6df639eb2ec2a1776702df2415acca9a66be73f2aac66e91a90b0ef75b29c->enter($__internal_b6b6df639eb2ec2a1776702df2415acca9a66be73f2aac66e91a90b0ef75b29c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_61ef106f0e28be941da4fbfa76913f251fe9c5476920db7b891747da29da580b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_61ef106f0e28be941da4fbfa76913f251fe9c5476920db7b891747da29da580b->enter($__internal_61ef106f0e28be941da4fbfa76913f251fe9c5476920db7b891747da29da580b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Accueil";
         
-        $__internal_b6b6df639eb2ec2a1776702df2415acca9a66be73f2aac66e91a90b0ef75b29c->leave($__internal_b6b6df639eb2ec2a1776702df2415acca9a66be73f2aac66e91a90b0ef75b29c_prof);
+        $__internal_61ef106f0e28be941da4fbfa76913f251fe9c5476920db7b891747da29da580b->leave($__internal_61ef106f0e28be941da4fbfa76913f251fe9c5476920db7b891747da29da580b_prof);
 
         
-        $__internal_5e025c2e9b3244ad007ea41c2c6524b3da0f609a6527ae3b16aed5b0baba079e->leave($__internal_5e025c2e9b3244ad007ea41c2c6524b3da0f609a6527ae3b16aed5b0baba079e_prof);
+        $__internal_642d7693d34fc5b095f0a8cc921155dcb51d7d567f3dc0d2c252948bfbac62fd->leave($__internal_642d7693d34fc5b095f0a8cc921155dcb51d7d567f3dc0d2c252948bfbac62fd_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_d3d9fb039c66d23757ab7f3a72601ece881c8b96e6cf2c5773073811e6a57931 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d3d9fb039c66d23757ab7f3a72601ece881c8b96e6cf2c5773073811e6a57931->enter($__internal_d3d9fb039c66d23757ab7f3a72601ece881c8b96e6cf2c5773073811e6a57931_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_816d70c7a13d604dfbc90157b866f5cc72527a22ac79145b49e739f2e769faa7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_816d70c7a13d604dfbc90157b866f5cc72527a22ac79145b49e739f2e769faa7->enter($__internal_816d70c7a13d604dfbc90157b866f5cc72527a22ac79145b49e739f2e769faa7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_e58a4e336477c605e055d0fec85b8f7ad98e6c240e36a5e2e49a61199d93d476 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_e58a4e336477c605e055d0fec85b8f7ad98e6c240e36a5e2e49a61199d93d476->enter($__internal_e58a4e336477c605e055d0fec85b8f7ad98e6c240e36a5e2e49a61199d93d476_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_a0b5463d072b508ef5013a2230afe48721889bc3756c63b5b59128579b0badb8 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_a0b5463d072b508ef5013a2230afe48721889bc3756c63b5b59128579b0badb8->enter($__internal_a0b5463d072b508ef5013a2230afe48721889bc3756c63b5b59128579b0badb8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "<!--Main Section  -->
@@ -102,76 +103,83 @@ class __TwigTemplate_177dfe9eaae9df75214ee42a81eedae01e6a2f356f035bcb9d701f0e7ac
         </h6>
     </div>
 
-        <!--Section 2  -->
-        <section class=\"container-fluid\">
-           
-            <div class=\"container flex\">
-                <div class=\"flexItem\">
-                    <img src=\"";
-        // line 36
+    <!--Section 2  -->
+    <section class=\"section2 container-fluid\">
+        <div class=\"row\">
+            <div class=\"col-lg-4 col-sm-10 offset-sm-1\">
+                <img id=\"image_accueil\" src=\"";
+        // line 35
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/music_tree.png"), "html", null, true);
         echo "\" alt=\"\">
-                </div>
-                 <div class=\"flexItem\">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique est ab eaque ipsum molestiae atque hic in optio. Culpa unde repellendus fuga aliquid, perferendis eligendi tempora excepturi suscipit quidem pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. In minima neque iusto odio dolorem, cumque dolorum sequi, optio provident illo placeat sit similique itaque molestias nam voluptate labore numquam harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, nesciunt quas ex. Voluptatem aspernatur eos impedit ullam commodi adipisci quasi quisquam explicabo, assumenda facere illum totam cupiditate vel nam nesciunt.</p>
+            </div>
+            <div class=\"offset-lg-2 col-lg-5 col-sm-10 offset-sm-1\">
+                <p id=\"texte_accueil\" class=\"description\">Marre d'écouter les mêmes albums en boucle ? <span class=\"musicM\">MusicMatch</span> est un espace pour les passionnés de musique, permettant de découvrir de nouveaux artistes en se basant sur vos préférences. <br>Plus besoin de s'ennuyer avec la radio, <span class=\"musicM\">MusicMatch</span> est la !<br><br>
+                </p>
+                <div>
+                    <span class=\"rock\">Are you ready to ...</span><img src=\"/MusicMatch/web/img/reggae.jpg\" id=\"readyTo\" alt=\"\" width=\"334\"><span class=\"rock2\">?</span>
                 </div>
             </div>
-        </section>
-
-        <!--Section 3  -->
-       
-        <section class=\"container-fluid vinyl\">
-            <div class=\"container flex\">
-                <div class=\"flexItem\">
-                    <img src=\"";
-        // line 49
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/placeholder.jpg"), "html", null, true);
-        echo "\" class=\"img-circle img-no-padding img-responsive\" alt=\"Rounded Image\">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique est ab eaque ipsum molestiae atque hic in optio. Culpa unde repellendus fuga aliquid, perferendis eligendi tempora excepturi suscipit quidem pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class=\"flexItem\">
-                    <img src=\"";
-        // line 53
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/placeholder.jpg"), "html", null, true);
-        echo "\" class=\"img-circle img-no-padding img-responsive\" alt=\"Rounded Image\">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique est ab eaque ipsum molestiae atque hic in optio. Culpa unde repellendus fuga aliquid, perferendis eligendi tempora excepturi suscipit quidem pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class=\"flexItem\">
-                    <div class=\"centerImg\">
-                        <img src=\"";
-        // line 58
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/placeholder.jpg"), "html", null, true);
-        echo "\" class=\"img-circle img-no-padding img-responsive\" alt=\"Rounded Image\">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique est ab eaque ipsum molestiae atque hic in optio. Culpa unde repellendus fuga aliquid, perferendis eligendi tempora excepturi suscipit quidem pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </section>
-        <footer class=\"footer\">
-           <div class=\"container\">
-               <div class=\"row\">
-                   <nav class=\"footer-nav\">
-                       <ul>
-                           <li><a href=\"http://www.creative-tim.com\">Creative Tim</a></li>
-                           <li><a href=\"http://blog.creative-tim.com\">Blog</a></li>
-                           <li><a href=\"http://www.creative-tim.com/license\">Licenses</a></li>
-                       </ul>
-                   </nav> 
-                   <div class=\"credits ml-auto\">
-                       <span class=\"copyright\">
-                           © <script>document.write(new Date().getFullYear())</script>, made with <i class=\"fa fa-heart heart\"></i> by WF3 Team
-                       </span>
-                   </div>
-               </div>
+        </div>
+    </section>
+</div>
+            
+<footer class=\"footer\">
+   <div class=\"container\">
+       <div class=\"row\">
+           <nav class=\"footer-nav\">
+               <ul>
+                   <li><a href=\"#\">Mentions légales</a></li>
+                   <li><a href=\"#\">Nous contacter</a></li>
+               </ul>
+           </nav> 
+           <div class=\"credits ml-auto\">
+               <span class=\"copyright\">
+                   © <script>document.write(new Date().getFullYear())</script>, made with <i class=\"fa fa-heart heart\"></i> by WF3 Team
+               </span>
            </div>
-        </footer>
-        
+       </div>
+   </div>
+</footer>
 ";
         
-        $__internal_e58a4e336477c605e055d0fec85b8f7ad98e6c240e36a5e2e49a61199d93d476->leave($__internal_e58a4e336477c605e055d0fec85b8f7ad98e6c240e36a5e2e49a61199d93d476_prof);
+        $__internal_a0b5463d072b508ef5013a2230afe48721889bc3756c63b5b59128579b0badb8->leave($__internal_a0b5463d072b508ef5013a2230afe48721889bc3756c63b5b59128579b0badb8_prof);
 
         
-        $__internal_d3d9fb039c66d23757ab7f3a72601ece881c8b96e6cf2c5773073811e6a57931->leave($__internal_d3d9fb039c66d23757ab7f3a72601ece881c8b96e6cf2c5773073811e6a57931_prof);
+        $__internal_816d70c7a13d604dfbc90157b866f5cc72527a22ac79145b49e739f2e769faa7->leave($__internal_816d70c7a13d604dfbc90157b866f5cc72527a22ac79145b49e739f2e769faa7_prof);
+
+    }
+
+    // line 67
+    public function block_script($context, array $blocks = array())
+    {
+        $__internal_0eb1824c358fae529bf1786489c8d553c02d55b7a8790dedaf58aab1d86cbcfb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0eb1824c358fae529bf1786489c8d553c02d55b7a8790dedaf58aab1d86cbcfb->enter($__internal_0eb1824c358fae529bf1786489c8d553c02d55b7a8790dedaf58aab1d86cbcfb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "script"));
+
+        $__internal_02ff84ce87afcc3c62753a8f068edd2941a73f7181861980d68ed84137ea180b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_02ff84ce87afcc3c62753a8f068edd2941a73f7181861980d68ed84137ea180b->enter($__internal_02ff84ce87afcc3c62753a8f068edd2941a73f7181861980d68ed84137ea180b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "script"));
+
+        // line 68
+        echo "    ";
+        $this->displayParentBlock("script", $context, $blocks);
+        echo "
+    <!-- Images animées page d'accueil -->
+    <script>
+        var path = \"";
+        // line 71
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/"), "html", null, true);
+        echo "\";
+    </script>
+
+    <script src=\"";
+        // line 74
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/readyTo.js"), "html", null, true);
+        echo "\"></script>
+";
+        
+        $__internal_02ff84ce87afcc3c62753a8f068edd2941a73f7181861980d68ed84137ea180b->leave($__internal_02ff84ce87afcc3c62753a8f068edd2941a73f7181861980d68ed84137ea180b_prof);
+
+        
+        $__internal_0eb1824c358fae529bf1786489c8d553c02d55b7a8790dedaf58aab1d86cbcfb->leave($__internal_0eb1824c358fae529bf1786489c8d553c02d55b7a8790dedaf58aab1d86cbcfb_prof);
 
     }
 
@@ -187,7 +195,7 @@ class __TwigTemplate_177dfe9eaae9df75214ee42a81eedae01e6a2f356f035bcb9d701f0e7ac
 
     public function getDebugInfo()
     {
-        return array (  143 => 58,  135 => 53,  128 => 49,  112 => 36,  98 => 25,  92 => 22,  86 => 19,  73 => 9,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
+        return array (  175 => 74,  169 => 71,  162 => 68,  153 => 67,  112 => 35,  99 => 25,  93 => 22,  87 => 19,  74 => 9,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -230,61 +238,51 @@ class __TwigTemplate_177dfe9eaae9df75214ee42a81eedae01e6a2f356f035bcb9d701f0e7ac
         </h6>
     </div>
 
-        <!--Section 2  -->
-        <section class=\"container-fluid\">
-           
-            <div class=\"container flex\">
-                <div class=\"flexItem\">
-                    <img src=\"{{ asset('img/music_tree.png') }}\" alt=\"\">
-                </div>
-                 <div class=\"flexItem\">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique est ab eaque ipsum molestiae atque hic in optio. Culpa unde repellendus fuga aliquid, perferendis eligendi tempora excepturi suscipit quidem pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. In minima neque iusto odio dolorem, cumque dolorum sequi, optio provident illo placeat sit similique itaque molestias nam voluptate labore numquam harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, nesciunt quas ex. Voluptatem aspernatur eos impedit ullam commodi adipisci quasi quisquam explicabo, assumenda facere illum totam cupiditate vel nam nesciunt.</p>
+    <!--Section 2  -->
+    <section class=\"section2 container-fluid\">
+        <div class=\"row\">
+            <div class=\"col-lg-4 col-sm-10 offset-sm-1\">
+                <img id=\"image_accueil\" src=\"{{ asset('img/music_tree.png') }}\" alt=\"\">
+            </div>
+            <div class=\"offset-lg-2 col-lg-5 col-sm-10 offset-sm-1\">
+                <p id=\"texte_accueil\" class=\"description\">Marre d'écouter les mêmes albums en boucle ? <span class=\"musicM\">MusicMatch</span> est un espace pour les passionnés de musique, permettant de découvrir de nouveaux artistes en se basant sur vos préférences. <br>Plus besoin de s'ennuyer avec la radio, <span class=\"musicM\">MusicMatch</span> est la !<br><br>
+                </p>
+                <div>
+                    <span class=\"rock\">Are you ready to ...</span><img src=\"/MusicMatch/web/img/reggae.jpg\" id=\"readyTo\" alt=\"\" width=\"334\"><span class=\"rock2\">?</span>
                 </div>
             </div>
-        </section>
-
-        <!--Section 3  -->
-       
-        <section class=\"container-fluid vinyl\">
-            <div class=\"container flex\">
-                <div class=\"flexItem\">
-                    <img src=\"{{ asset('img/placeholder.jpg')}}\" class=\"img-circle img-no-padding img-responsive\" alt=\"Rounded Image\">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique est ab eaque ipsum molestiae atque hic in optio. Culpa unde repellendus fuga aliquid, perferendis eligendi tempora excepturi suscipit quidem pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class=\"flexItem\">
-                    <img src=\"{{ asset('img/placeholder.jpg')}}\" class=\"img-circle img-no-padding img-responsive\" alt=\"Rounded Image\">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique est ab eaque ipsum molestiae atque hic in optio. Culpa unde repellendus fuga aliquid, perferendis eligendi tempora excepturi suscipit quidem pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class=\"flexItem\">
-                    <div class=\"centerImg\">
-                        <img src=\"{{ asset('img/placeholder.jpg')}}\" class=\"img-circle img-no-padding img-responsive\" alt=\"Rounded Image\">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique est ab eaque ipsum molestiae atque hic in optio. Culpa unde repellendus fuga aliquid, perferendis eligendi tempora excepturi suscipit quidem pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </section>
-        <footer class=\"footer\">
-           <div class=\"container\">
-               <div class=\"row\">
-                   <nav class=\"footer-nav\">
-                       <ul>
-                           <li><a href=\"http://www.creative-tim.com\">Creative Tim</a></li>
-                           <li><a href=\"http://blog.creative-tim.com\">Blog</a></li>
-                           <li><a href=\"http://www.creative-tim.com/license\">Licenses</a></li>
-                       </ul>
-                   </nav> 
-                   <div class=\"credits ml-auto\">
-                       <span class=\"copyright\">
-                           © <script>document.write(new Date().getFullYear())</script>, made with <i class=\"fa fa-heart heart\"></i> by WF3 Team
-                       </span>
-                   </div>
-               </div>
+        </div>
+    </section>
+</div>
+            
+<footer class=\"footer\">
+   <div class=\"container\">
+       <div class=\"row\">
+           <nav class=\"footer-nav\">
+               <ul>
+                   <li><a href=\"#\">Mentions légales</a></li>
+                   <li><a href=\"#\">Nous contacter</a></li>
+               </ul>
+           </nav> 
+           <div class=\"credits ml-auto\">
+               <span class=\"copyright\">
+                   © <script>document.write(new Date().getFullYear())</script>, made with <i class=\"fa fa-heart heart\"></i> by WF3 Team
+               </span>
            </div>
-        </footer>
-        
+       </div>
+   </div>
+</footer>
 {% endblock %}
     
+{% block script %}
+    {{ parent() }}
+    <!-- Images animées page d'accueil -->
+    <script>
+        var path = \"{{ asset('img/') }}\";
+    </script>
 
+    <script src=\"{{ asset('js/readyTo.js') }}\"></script>
+{% endblock %}
 ", "index.html.twig", "C:\\xampp\\htdocs\\music_match\\music_match\\templates\\index.html.twig");
     }
 }

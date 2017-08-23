@@ -100,16 +100,17 @@ class ProfileController extends ControllerAbstract {
     public function addTagsAction(Request $request){
         
         $spotifyTags = $this->app['spotify.api']->getGenreSeeds();
-        $tags = $request->request->get('tags');
-        $user = $this->app['user.manager']->getUser();
         $errors = [];
         
         if($request->isMethod('POST')){
+            $tags = $request->request->get('tags');
+            $user = $this->app['user.manager']->getUser();
+            
             if(empty($tags)){
                 $errors['tags'] = 'Veuillez entrer au moins une categorie';
             }else{
                 $this->app['profile.repository']->saveTag($tags, $user->getId());
-                $this->app['user.manager']->getUser()->setTags($tags);
+                $user->setTags($tags);
                 return $this->redirectRoute('dashboardDisplay', ['username' => $user->getUsername()]);
             }
         }

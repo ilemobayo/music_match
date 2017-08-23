@@ -1,13 +1,5 @@
 body {
     margin: 0;
-/*    background: rgba(0,0,0,1);
-    background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 16%, rgba(255,255,255,1) 87%, rgba(0,0,0,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(16%, rgba(255,255,255,1)), color-stop(87%, rgba(255,255,255,1)), color-stop(100%, rgba(0,0,0,1)));
-    background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 16%, rgba(255,255,255,1) 87%, rgba(0,0,0,1) 100%);
-    background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 16%, rgba(255,255,255,1) 87%, rgba(0,0,0,1) 100%);
-    background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 16%, rgba(255,255,255,1) 87%, rgba(0,0,0,1) 100%);
-    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 16%, rgba(255,255,255,1) 87%, rgba(0,0,0,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );*/
 }
 h1 {
     animation-delay: 0.3s;
@@ -22,7 +14,7 @@ h2 {
 }
 
 section.container-fluid {
-    margin: 40px auto;
+    margin: 85px auto;
     margin-bottom: 0;
     padding: 40px 0;
 }
@@ -90,6 +82,74 @@ a button.btn.btn-success.btn-round{
     padding: 10px;
 }
 
+.rock {
+    font-family: Bangers;
+    font-size: 3.5em;
+}
+.rock2 {
+    font-family: Bangers;
+    font-size: 8em;
+}
+.description {
+    font-family: Roboto;
+    font-size: 2.6em;
+}
+.theRock {
+    width: 334px;
+    height: 151px; 
+    margin: 0;
+}
+.containerFlex {
+    display: flex;
+    
+}
+.musicM {
+    font-weight: bold;
+}
+
+.profile {
+    font-family: Indie Flower;
+    font-size: 1.4em;
+    
+}
+.fat{
+    font-weight: bold;
+    font-size: 1.8em;
+    display: inline;
+}
+
+.list-group.profile{
+    display: inline;
+}
+
+.badge.badge-primary{
+    vertical-align: 0.2em;
+}
+
+span.fat.applepie{
+    font-family: Courgette;
+}
+
+div.row.info{
+    margin-top:30px;
+}
+
+.btn.btn-success.fat a, .btn.btn-danger.fat a{
+    color: inherit;
+}
+
+.row.infos li{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.col-sm-4.col-xs-12, .offset-sm-1.col-sm-6.col-xs-12{
+    display: inline-block;
+}
+
+.col-sm-4.col-xs-12{
+    margin-left: 10%;
+}
 
 @media (min-width:576px){
 /*    i.fa.fa-play-circle.fa-2x {
@@ -147,6 +207,10 @@ a button.btn.btn-success.btn-round{
     .playbutton{
         margin-left: 0;
     }
+    
+    #image_accueil, #texte_accueil{
+        width: 100%;
+    }
 }
 
 @media (max-width:575px){
@@ -155,12 +219,7 @@ a button.btn.btn-success.btn-round{
         margin-bottom: 1.5em;
     }
     
-/*    .row{
-        width: 100%;
+    body{
+        font-size: 0.6em;
     }
-    
-    .wrapper, .page-header, .container{
-    width: 100% !important;
-}*/
-
 }

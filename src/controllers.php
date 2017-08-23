@@ -4,7 +4,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 //Request::setTrustedProxies(array('127.0.0.1'));
 $app->get('/', function () use ($app) {
-    return $app['twig']->render('index.html.twig', array());
+    return $app['twig']->render('index.html.twig');
 })
 ->bind('homepage')
 ->before(function(Request $request, Application $app){

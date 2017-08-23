@@ -53,14 +53,13 @@ class UserRepository extends RepositoryAbstract {
         }
         
     }
-    public function findUserFriend($id_user, $sense = false){
+    
+    
+    public function findUserFriend($id_user){
         
-        if(!$sense){
-            $sql = 'SELECT users.id_user, users.pseudo, users.mdp, users.email, users.role, users.register_date, users.picture FROM user_relationships JOIN users ON user_relationships.id_friend = users.id_user  WHERE user_relationships.id_user = :id_user ';
-        }else {
-            $sql = 'SELECT users.id_user, users.pseudo, users.mdp, users.email, users.role, users.register_date, users.picture FROM user_relationships JOIN users ON user_relationships.id_user = users.id_user  WHERE user_relationships.id_friend = :id_user';
-        }
-        
+        $sql = 'SELECT users.id_user, users.pseudo, users.mdp, users.email, users.role, users.register_date, users.picture FROM user_relationships left JOIN users ON user_relationships.id_user = users.id_user  WHERE user_relationships.id_friend = :id_user' .
+' UNION'.
+' SELECT users.id_user, users.pseudo, users.mdp, users.email, users.role, users.register_date, users.picture FROM user_relationships left JOIN users ON user_relationships.id_friend = users.id_user  WHERE user_relationships.id_user = :id_user';
         $dbUsers = $this->db->fetchAll($sql,
             [
                 ':id_user' => $id_user
@@ -77,6 +76,8 @@ class UserRepository extends RepositoryAbstract {
         }
         return $users;
     }
+    
+    
     public function save($entity, array $data){
         // Si la catégorie a un id, on est en update
         // sinon, en insert
