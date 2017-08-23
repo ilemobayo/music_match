@@ -80,6 +80,7 @@ class ProfileController extends ControllerAbstract {
                 $this->app['profile.repository']->saveTag($tags, $profile->getId());
                 $this->app['user.manager']->getUser()->setUsername($data['pseudo']);
                 $this->app['user.manager']->getUser()->setEmail($data['email']);
+                $this->app['user.manager']->getUser()->setTags($tags);
                 return $this->redirectRoute('display', ['username' => $data['pseudo']]);
             } else {
                 $message = '<strong>Le formulaire contient des erreurs :</strong>';
@@ -108,6 +109,7 @@ class ProfileController extends ControllerAbstract {
                 $errors['tags'] = 'Veuillez entrer au moins une categorie';
             }else{
                 $this->app['profile.repository']->saveTag($tags, $user->getId());
+                $this->app['user.manager']->getUser()->setTags($tags);
                 return $this->redirectRoute('dashboardDisplay', ['username' => $user->getUsername()]);
             }
         }

@@ -18,7 +18,7 @@
                 <li class="list-group-item">Pseudo : {{ profile.username }}</li>
                 <li class="list-group-item">Email : {{ profile.email }}</li>
                 <li class="list-group-item">Date d'enregistrement : {{ profile.registerDate|date("d/m/Y")}}</li>
-                <li class="list-group-item">Vos styles musicaux : {{ profile.tags|join(', ')|upper }}</li>
+                <li class="list-group-item">Vos styles musicaux : <span class="badge badge-primary">{{ profile.tags|join('</span>&nbsp<span class="badge badge-primary">')|raw }}</span></li>
             </ul>
             <div class="col-sm-5 offset-1">
                 <img src="{% if profile.picture %}
