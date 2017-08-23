@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="wrapper">
-        <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('http://admin.traxmag.com/uploads/images/size800x1200/2017/01/justice-woman-cd-3_5880bd06b146e.jpg'); background-size: cover; background-position: center -630px">
+        <div class="page-header page-header-xs img-responsive" data-parallax="true" style="background-image: url('{{ asset("img/elvis-presley-1482026_1280.jpg") }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
             <div class="filter">
             </div>
         </div>
@@ -18,11 +18,10 @@
                             {{ get_gravatar(user.email, 80, 'retro') }}
                             {% endif %}" class='rounded-circle profil' width='150' height='150'>
                         <h4 class="title">{{ user.username}}<br /></h4>
-                        {# <h6 class="description">Music Producer</h6> #}
                     </div>
                     <div class="container flex">
                         <div class="flexItem">
-                            <h2>Bibliotheque</h2>
+                            <h2>Bibliothèque</h2>
                         </div>
                     </div>
                 </div>
@@ -36,19 +35,19 @@
                                         {% for track in tracksUser.tracks %}
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-1 offset-md-0">
+                                                    <div class="col-md-1 offset-md-0 image text-center">
                                                         <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
                                                             <img src="{{ track.album.images[0].url }}" alt="Circle Image" class=" img-responsive">
                                                         </a>
                                                     </div>
-                                                    <div class="col-md-1 mt-3 text-center">
+                                                    <div class="col-md-1 mt-3 col-xs-2 text-center playbutton">
                                                         <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
                                                         <audio >
                                                             <source src="{{ track.preview_url }}" type="audio/mp3">
                                                             Your browser does not support the audio element.
                                                         </audio>
                                                     </div>
-                                                    <div class="col-md-7 col-xs-4">
+                                                    <div class="col-md-7 col-xs-4 track">
                                                         <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
                                                             <small>
                                                                 Artiste :
@@ -67,12 +66,12 @@
                                                             </small><br/>
                                                         </h6>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 offset-sm-1">
+                                                    <div class="col-md-1 col-xs-2 offset-sm-1 lien_spotify">
                                                         <div class="py-3" >
                                                             <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-1 col-xs-2 ">
+                                                    <div class="col-md-1 col-xs-2 library ">
                                                         <div class="mt-3" >
                                                             <button class="removeToLibrary" data-id="{{ track.id }}"><i class="fa fa-times" aria-hidden="true"></i></button>
                                                         </div>
@@ -83,9 +82,9 @@
                                         {% endfor %}
                                     {% else %}
                                         <li>
-                                            <p><strong>No tracks</strong></p>
-                                            <h3 class="text-muted">Not following anyone yet :(</h3>
-                                            <button class="btn btn-warning btn-round">Find artists</button>
+                                            <p><strong>Votre bibliothèque est vide</strong></p>
+                                            <h3 class="text-muted">Aucun morceau ajouté à votre bibliothèque pour le moment :(</h3>
+                                            <a href="{{ path('dashboardDisplay', { username : user_manager.user.username }) }}"><button class="btn btn-success btn-round">Pour en trouver, c'est par ici !</button></a>
                                         </li>
                                     {% endif %}
                                 </ul>

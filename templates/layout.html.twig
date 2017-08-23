@@ -32,7 +32,7 @@
 </head>
     <body>
         <!--Navbar  -->
-        <nav class="navbar navbar-toggleable-md fixed-top navbar-transparent" color-on-scroll="200">
+        <nav class="navbar navbar-toggleable-md fixed-top navbar-transparent" color-on-scroll="287">
             <div class="container">
                 <div class="navbar-translate">
                     <button class="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,6 +69,7 @@
                             <ul class="dropdown-menu p-2">
                                 <a href="{{ path('display', { username : user_manager.user.username }) }}" class="dropdown-item">Profil</a>
                                 <a href="{{ path('dashboardLibrary', { username : user_manager.user.username }) }}" class="dropdown-item">Bibliothèque</a>                                
+                                <a href="{{ path('dashboardfriend')}}" class="dropdown-item">Amis</a>                                
                                 <div class="dropdown-divider"></div>
                                 <a href="{{ path('logout') }}" class="dropdown-item">Déconnexion</a>
                             </ul>
@@ -107,29 +108,18 @@
                 <div class="modal-content card card-register">
                     <div class="modal-body">
                         <h3 class="title">Welcome</h3>
-                        {#<div class="social-line text-center">
-                            <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                            <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </div>#}
                         <form method="post" action="{{ path('login') }}" class="register-form">
                             <label>Email</label>
                             <div class="input-group form-group-no-border">
                                 <span class="input-group-addon">
-                                    <i class="nc-icon nc-email-85"></i>
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
                                 </span>
                                 <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                             </div>
                             <label>Password</label>
                             <div class="input-group form-group-no-border">
                                 <span class="input-group-addon">
-                                    <i class="nc-icon nc-key-25"></i>
+                                    <i class="fa fa-key" aria-hidden="true"></i>
                                 </span>
                                 <input type="text" id="mdp" name="password" class="form-control" placeholder="Password">
                             </div>
@@ -145,7 +135,7 @@
     
         <!-- succes message ajex -->
         <div class="panel-ajax"></div>
-                            
+        
         {% block script %}                    
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -173,99 +163,11 @@
         <!-- a refaire en propre -->
         {% endblock %}
         <script>
-            $(function () {
-                // player stop and play
-                $('.play').on('click', function() {
-                    $this = $(this);
-                    i = $this.children();
-                    $('audio').each(function () {
-                        //console.log($(this).get(0));
-                        $(this).get(0).pause();
-                        $(this).get(0).currentTime = 0;
-                    });
-                    if(i.hasClass('fa-play-circle')){
-                        i.removeClass('fa-play-circle').addClass('fa-pause-circle');
-                        $this.next().get(0).play()
-                    }else{
-                        i.removeClass('fa-pause-circle').addClass('fa-play-circle');
-                        $this.next().get(0).pause()
-                    }
-                    $('audio').on('pause', function () {
-                        $(this).prev().children().removeClass('fa-pause-circle').addClass('fa-play-circle');
-                    })
-                    $('audio').on('ended', function () {
-                        $(this).prev().children().removeClass('fa-pause-circle').addClass('fa-play-circle');
-                    })
-                })
-
-                // ajout d'un titre dans la bibliotheque
-                $('.addToLibrary').on('click', function () {
-                    var $this = $(this);
-                    var id_track = $this.data('id');
-                    $.post( "{{ path('ajax_addTrack') }}", { id: id_track } ,function( data ) {
-                        $('.panel-ajax').html( data.message );
-                        $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
-                            $(this).removeClass('move-panel-ajax');
-                            next();
-                        }).delay(500).queue(function(next){
-                            $(this).removeClass(data.status);
-                            next();
-                        });
-                    });
-                })
-
-                // retirer un titre de la biliotheque
-                $('.removeToLibrary').on('click', function () {
-                    var $this = $(this);
-                    var id_track = $this.data('id');
-                    $.post( "{{ path('ajax_removeTrack') }}", { id: id_track } ,function( data ) {
-                        $('.panel-ajax').html( data.message );
-                        $this.closest('li').slideUp('slow');
-                        $this.closest('li').next().hide();
-                        $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
-                            $(this).removeClass('move-panel-ajax');
-                            next();
-                        }).delay(500).queue(function(next){
-                            $(this).removeClass(data.status);
-                            next();
-                        });
-                    });
-                })
-
-                // ajout d'un amie dans la liste
-                $('.addToFriends').on('click', function () {
-                    var $this = $(this);
-                    var id_friend = $this.data('id');
-                    $.post( "{{ path('ajax_addFriend') }}", { id: id_friend } ,function( data ) {
-                        $('.panel-ajax').html( data.message );
-                        $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
-                            $(this).removeClass('move-panel-ajax');
-                            next();
-                        }).delay(500).queue(function(next){
-                            $(this).removeClass(data.status);
-                            next();
-                        });
-                    });
-                })
-
-                // retirer un amie de la liste
-                $('.removeToFriends').on('click', function () {
-                    var $this = $(this);
-                    var id_track = $this.data('id');
-                    $.post( "{{ path('ajax_removeFriend') }}", { id: id_track } ,function( data ) {
-                        $('.panel-ajax').html( data.message );
-                        $this.closest('.col-sm-3').fadeOut('slow');
-                        $('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
-                            $(this).removeClass('move-panel-ajax');
-                            next();
-                        }).delay(500).queue(function(next){
-                            $(this).removeClass(data.status);
-                            next();
-                        });
-                    });
-                })
-            });    
+            var ajaxAddTrack = "{{ path('ajax_addTrack') }}";
+            var ajaxRemoveTrack = "{{ path('ajax_removeTrack') }}";
+            var ajaxAddFriend = "{{ path('ajax_addFriend') }}";
+            var ajaxRemoveFriend = "{{ path('ajax_removeFriend') }}";
         </script>
-            
+        <script src="{{ asset('js/main.js') }}"></script>
     </body>
 </html>

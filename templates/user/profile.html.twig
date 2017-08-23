@@ -18,7 +18,7 @@
                 <li class="list-group-item">Pseudo : {{ profile.username }}</li>
                 <li class="list-group-item">Email : {{ profile.email }}</li>
                 <li class="list-group-item">Date d'enregistrement : {{ profile.registerDate|date("d/m/Y")}}</li>
-                <li class="list-group-item">Vos styles musicaux : {{ profile.tags|join(', ')|upper }}</li>
+                <li class="list-group-item">Vos styles musicaux : <span class="badge badge-primary">{{ profile.tags|join('</span>&nbsp<span class="badge badge-primary">')|raw }}</span></li>
             </ul>
             <div class="col-sm-5 offset-1">
                 <img src="{% if profile.picture %}
@@ -28,7 +28,74 @@
                             {% endif %}" alt="Photo de profil" style="height: 250px;">
             </div>
             {% if user_manager.user.username == global.request.get('username') %}
-                <a href="{{ path('edit', {username: profile.username}) }}">Modifier votre profil</a>
+                <ul>
+                    <li><a href="{{ path('edit', {username: profile.username}) }}">Modifier votre profil</a></li>
+                    <li><a href="{{ path('user_delete') }}">Désinscription</a></li>
+                </ul>
+            {% endif %}
+
+            {# sur la page profil d'un amie affiche les titre de sa bibkliotheque  #}
+            {% if user_manager.user.username != global.request.get('username') %}
+            <div class="tab-content following">
+                <div class="tab-pane active" id="recommendations" role="tabpanel">
+                    <div class="row">
+                        <div class="col-sm-12 offset-md-0">
+                            <ul class="list-unstyled follows">
+                                {% if tracks %}
+                                    {% for track in tracks.tracks %}
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-md-1 col-xs-1 offset-md-0 image text-center" >
+                                                    <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}">
+                                                        <img src="{{ track.album.images[1].url }}" alt="Circle Image" class=" img-responsive">
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-1 col-xs-2 mt-3 text-center playbutton">
+                                                    <button class="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></button>
+                                                    <audio >
+                                                        <source src="{{ track.preview_url }}" type="audio/mp3">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </div>
+                                                <div class="col-md-6 col-xs-4 track">
+                                                    <h6><a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.name }}</a><br/>
+                                                        <small>
+                                                            Artiste : 
+                                                            {% for artist in track.artists %}
+                                                                <a href="{{ path('showArtist', {'id_artist' : artist.id}) }}" class="link-music">
+                                                                    {% if loop.last %}
+                                                                        {{ artist.name }}
+                                                                    {% else %}
+                                                                        {{ artist.name }},
+                                                                    {% endif %}
+                                                                </a>
+                                                            {% endfor %}
+                                                        </small><br/>
+                                                        <small>
+                                                            Album : <a href="{{ path('showAlbum', {'id_album' : track.album.id}) }}" class="link-music">{{ track.album.name }}</a>
+                                                        </small><br/>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-md-1 col-xs-2 offset-1 lien_spotify">
+                                                    <div class="py-3" >
+                                                        <a href="{{ track.external_urls.spotify }}" target="blank"><i class="fa fa-spotify fa-2x text-success" aria-hidden="true"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1 col-xs-2 library">
+                                                    <div class="mt-3">
+                                                        <button class="addToLibrary" data-id="{{ track.id }}"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <hr />
+                                    {% endfor %}
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {% endif %}
         </div>
 

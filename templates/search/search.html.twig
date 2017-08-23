@@ -119,7 +119,7 @@
                         {% for profil in resultUsers %}
                             <div class="col-sm-3">
                                 <div class="card" >
-                                    <img class="card-img-top" src="{% if profil.picture %}{{ profil.picture }}{% else %}{{ get_gravatar(profil.email, 210, 'retro') }}{% endif %}" alt="Card image cap">
+                                    <img class="card-img-top" src="{% if profil.picture %}{{ asset('photo/') }}{{ profil.picture }}{% else %}{{ get_gravatar(profil.email, 210, 'retro') }}{% endif %}" alt="Card image cap">
                                     <div class="card-body">
                                         <h4 class="card-title">{{ profil.username }}</h4>
                                         <a href="{{ path('display', {'username' : profil.username}) }}" class="btn btn-primary btn-block mb-1">voir profil</a>
@@ -140,4 +140,3 @@
         </div>
     </div>
 {% endblock %}
-    

@@ -1,7 +1,5 @@
 <?php
-
 namespace Controller;
-
 use Entity\User;
 use Form\Type\LoginType;
 use Form\Type\RegisterType;
@@ -11,7 +9,6 @@ use Symfony\Component\HttpFoundation\Request;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  * Description of UserController
  *
@@ -25,24 +22,16 @@ class UserController extends ControllerAbstract{
         
         $registerform = $this->app['form.factory']->create(RegisterType::class, $user);
         $registerform->handleRequest($request);
-
         if ($registerform->isSubmitted() && $registerform->isValid()) {
-
-
-
             /*
              * verifie si l'utilisateur existe deja ou non avant de l'enregistrer en bdd
              */
-
             //dump($this->app['user.repository']->findByUsername($user->getUsername()));
-
             if(
                 !$this->app['user.repository']->findByUsername($user->getUsername())&&
                 !$this->app['user.repository']->findByEmail($user->getEmail())
             ){
                 $passHash = $this->app['user.manager']->encodePassword($user->getPassword());
-
-
                 $this->app['user.repository']->save($user,
                    [
                        'pseudo' => $user->getUsername(),
@@ -52,16 +41,12 @@ class UserController extends ControllerAbstract{
                        'role' => 'ROLE_USER'
                    ]
                 );
-
                 $this->app['user.manager']->login($user);
-
                 // redirect somewhere
                 return $this->redirectRoute('addTags');
             }
-
             $this->addFlashMessage('le pseudo ou l\' email sont déja pris', 'error');
         }
-
         
         $registerFormView = $registerform->createView();
    
@@ -79,7 +64,6 @@ class UserController extends ControllerAbstract{
                 if($this->app['user.manager']->verifyPassword($request->request->get('password'), $user->getPassword()))
                 {
                     $this->app['user.manager']->login($user);
-
                     return $this->redirectRoute('dashboardDisplay', ['username' => $user->getUsername()]);
                 }
             }

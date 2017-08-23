@@ -71,14 +71,13 @@ class DashboardController extends ControllerAbstract {
             ]
         );
     }
-
     public function userFriendsDisplayAction(){
         $usersFriends = $this->app['user.repository']->findUserFriend($this->app['user.manager']->getUser()->getId());
-
+        
         return $this->render('dashboard/friends.html.twig',
              [
                  'user' => $this->app['user.manager']->getUser(),
-                 'usersFriends' => $usersFriends
+                 'usersFriends' => $usersFriends,
              ]
          );
     }

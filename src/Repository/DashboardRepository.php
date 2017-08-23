@@ -12,7 +12,6 @@ class DashboardRepository extends RepositoryAbstract
     public function getTable(){
         return 'library';
     }
-
     public function saveTrack($id_track, $id_user) {
         $data = [
             'id_track' => $id_track,
@@ -31,7 +30,6 @@ class DashboardRepository extends RepositoryAbstract
         $this->persist($data);
         return true;
     }
-
     public function deleteTrack($id_track, $id_user){
         $data = [
             'id_track' => $id_track,

@@ -59,8 +59,10 @@
                         <input type ="submit" class="btn btn-primary" value="Valider vos modifications">
                     </div>
 
-
-                <a href="{{ path('display', {username: profile.username}) }}">Annuler et retourner vers votre profil</a>
+                <ul>
+                    <li><a href="{{ path('display', {username: profile.username}) }}">Annuler et retourner vers votre profil</a></li>
+                    <li><a href="{{ path('user_delete') }}">Désinscription</a></li>
+                </ul>
 
                 </form>
             </div>
