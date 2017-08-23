@@ -1,0 +1,35 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'profile' %}
+
+{% block content %}
+        
+    <div>
+        <img src="{{ asset('img/vinyl-1437600_1920.jpg') }}" class="profile_page_photo" alt="vynils">
+    </div>
+        
+    <div class="container container-top">
+        <div class="starter-template">
+            <h1 id="profil"><span class ='fat applepie'>{{ profile.username }}</span> </h1>
+        </div><br>
+        <div class="row">
+            <ul class="col-sm-6">
+                <li class="list-group profile"><span class="fat">Vos informations</span></li><br>   
+                <li class="list-group profile"><span class="fat">Email : </span><span class="profile">{{ profile.email }}</span></li><br>
+                <li class="list-group profile"><span class="fat">Date d'enregistrement : </span><span class="profile"> {{ profile.registerDate|date("d/m/Y")}}</span></li><br>
+                <li class="list-group profile"><span class="fat">Vos styles musicaux : </span> <span class="badge badge-primary">{{ profile.tags|join('</span>&nbsp<span class="badge badge-primary">')|raw }}</span></li>
+            </ul>
+            <div class="col-sm-5 offset-1">
+                <img src="{% if profile.picture %}
+                            {{ asset('photo/') }}{{ profile.picture }}
+                            {% else %}
+                            {{ get_gravatar(profile.email, 80, 'retro') }}
+                            {% endif %}" alt="Photo de profil" style="height: 250px;">
+            </div>
+            {% if user_manager.user.username == global.request.get('username') %}
+                <a href="{{ path('edit', {username: profile.username}) }}"><span class="fat btn btn-success">Modifier votre profil</span></a>
+            {% endif %}
+        </div>
+
+    </div><!-- /.container -->
+{% endblock %}
