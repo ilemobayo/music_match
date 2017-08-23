@@ -122,7 +122,7 @@ class __TwigTemplate_b439a1ba4e3dc5bfa7e114b23cbda5553c353239d6228b067a73b93ea76
             echo "\" class=\"dropdown-item\">Bibliothèque</a>                                
                                 <a href=\"";
             // line 72
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("dashboardfriend", array("username" => $this->getAttribute($this->getAttribute((isset($context["user_manager"]) ? $context["user_manager"] : null), "user", array()), "username", array()))), "html", null, true);
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("dashboardfriend");
             echo "\" class=\"dropdown-item\">Amis</a>                                
                                 <div class=\"dropdown-divider\"></div>
                                 <a href=\"";
@@ -202,14 +202,14 @@ class __TwigTemplate_b439a1ba4e3dc5bfa7e114b23cbda5553c353239d6228b067a73b93ea76
                             <label>Email</label>
                             <div class=\"input-group form-group-no-border\">
                                 <span class=\"input-group-addon\">
-                                    <i class=\"nc-icon nc-email-85\"></i>
+                                    <i class=\"fa fa-envelope-o\" aria-hidden=\"true\"></i>
                                 </span>
                                 <input type=\"text\" class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"Email\">
                             </div>
                             <label>Password</label>
                             <div class=\"input-group form-group-no-border\">
                                 <span class=\"input-group-addon\">
-                                    <i class=\"nc-icon nc-key-25\"></i>
+                                    <i class=\"fa fa-key\" aria-hidden=\"true\"></i>
                                 </span>
                                 <input type=\"text\" id=\"mdp\" name=\"password\" class=\"form-control\" placeholder=\"Password\">
                             </div>
@@ -316,11 +316,31 @@ class __TwigTemplate_b439a1ba4e3dc5bfa7e114b23cbda5553c353239d6228b067a73b93ea76
                 // retirer un amie de la liste
                 \$('.removeToFriends').on('click', function () {
                     var \$this = \$(this);
-                    var id_track = \$this.data('id');
+                    var id_friend = \$this.data('id');
                     \$.post( \"";
         // line 243
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ajax_removeFriend");
-        echo "\", { id: id_track } ,function( data ) {
+        echo "\", { id: id_friend } ,function( data ) {
+                        \$('.panel-ajax').html( data.message );
+                        \$this.closest('.col-sm-3').fadeOut('slow');
+                        \$('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
+                            \$(this).removeClass('move-panel-ajax');
+                            next();
+                        }).delay(500).queue(function(next){
+                            \$(this).removeClass(data.status);
+                            next();
+                        });
+                    });
+                })
+                
+                // retirer un amie de la liste
+                \$('.removeToFriends2').on('click', function () {
+                    var \$this = \$(this);
+                    var id_friend = \$this.data('id');
+                    \$.post( \"";
+        // line 260
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ajax_removeFriend");
+        echo "\", { id_friend: id_friend } ,function( data ) {
                         \$('.panel-ajax').html( data.message );
                         \$this.closest('.col-sm-3').fadeOut('slow');
                         \$('.panel-ajax').addClass('move-panel-ajax ' + data.status).delay(2000).queue(function (next) {
@@ -466,7 +486,7 @@ class __TwigTemplate_b439a1ba4e3dc5bfa7e114b23cbda5553c353239d6228b067a73b93ea76
 
     public function getDebugInfo()
     {
-        return array (  451 => 162,  445 => 159,  441 => 158,  435 => 155,  429 => 152,  423 => 149,  419 => 148,  415 => 147,  411 => 146,  400 => 139,  395 => 101,  392 => 100,  386 => 29,  377 => 23,  373 => 22,  369 => 21,  365 => 20,  361 => 19,  357 => 18,  352 => 15,  349 => 14,  343 => 9,  322 => 243,  303 => 227,  282 => 209,  264 => 194,  233 => 165,  231 => 139,  200 => 111,  190 => 103,  188 => 100,  182 => 96,  176 => 95,  165 => 93,  162 => 92,  159 => 91,  156 => 90,  151 => 89,  147 => 88,  139 => 82,  136 => 81,  130 => 74,  125 => 72,  121 => 71,  117 => 70,  111 => 67,  107 => 66,  98 => 61,  89 => 55,  86 => 54,  84 => 53,  78 => 49,  72 => 47,  66 => 45,  64 => 44,  49 => 31,  47 => 14,  39 => 9,  33 => 6,  29 => 5,  23 => 1,);
+        return array (  471 => 162,  465 => 159,  461 => 158,  455 => 155,  449 => 152,  443 => 149,  439 => 148,  435 => 147,  431 => 146,  420 => 139,  415 => 101,  412 => 100,  406 => 29,  397 => 23,  393 => 22,  389 => 21,  385 => 20,  381 => 19,  377 => 18,  372 => 15,  369 => 14,  363 => 9,  342 => 260,  322 => 243,  303 => 227,  282 => 209,  264 => 194,  233 => 165,  231 => 139,  200 => 111,  190 => 103,  188 => 100,  182 => 96,  176 => 95,  165 => 93,  162 => 92,  159 => 91,  156 => 90,  151 => 89,  147 => 88,  139 => 82,  136 => 81,  130 => 74,  125 => 72,  121 => 71,  117 => 70,  111 => 67,  107 => 66,  98 => 61,  89 => 55,  86 => 54,  84 => 53,  78 => 49,  72 => 47,  66 => 45,  64 => 44,  49 => 31,  47 => 14,  39 => 9,  33 => 6,  29 => 5,  23 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

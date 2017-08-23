@@ -63,6 +63,12 @@ $app
     ->get('/desinscription', 'user.controller:deleteUserAction')
     ->bind('user_delete')
 ;
+
+$app
+    ->match('/mot_de_passe_oublie', 'user.controller:forgottenPass')
+    ->bind('forgottenPass')
+;
+
 // ----------------- Dashboard ----------------- //
 $app
     ->get('/{username}/accueil', 'dashboard.controller:userMusicDisplayAction')

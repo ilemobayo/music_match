@@ -80,6 +80,39 @@ class UserController extends ControllerAbstract{
         return $this->redirectRoute('homepage');
     }
     
+    public function forgottenPass(Request $request){
+        $alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+        
+        if($request->isMethod('POST')){
+            $email = $request->request->get('email');
+            $user = $this->app['user.repository']->findByEmail($email);
+            
+            if($user){
+                shuffle($alpha);
+                $mdp = implode(array_slice($alpha, 0, 9));
+                $hash = $this->app['user.manager']->encodePassword($mdp);
+                $user->setPassword($hash);
+                
+                
+                $sujet = 'Réinitialisation du mot de passe Music Match';
+                $message = 'Voici votre nouveau mot de passe : ' . $mdp . ".\n" . 'Veuillez l\'utiliser pour vous connecter à votre profil et le changer au plus vite.\n A bientôt sur Music Match !';
+                $headers = 'From: musicmatch@noreply.fr';
+                
+                if(mail('luront@gmail.com', $sujet, $message, $headers)){
+                    $this->app['user.repository']->save($user, 
+                        [
+                            'mdp' => $user->getPassword()
+                        ]
+                    );
+                    
+                    return $this->redirectRoute('homepage');
+                }
+            }
+        }
+        
+        return $this->render('user/forgottenPass.html.twig');
+    }
+    
     public function selectTagsAction(){
         $tags = $this->app['user.manager']->getUser()->getTags();
         

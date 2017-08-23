@@ -1,5 +1,13 @@
 body {
     margin: 0;
+/*    background: rgba(0,0,0,1);
+    background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 16%, rgba(255,255,255,1) 87%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(16%, rgba(255,255,255,1)), color-stop(87%, rgba(255,255,255,1)), color-stop(100%, rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 16%, rgba(255,255,255,1) 87%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 16%, rgba(255,255,255,1) 87%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 16%, rgba(255,255,255,1) 87%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 16%, rgba(255,255,255,1) 87%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );*/
 }
 h1 {
     animation-delay: 0.3s;
@@ -82,12 +90,6 @@ a button.btn.btn-success.btn-round{
     padding: 10px;
 }
 
-/*body {
-background: #ECE9E6;   fallback for old browsers 
-background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);   Chrome 10-25, Safari 5.1-6 
-background: linear-gradient(to right, #FFFFFF, #ECE9E6);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
-
-}*/
 
 @media (min-width:576px){
 /*    i.fa.fa-play-circle.fa-2x {

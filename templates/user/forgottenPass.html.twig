@@ -1,0 +1,33 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'Mot de passe oublié' %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="page-header" style="background-image:url('{{ asset('img/music-cassette.jpg') }}'); text-align:center;">
+            <div class="filter"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3">
+                            <div class="card card-register" style="background:transparent;">						
+                                <h2 class="title" style="font-weight:bold;color:red;">Mot de passe oublié</h2>
+                                    <form method="post">
+                                        <div class="form-group">
+                                            <label>Votre Email</label>
+                                            <input class="form-control" type='email' name='email'>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input class="form-control btn btn-primary" type='submit' value="Valider">
+                                        </div>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer register-footer text-center">
+                            <h6>&copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i>by us @ WebForce3</h6>
+                    </div>
+                </div>
+        </div>
+    </div>
+{% endblock %}

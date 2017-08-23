@@ -84,7 +84,7 @@ class UserRepository extends RepositoryAbstract {
             ? ['id_user' => $entity->getId()]
             : null
         ;
-        // Appel à la méthide de RepositoryAbstract pour enregistrer
+        // Appel à la méthode de RepositoryAbstract pour enregistrer
         $this->persist($data, $where);
         // On set l'id quand on est en insert
         if(empty($entity->getId())) {
