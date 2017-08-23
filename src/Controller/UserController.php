@@ -98,7 +98,7 @@ class UserController extends ControllerAbstract{
                 $message = 'Voici votre nouveau mot de passe : ' . $mdp . ".\n" . 'Veuillez l\'utiliser pour vous connecter à votre profil et le changer au plus vite.\n A bientôt sur Music Match !';
                 $headers = 'From: musicmatch@noreply.fr';
                 
-                if(mail('luront@gmail.com', $sujet, $message, $headers)){
+                if(mail($user->getEmail(), $sujet, $message, $headers)){
                     $this->app['user.repository']->save($user, 
                         [
                             'mdp' => $user->getPassword()
