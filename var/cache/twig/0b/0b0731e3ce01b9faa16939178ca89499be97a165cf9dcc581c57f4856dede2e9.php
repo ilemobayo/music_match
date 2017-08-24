@@ -12,6 +12,7 @@ class __TwigTemplate_886c346db559919896170d3cfc5c6431e604e6acff689afaafe86492866
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'content' => array($this, 'block_content'),
+            'script' => array($this, 'block_script'),
         );
     }
 
@@ -72,70 +73,65 @@ class __TwigTemplate_886c346db559919896170d3cfc5c6431e604e6acff689afaafe86492866
         </h6>
     </div>
 
-        <!--Section 2  -->
-        <section class=\"container-fluid\">
-           
-            <div class=\"container flex\">
-                <div class=\"flexItem\">
-                    <img src=\"";
-        // line 36
+    <!--Section 2  -->
+    <section class=\"section2 container-fluid\">
+        <div class=\"row\">
+            <div class=\"col-lg-4 col-sm-10 offset-sm-1\">
+                <img id=\"image_accueil\" src=\"";
+        // line 35
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/music_tree.png"), "html", null, true);
         echo "\" alt=\"\">
-                </div>
-                 <div class=\"flexItem\">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique est ab eaque ipsum molestiae atque hic in optio. Culpa unde repellendus fuga aliquid, perferendis eligendi tempora excepturi suscipit quidem pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. In minima neque iusto odio dolorem, cumque dolorum sequi, optio provident illo placeat sit similique itaque molestias nam voluptate labore numquam harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, nesciunt quas ex. Voluptatem aspernatur eos impedit ullam commodi adipisci quasi quisquam explicabo, assumenda facere illum totam cupiditate vel nam nesciunt.</p>
+            </div>
+            <div class=\"offset-lg-2 col-lg-5 col-sm-10 offset-sm-1\">
+                <p id=\"texte_accueil\" class=\"description\">Marre d'écouter les mêmes albums en boucle ? <span class=\"musicM\">MusicMatch</span> est un espace pour les passionnés de musique, permettant de découvrir de nouveaux artistes en se basant sur vos préférences. <br>Plus besoin de s'ennuyer avec la radio, <span class=\"musicM\">MusicMatch</span> est la !<br><br>
+                </p>
+                <div>
+                    <span class=\"rock\">Are you ready to ...</span><img src=\"/MusicMatch/web/img/reggae.jpg\" id=\"readyTo\" alt=\"\" width=\"334\"><span class=\"rock2\">?</span>
                 </div>
             </div>
-        </section>
-
-        <!--Section 3  -->
-       
-        <section class=\"container-fluid vinyl\">
-            <div class=\"container flex\">
-                <div class=\"flexItem\">
-                    <img src=\"";
-        // line 49
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/placeholder.jpg"), "html", null, true);
-        echo "\" class=\"img-circle img-no-padding img-responsive\" alt=\"Rounded Image\">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique est ab eaque ipsum molestiae atque hic in optio. Culpa unde repellendus fuga aliquid, perferendis eligendi tempora excepturi suscipit quidem pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class=\"flexItem\">
-                    <img src=\"";
-        // line 53
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/placeholder.jpg"), "html", null, true);
-        echo "\" class=\"img-circle img-no-padding img-responsive\" alt=\"Rounded Image\">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique est ab eaque ipsum molestiae atque hic in optio. Culpa unde repellendus fuga aliquid, perferendis eligendi tempora excepturi suscipit quidem pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class=\"flexItem\">
-                    <div class=\"centerImg\">
-                        <img src=\"";
-        // line 58
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/placeholder.jpg"), "html", null, true);
-        echo "\" class=\"img-circle img-no-padding img-responsive\" alt=\"Rounded Image\">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique est ab eaque ipsum molestiae atque hic in optio. Culpa unde repellendus fuga aliquid, perferendis eligendi tempora excepturi suscipit quidem pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </section>
-        <footer class=\"footer\">
-           <div class=\"container\">
-               <div class=\"row\">
-                   <nav class=\"footer-nav\">
-                       <ul>
-                           <li><a href=\"http://www.creative-tim.com\">Creative Tim</a></li>
-                           <li><a href=\"http://blog.creative-tim.com\">Blog</a></li>
-                           <li><a href=\"http://www.creative-tim.com/license\">Licenses</a></li>
-                       </ul>
-                   </nav> 
-                   <div class=\"credits ml-auto\">
-                       <span class=\"copyright\">
-                           © <script>document.write(new Date().getFullYear())</script>, made with <i class=\"fa fa-heart heart\"></i> by WF3 Team
-                       </span>
-                   </div>
-               </div>
+        </div>
+    </section>
+</div>
+            
+<footer class=\"footer\">
+   <div class=\"container\">
+       <div class=\"row\">
+           <nav class=\"footer-nav\">
+               <ul>
+                   <li><a href=\"#\">Mentions légales</a></li>
+                   <li><a href=\"#\">Nous contacter</a></li>
+               </ul>
+           </nav> 
+           <div class=\"credits ml-auto\">
+               <span class=\"copyright\">
+                   © <script>document.write(new Date().getFullYear())</script>, made with <i class=\"fa fa-heart heart\"></i> by WF3 Team
+               </span>
            </div>
-        </footer>
-        
+       </div>
+   </div>
+</footer>
+";
+    }
+
+    // line 67
+    public function block_script($context, array $blocks = array())
+    {
+        // line 68
+        echo "    ";
+        $this->displayParentBlock("script", $context, $blocks);
+        echo "
+    <!-- Images animées page d'accueil -->
+    <script>
+        var path = \"";
+        // line 71
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/"), "html", null, true);
+        echo "\";
+    </script>
+
+    <script src=\"";
+        // line 74
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/readyTo.js"), "html", null, true);
+        echo "\"></script>
 ";
     }
 
@@ -151,7 +147,7 @@ class __TwigTemplate_886c346db559919896170d3cfc5c6431e604e6acff689afaafe86492866
 
     public function getDebugInfo()
     {
-        return array (  113 => 58,  105 => 53,  98 => 49,  82 => 36,  68 => 25,  62 => 22,  56 => 19,  43 => 9,  38 => 6,  35 => 5,  29 => 3,  11 => 1,);
+        return array (  133 => 74,  127 => 71,  120 => 68,  117 => 67,  82 => 35,  69 => 25,  63 => 22,  57 => 19,  44 => 9,  39 => 6,  36 => 5,  30 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
