@@ -97,7 +97,7 @@
                         {% for artist in resultArtists.artists.items %}
                             <div class="col-sm-3">
                                 <a href="{{ path('showArtist', {'id_artist' : artist.id}) }}" class="link-music">
-                                    <img src="{% if artist.images %}{{ artist.images[0].url }}{% else %}{{ get_gravatar('', 210) }}{% endif %}" alt="" class="img-fluid rounded-circle">
+                                    <img src="{% if artist.images %}{{ artist.images[0].url }}{% else %}{{ get_gravatar('', 210) }}{% endif %}" alt="" class="img-fluid rounded-circle" height="207">
                                     <p class="text-center"><strong>{{ artist.name }}</strong></p>
                                 </a>
                             </div>
