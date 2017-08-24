@@ -22,47 +22,47 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_549d980b9aa40aa0f678b219263bcdafb91a37040aa6cd5479aa680ee56e176f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_549d980b9aa40aa0f678b219263bcdafb91a37040aa6cd5479aa680ee56e176f->enter($__internal_549d980b9aa40aa0f678b219263bcdafb91a37040aa6cd5479aa680ee56e176f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/home.html.twig"));
+        $__internal_b2418ecbb8f0fd8c4dd4265e1702c11f4397545d0b0837c6caa5c107ba74eca3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b2418ecbb8f0fd8c4dd4265e1702c11f4397545d0b0837c6caa5c107ba74eca3->enter($__internal_b2418ecbb8f0fd8c4dd4265e1702c11f4397545d0b0837c6caa5c107ba74eca3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/home.html.twig"));
 
-        $__internal_72273f510dae814c7022debde5b91da07aa9a8b9131058b2166c41dc5a8462f0 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_72273f510dae814c7022debde5b91da07aa9a8b9131058b2166c41dc5a8462f0->enter($__internal_72273f510dae814c7022debde5b91da07aa9a8b9131058b2166c41dc5a8462f0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/home.html.twig"));
+        $__internal_f7c3ea445b2deca9a254126785abf63d842d05864d2029574b5bcc9c3ae90602 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_f7c3ea445b2deca9a254126785abf63d842d05864d2029574b5bcc9c3ae90602->enter($__internal_f7c3ea445b2deca9a254126785abf63d842d05864d2029574b5bcc9c3ae90602_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard/home.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_549d980b9aa40aa0f678b219263bcdafb91a37040aa6cd5479aa680ee56e176f->leave($__internal_549d980b9aa40aa0f678b219263bcdafb91a37040aa6cd5479aa680ee56e176f_prof);
+        $__internal_b2418ecbb8f0fd8c4dd4265e1702c11f4397545d0b0837c6caa5c107ba74eca3->leave($__internal_b2418ecbb8f0fd8c4dd4265e1702c11f4397545d0b0837c6caa5c107ba74eca3_prof);
 
         
-        $__internal_72273f510dae814c7022debde5b91da07aa9a8b9131058b2166c41dc5a8462f0->leave($__internal_72273f510dae814c7022debde5b91da07aa9a8b9131058b2166c41dc5a8462f0_prof);
+        $__internal_f7c3ea445b2deca9a254126785abf63d842d05864d2029574b5bcc9c3ae90602->leave($__internal_f7c3ea445b2deca9a254126785abf63d842d05864d2029574b5bcc9c3ae90602_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_35ba43865f21a8a58c0c94f07ed01eaafbb40ca4259777209b86160a120e7cf0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_35ba43865f21a8a58c0c94f07ed01eaafbb40ca4259777209b86160a120e7cf0->enter($__internal_35ba43865f21a8a58c0c94f07ed01eaafbb40ca4259777209b86160a120e7cf0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_b68555428c4b768339a35c96e354043a141183cb43f5cbb35bf6722130843bec = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b68555428c4b768339a35c96e354043a141183cb43f5cbb35bf6722130843bec->enter($__internal_b68555428c4b768339a35c96e354043a141183cb43f5cbb35bf6722130843bec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_8aa16d34a306c9165ef5bb98eab18e2b46fac6845a51f93cd46a7ca8247b8b35 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_8aa16d34a306c9165ef5bb98eab18e2b46fac6845a51f93cd46a7ca8247b8b35->enter($__internal_8aa16d34a306c9165ef5bb98eab18e2b46fac6845a51f93cd46a7ca8247b8b35_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_ad8ed4609911f9e68bc3b8767e641ee94ab6a22650b059b8d7daad271ab8bb8c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_ad8ed4609911f9e68bc3b8767e641ee94ab6a22650b059b8d7daad271ab8bb8c->enter($__internal_ad8ed4609911f9e68bc3b8767e641ee94ab6a22650b059b8d7daad271ab8bb8c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Home";
         
-        $__internal_8aa16d34a306c9165ef5bb98eab18e2b46fac6845a51f93cd46a7ca8247b8b35->leave($__internal_8aa16d34a306c9165ef5bb98eab18e2b46fac6845a51f93cd46a7ca8247b8b35_prof);
+        $__internal_ad8ed4609911f9e68bc3b8767e641ee94ab6a22650b059b8d7daad271ab8bb8c->leave($__internal_ad8ed4609911f9e68bc3b8767e641ee94ab6a22650b059b8d7daad271ab8bb8c_prof);
 
         
-        $__internal_35ba43865f21a8a58c0c94f07ed01eaafbb40ca4259777209b86160a120e7cf0->leave($__internal_35ba43865f21a8a58c0c94f07ed01eaafbb40ca4259777209b86160a120e7cf0_prof);
+        $__internal_b68555428c4b768339a35c96e354043a141183cb43f5cbb35bf6722130843bec->leave($__internal_b68555428c4b768339a35c96e354043a141183cb43f5cbb35bf6722130843bec_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_52cec27279d0b83344fa7bfb0b798fb7134ab43bcb09c8a2969fda9b31b82dbf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_52cec27279d0b83344fa7bfb0b798fb7134ab43bcb09c8a2969fda9b31b82dbf->enter($__internal_52cec27279d0b83344fa7bfb0b798fb7134ab43bcb09c8a2969fda9b31b82dbf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_0a4dba69ae8f592c95e4aad0ee4e6e92704c7d450696d3bb011b414eb997ed23 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0a4dba69ae8f592c95e4aad0ee4e6e92704c7d450696d3bb011b414eb997ed23->enter($__internal_0a4dba69ae8f592c95e4aad0ee4e6e92704c7d450696d3bb011b414eb997ed23_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_94f1fc1148c3f4699a69ed07759e3ca3fd35adcd335af781147c3296bcb9904c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_94f1fc1148c3f4699a69ed07759e3ca3fd35adcd335af781147c3296bcb9904c->enter($__internal_94f1fc1148c3f4699a69ed07759e3ca3fd35adcd335af781147c3296bcb9904c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_a597dbfd66f07d06d09072ed99126398732d71a1da2487fd8a7f208d44ed6e3f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_a597dbfd66f07d06d09072ed99126398732d71a1da2487fd8a7f208d44ed6e3f->enter($__internal_a597dbfd66f07d06d09072ed99126398732d71a1da2487fd8a7f208d44ed6e3f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "    <div class=\"wrapper\">
@@ -104,9 +104,9 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                         </div>
                     </div>
                 </div>
-            
-               
                 <br/>
+                
+                
                 <div class=\"nav-tabs-navigation\">
                     <div class=\"nav-tabs-wrapper\">
                         <ul class=\"nav nav-tabs\" role=\"tablist\">
@@ -128,6 +128,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                         </ul>
                     </div>
                 </div>
+                            
                 <!-- Tab panes -->
                 <div class=\"tab-content following\">
                     <div class=\"tab-pane active\" id=\"recommendations\" role=\"tabpanel\">
@@ -135,23 +136,23 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                             <div class=\"col-md-10 offset-md-1\">
                                 <ul class=\"list-unstyled follows\">
                                     ";
-        // line 53
+        // line 54
         if ((isset($context["recommendations"]) ? $context["recommendations"] : $this->getContext($context, "recommendations"))) {
-            // line 54
+            // line 55
             echo "                                        ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["recommendations"]) ? $context["recommendations"] : $this->getContext($context, "recommendations")), "tracks", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["track"]) {
-                // line 55
+                // line 56
                 echo "                                            <li>
                                                 <div class=\"row\">
                                                     <div class=\"col-md-1 col-xs-1 offset-md-0 image text-center\" >
                                                         <a href=\"";
-                // line 58
+                // line 59
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
                 echo "\">
                                                             <img src=\"";
-                // line 59
+                // line 60
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute($context["track"], "album", array()), "images", array()), 1, array(), "array"), "url", array()), "html", null, true);
                 echo "\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
@@ -160,7 +161,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"";
-                // line 65
+                // line 66
                 echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "preview_url", array()), "html", null, true);
                 echo "\" type=\"audio/mp3\">
                                                             Your browser does not support the audio element.
@@ -168,7 +169,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                     </div>
                                                     <div class=\"col-md-7 col-xs-4 track\">
                                                         <h6><a href=\"";
-                // line 70
+                // line 71
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
                 echo "\" class=\"link-music\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "name", array()), "html", null, true);
@@ -176,7 +177,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                             <small>
                                                                 Artiste : 
                                                                 ";
-                // line 73
+                // line 74
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["track"], "artists", array()));
                 $context['loop'] = array(
@@ -193,26 +194,26 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                     $context['loop']['last'] = 1 === $length;
                 }
                 foreach ($context['_seq'] as $context["_key"] => $context["artist"]) {
-                    // line 74
+                    // line 75
                     echo "                                                                    <a href=\"";
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showArtist", array("id_artist" => $this->getAttribute($context["artist"], "id", array()))), "html", null, true);
                     echo "\" class=\"link-music\">
                                                                         ";
-                    // line 75
+                    // line 76
                     if ($this->getAttribute($context["loop"], "last", array())) {
-                        // line 76
+                        // line 77
                         echo "                                                                            ";
                         echo twig_escape_filter($this->env, $this->getAttribute($context["artist"], "name", array()), "html", null, true);
                         echo "
                                                                         ";
                     } else {
-                        // line 78
+                        // line 79
                         echo "                                                                            ";
                         echo twig_escape_filter($this->env, $this->getAttribute($context["artist"], "name", array()), "html", null, true);
                         echo ",
                                                                         ";
                     }
-                    // line 80
+                    // line 81
                     echo "                                                                    </a>
                                                                 ";
                     ++$context['loop']['index0'];
@@ -227,11 +228,11 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['artist'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 82
+                // line 83
                 echo "                                                            </small><br/>
                                                             <small>
                                                                 Album : <a href=\"";
-                // line 84
+                // line 85
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
                 echo "\" class=\"link-music\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["track"], "album", array()), "name", array()), "html", null, true);
@@ -242,7 +243,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                     <div class=\"col-md-1 col-xs-2 offset-1 lien_spotify\">
                                                         <div class=\"py-3\" >
                                                             <a href=\"";
-                // line 90
+                // line 91
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["track"], "external_urls", array()), "spotify", array()), "html", null, true);
                 echo "\" target=\"blank\"><i class=\"fa fa-spotify fa-2x text-success\" aria-hidden=\"true\"></i></a>
                                                         </div>
@@ -250,7 +251,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                     <div class=\"col-md-1 col-xs-2 library\">
                                                         <div class=\"mt-3\">
                                                             <button class=\"addToLibrary\" data-id=\"";
-                // line 95
+                // line 96
                 echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "id", array()), "html", null, true);
                 echo "\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>
                                                         </div>
@@ -263,10 +264,10 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['track'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 102
+            // line 103
             echo "                                    ";
         } else {
-            // line 103
+            // line 104
             echo "                                        <li>
                                             <p><strong>No tracks</strong></p>
                                             <h3 class=\"text-muted\">Not following anyone yet :(</h3>
@@ -274,7 +275,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                         </li>
                                     ";
         }
-        // line 109
+        // line 110
         echo "                                </ul>
                             </div>
                         </div>
@@ -284,23 +285,23 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                             <div class=\"col-md-10 offset-md-1 col-xs-10 \">
                                 <ul class=\"list-unstyled follows\">
                                     ";
-        // line 117
+        // line 118
         if ((isset($context["recommendationsTag"]) ? $context["recommendationsTag"] : $this->getContext($context, "recommendationsTag"))) {
-            // line 118
+            // line 119
             echo "                                        ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["recommendationsTag"]) ? $context["recommendationsTag"] : $this->getContext($context, "recommendationsTag")), "tracks", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["track"]) {
-                // line 119
+                // line 120
                 echo "                                            <li>
                                                 <div class=\"row\">
                                                     <div class=\"col-md-1 offset-md-0 col-xs-1 image text-center\">
                                                         <a href=\"";
-                // line 122
+                // line 123
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
                 echo "\">
                                                             <img src=\"";
-                // line 123
+                // line 124
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute($context["track"], "album", array()), "images", array()), 1, array(), "array"), "url", array()), "html", null, true);
                 echo "\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
@@ -309,7 +310,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"";
-                // line 129
+                // line 130
                 echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "preview_url", array()), "html", null, true);
                 echo "\" type=\"audio/mp3\">
                                                             Your browser does not support the audio element.
@@ -317,7 +318,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                     </div>
                                                     <div class=\"col-md-7 col-xs-4 track\">
                                                         <h6><a href=\"";
-                // line 134
+                // line 135
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
                 echo "\" class=\"link-music\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "name", array()), "html", null, true);
@@ -325,7 +326,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                             <small>
                                                                 Artiste :
                                                                 ";
-                // line 137
+                // line 138
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["track"], "artists", array()));
                 $context['loop'] = array(
@@ -342,26 +343,26 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                     $context['loop']['last'] = 1 === $length;
                 }
                 foreach ($context['_seq'] as $context["_key"] => $context["artist"]) {
-                    // line 138
+                    // line 139
                     echo "                                                                    <a href=\"";
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showArtist", array("id_artist" => $this->getAttribute($context["artist"], "id", array()))), "html", null, true);
                     echo "\" class=\"link-music\">
                                                                         ";
-                    // line 139
+                    // line 140
                     if ($this->getAttribute($context["loop"], "last", array())) {
-                        // line 140
+                        // line 141
                         echo "                                                                            ";
                         echo twig_escape_filter($this->env, $this->getAttribute($context["artist"], "name", array()), "html", null, true);
                         echo "
                                                                         ";
                     } else {
-                        // line 142
+                        // line 143
                         echo "                                                                            ";
                         echo twig_escape_filter($this->env, $this->getAttribute($context["artist"], "name", array()), "html", null, true);
                         echo ",
                                                                         ";
                     }
-                    // line 144
+                    // line 145
                     echo "                                                                    </a>
                                                                 ";
                     ++$context['loop']['index0'];
@@ -376,11 +377,11 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['artist'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 146
+                // line 147
                 echo "                                                            </small><br/>
                                                             <small>
                                                                 Album : <a href=\"";
-                // line 148
+                // line 149
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
                 echo "\" class=\"link-music\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["track"], "album", array()), "name", array()), "html", null, true);
@@ -391,7 +392,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                     <div class=\"col-md-1 col-xs-2 offset-1 lien_spotify\">
                                                         <div class=\"py-3\" >
                                                             <a href=\"";
-                // line 154
+                // line 155
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["track"], "external_urls", array()), "spotify", array()), "html", null, true);
                 echo "\" target=\"blank\"><i class=\"fa fa-spotify fa-2x text-success\" aria-hidden=\"true\"></i></a>
                                                         </div>
@@ -399,7 +400,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                     <div class=\"col-md-1 col-xs-2 library\">
                                                         <div class=\"mt-3\" >
                                                             <button class=\"addToLibrary\" data-id=\"";
-                // line 159
+                // line 160
                 echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "id", array()), "html", null, true);
                 echo "\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>
                                                         </div>
@@ -412,10 +413,10 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['track'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 166
+            // line 167
             echo "                                    ";
         } else {
-            // line 167
+            // line 168
             echo "                                        <li>
                                             <p><strong>No tracks</strong></p>
                                             <h3 class=\"text-muted\">Not following anyone yet :(</h3>
@@ -423,7 +424,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                         </li>
                                     ";
         }
-        // line 173
+        // line 174
         echo "                                </ul>
                             </div>
                        </div>
@@ -434,23 +435,23 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                             <div class=\"col-md-10 col-xs-10 offset-md-1\">
                                 <ul class=\"list-unstyled follows\">
                                     ";
-        // line 182
+        // line 183
         if ((isset($context["recommendationsArtist"]) ? $context["recommendationsArtist"] : $this->getContext($context, "recommendationsArtist"))) {
-            // line 183
+            // line 184
             echo "                                        ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["recommendationsArtist"]) ? $context["recommendationsArtist"] : $this->getContext($context, "recommendationsArtist")), "tracks", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["track"]) {
-                // line 184
+                // line 185
                 echo "                                            <li>
                                                 <div class=\"row\">
                                                     <div class=\"col-md-1 offset-md-0 col-xs-1 image text-center\">
                                                         <a href=\"";
-                // line 187
+                // line 188
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
                 echo "\">
                                                             <img src=\"";
-                // line 188
+                // line 189
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute($context["track"], "album", array()), "images", array()), 1, array(), "array"), "url", array()), "html", null, true);
                 echo "\" alt=\"Circle Image\" class=\" img-responsive\">
                                                         </a>
@@ -459,7 +460,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                         <button class=\"play\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></button>
                                                         <audio >
                                                             <source src=\"";
-                // line 194
+                // line 195
                 echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "preview_url", array()), "html", null, true);
                 echo "\" type=\"audio/mp3\">
                                                             Your browser does not support the audio element.
@@ -467,7 +468,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                     </div>
                                                     <div class=\"col-md-7 col-xs-4 track\">
                                                         <h6><a href=\"";
-                // line 199
+                // line 200
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
                 echo "\" class=\"link-music\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "name", array()), "html", null, true);
@@ -475,7 +476,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                             <small>
                                                                 Artiste :
                                                                 ";
-                // line 202
+                // line 203
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["track"], "artists", array()));
                 $context['loop'] = array(
@@ -492,26 +493,26 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                     $context['loop']['last'] = 1 === $length;
                 }
                 foreach ($context['_seq'] as $context["_key"] => $context["artist"]) {
-                    // line 203
+                    // line 204
                     echo "                                                                    <a href=\"";
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showArtist", array("id_artist" => $this->getAttribute($context["artist"], "id", array()))), "html", null, true);
                     echo "\" class=\"link-music\">
                                                                         ";
-                    // line 204
+                    // line 205
                     if ($this->getAttribute($context["loop"], "last", array())) {
-                        // line 205
+                        // line 206
                         echo "                                                                            ";
                         echo twig_escape_filter($this->env, $this->getAttribute($context["artist"], "name", array()), "html", null, true);
                         echo "
                                                                         ";
                     } else {
-                        // line 207
+                        // line 208
                         echo "                                                                            ";
                         echo twig_escape_filter($this->env, $this->getAttribute($context["artist"], "name", array()), "html", null, true);
                         echo ",
                                                                         ";
                     }
-                    // line 209
+                    // line 210
                     echo "                                                                    </a>
                                                                 ";
                     ++$context['loop']['index0'];
@@ -526,11 +527,11 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['artist'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 211
+                // line 212
                 echo "                                                            </small><br/>
                                                             <small>
                                                                 Album : <a href=\"";
-                // line 213
+                // line 214
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("showAlbum", array("id_album" => $this->getAttribute($this->getAttribute($context["track"], "album", array()), "id", array()))), "html", null, true);
                 echo "\" class=\"link-music\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["track"], "album", array()), "name", array()), "html", null, true);
@@ -541,7 +542,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                     <div class=\"col-md-1 col-xs-2 offset-1 lien_spotify\">
                                                         <div class=\"py-3\" >
                                                             <a href=\"";
-                // line 219
+                // line 220
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["track"], "external_urls", array()), "spotify", array()), "html", null, true);
                 echo "\" target=\"blank\"><i class=\"fa fa-spotify fa-2x text-success\" aria-hidden=\"true\"></i></a>
                                                         </div>
@@ -549,7 +550,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                                     <div class=\"col-md-1 col-xs-2 library \">
                                                         <div class=\"mt-3\" >
                                                             <button class=\"addToLibrary\" data-id=\"";
-                // line 224
+                // line 225
                 echo twig_escape_filter($this->env, $this->getAttribute($context["track"], "id", array()), "html", null, true);
                 echo "\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>
                                                         </div>
@@ -562,10 +563,10 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['track'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 231
+            // line 232
             echo "                                    ";
         } else {
-            // line 232
+            // line 233
             echo "                                        <li>
                                             <p><strong>No tracks</strong></p>
                                             <h3 class=\"text-muted\">Not following anyone yet :(</h3>
@@ -573,7 +574,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                                         </li>
                                     ";
         }
-        // line 238
+        // line 239
         echo "                                </ul>
                             </div>
                         </div>
@@ -585,10 +586,10 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
              
 ";
         
-        $__internal_94f1fc1148c3f4699a69ed07759e3ca3fd35adcd335af781147c3296bcb9904c->leave($__internal_94f1fc1148c3f4699a69ed07759e3ca3fd35adcd335af781147c3296bcb9904c_prof);
+        $__internal_a597dbfd66f07d06d09072ed99126398732d71a1da2487fd8a7f208d44ed6e3f->leave($__internal_a597dbfd66f07d06d09072ed99126398732d71a1da2487fd8a7f208d44ed6e3f_prof);
 
         
-        $__internal_52cec27279d0b83344fa7bfb0b798fb7134ab43bcb09c8a2969fda9b31b82dbf->leave($__internal_52cec27279d0b83344fa7bfb0b798fb7134ab43bcb09c8a2969fda9b31b82dbf_prof);
+        $__internal_0a4dba69ae8f592c95e4aad0ee4e6e92704c7d450696d3bb011b414eb997ed23->leave($__internal_0a4dba69ae8f592c95e4aad0ee4e6e92704c7d450696d3bb011b414eb997ed23_prof);
 
     }
 
@@ -604,7 +605,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
 
     public function getDebugInfo()
     {
-        return array (  577 => 238,  569 => 232,  566 => 231,  553 => 224,  545 => 219,  534 => 213,  530 => 211,  515 => 209,  509 => 207,  503 => 205,  501 => 204,  496 => 203,  479 => 202,  471 => 199,  463 => 194,  454 => 188,  450 => 187,  445 => 184,  440 => 183,  438 => 182,  427 => 173,  419 => 167,  416 => 166,  403 => 159,  395 => 154,  384 => 148,  380 => 146,  365 => 144,  359 => 142,  353 => 140,  351 => 139,  346 => 138,  329 => 137,  321 => 134,  313 => 129,  304 => 123,  300 => 122,  295 => 119,  290 => 118,  288 => 117,  278 => 109,  270 => 103,  267 => 102,  254 => 95,  246 => 90,  235 => 84,  231 => 82,  216 => 80,  210 => 78,  204 => 76,  202 => 75,  197 => 74,  180 => 73,  172 => 70,  164 => 65,  155 => 59,  151 => 58,  146 => 55,  141 => 54,  139 => 53,  125 => 42,  119 => 39,  98 => 21,  94 => 19,  88 => 18,  81 => 16,  79 => 15,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
+        return array (  578 => 239,  570 => 233,  567 => 232,  554 => 225,  546 => 220,  535 => 214,  531 => 212,  516 => 210,  510 => 208,  504 => 206,  502 => 205,  497 => 204,  480 => 203,  472 => 200,  464 => 195,  455 => 189,  451 => 188,  446 => 185,  441 => 184,  439 => 183,  428 => 174,  420 => 168,  417 => 167,  404 => 160,  396 => 155,  385 => 149,  381 => 147,  366 => 145,  360 => 143,  354 => 141,  352 => 140,  347 => 139,  330 => 138,  322 => 135,  314 => 130,  305 => 124,  301 => 123,  296 => 120,  291 => 119,  289 => 118,  279 => 110,  271 => 104,  268 => 103,  255 => 96,  247 => 91,  236 => 85,  232 => 83,  217 => 81,  211 => 79,  205 => 77,  203 => 76,  198 => 75,  181 => 74,  173 => 71,  165 => 66,  156 => 60,  152 => 59,  147 => 56,  142 => 55,  140 => 54,  125 => 42,  119 => 39,  98 => 21,  94 => 19,  88 => 18,  81 => 16,  79 => 15,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -645,9 +646,9 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                         </div>
                     </div>
                 </div>
-            
-               
                 <br/>
+                
+                
                 <div class=\"nav-tabs-navigation\">
                     <div class=\"nav-tabs-wrapper\">
                         <ul class=\"nav nav-tabs\" role=\"tablist\">
@@ -663,6 +664,7 @@ class __TwigTemplate_b9934d6187a52a4196d2457018ef2a54edb8fc877414089ba107e9a3a5b
                         </ul>
                     </div>
                 </div>
+                            
                 <!-- Tab panes -->
                 <div class=\"tab-content following\">
                     <div class=\"tab-pane active\" id=\"recommendations\" role=\"tabpanel\">

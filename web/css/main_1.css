@@ -151,6 +151,10 @@ div.row.info{
     margin-left: 10%;
 }
 
+.nav.nav-tabs{
+    margin-bottom: 2em;
+}
+
 @media (min-width:576px){
 /*    i.fa.fa-play-circle.fa-2x {
         margin-left: 25px;
@@ -211,6 +215,21 @@ div.row.info{
     #image_accueil, #texte_accueil{
         width: 100%;
     }
+    
+    .nav-tabs-navigation{
+        font-size: 0.6em;
+        width: 100%;
+    }
+    
+    .tab-content.following{
+    margin-top: 3em;
+    }
+    
+    
+    .nav.nav-tabs .nav-item a{
+        font-size: 0.5em;
+    }
+
 }
 
 @media (max-width:575px){

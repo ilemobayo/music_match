@@ -5,7 +5,7 @@
 {% block content %}
         
     <div>
-        <img src="{{ asset('img/vinyl-1437600_1920.jpg') }}" class="profile_page_photo" alt="vynils">
+        <img src="{{ asset('img/vinyl-1437600_1920.jpg') }}" class="profile_page_photo img-repsonsive" alt="vynils">
     </div>
         
     <div class="container container-top">
@@ -24,7 +24,7 @@
                             {{ asset('photo/') }}{{ profile.picture }}
                             {% else %}
                             {{ get_gravatar(profile.email, 80, 'retro') }}
-                            {% endif %}" alt="Photo de profil" style="height: 250px;">
+                            {% endif %}" alt="Photo de profil" style="height: 250px; width: 100%;">
             </div>
             {% if user_manager.user.username == global.request.get('username') %}
                 <ul>
