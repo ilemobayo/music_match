@@ -81,6 +81,7 @@ class ProfileController extends ControllerAbstract {
                 $this->app['user.manager']->getUser()->setUsername($data['pseudo']);
                 $this->app['user.manager']->getUser()->setEmail($data['email']);
                 $this->app['user.manager']->getUser()->setTags($tags);
+                $this->app['user.manager']->getUser()->setPicture($data['picture']);
                 return $this->redirectRoute('display', ['username' => $data['pseudo']]);
             } else {
                 $message = '<strong>Le formulaire contient des erreurs :</strong>';
